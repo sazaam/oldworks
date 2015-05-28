@@ -1,0 +1,3 @@
+<?php
+if(!defined('__XE__')) { exit(); }
+return 'a:2:{i:0;O:8:\"stdClass\":5:{s:12:\"trigger_name\";s:7:\"display\";s:15:\"called_position\";s:6:\"before\";s:6:\"module\";s:6:\"editor\";s:4:\"type\";s:10:\"controller\";s:13:\"called_method\";s:29:\"triggerEditorComponentCompile\";}i:1;O:8:\"stdClass\":5:{s:12:\"trigger_name\";s:7:\"display\";s:15:\"called_position\";s:6:\"before\";s:6:\"module\";s:6:\"widget\";s:4:\"type\";s:10:\"controller\";s:13:\"called_method\";s:20:\"triggerWidgetCompile\";}}';

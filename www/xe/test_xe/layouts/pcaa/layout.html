@@ -1,0 +1,143 @@
+﻿
+
+<style type="text/css">
+	@import "./layouts/pcaa/css/fonts/font.css";
+	@import "./layouts/pcaa/css/plug/default.css";
+	@import "./layouts/pcaa/css/plug/base.css";
+	@import "./layouts/pcaa/css/pcaa.css";
+	@import "./layouts/pcaa/css/mq.css";
+</style>
+
+<script type="text/javascript">
+	
+	function doChangeLangType(a){
+		setLangType(a) ;
+		location.href = location.href ;
+	}
+	
+</script>
+
+<div class="all">
+	
+	<div class="abs right0 txtR top0 paddingLg context" style="z-index:3000">
+		<div class="lang floatL">
+			<strong class="userLang floatL {$lang_type}">
+				<span class="hidden">{$lang_supported[$lang_type]}</span>
+			</strong>
+			<ul class="langList">
+				<li loop="$lang_supported=>$key,$val" cond="$key != $lang_type">
+					<a class="userLang {$key}" href="#" onclick="doChangeLangType('{$key}');location.reload();return false;">
+						<span class="hidden">{$val}</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	
+	</div>
+	
+	
+	
+	<div class="header padding HpaddingLg context">
+		<h1 class="logo floatL">
+			<a class="dispBlock fullW fullH" href="{$request_uri}">
+				<span class="hidden">
+					Site Logo
+				</span>		
+			</a>
+		</h1>
+		<form action="{getUrl()}" method="get" class="search dispNone floatR Vmargin">
+			<input type="hidden" name="vid" value="{$vid}" />
+			<input type="hidden" name="mid" value="{$mid}" />
+			<input type="hidden" name="act" value="IS" />
+			<input class="input TmarginSm txtR" type="text" name="is_keyword" value="{$is_keyword}" title="{$lang->cmd_search}" />
+			<input class="submit TmarginSm" type="submit" value="{$lang->cmd_search}" />
+		</form>
+	</div>
+	
+	
+	
+	<div class="sidenav {!$act ? 'noact' : 'act' }">
+		<div class="nav paddingLg">
+			<div class="home dyncont content padding Rpadding0" cond="$module_info->mid == 'PCAA'">
+				<div class="body">
+					{$content}
+					<div class="curtainall">
+						<div class="curtain">
+							<!--  -->
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<ul class="navitems">
+				
+				<li loop="$main_menu->list=>$key1,$val1">
+				{@ if ($val1['selected']) $temp = $val1 ;}
+					
+					<div class="context menulinkall topmenulinkall">
+						<a id="{$val1['node_srl']}" class="menulink {$val1['is_shortcut'] == Y ? 'sectionfold' : 'nosectionfold'}" href="{$request_uri.$val1['url'].'/'}" target="_blank"|cond="$val1['open_window']=='Y'">{$val1['text']}</a>
+						<a class="fold" href="#" cond="$val1['is_shortcut'] == N"><span class="hidden">fold-unfold</span></a>
+					</div>
+					
+					<ul id="{$val1['node_srl']}nested" class="nested context {$val1['selected'] ? '' : 'dispNone'}" rel="{sizeof($val1['list'])}" cond="$val1['list']">
+						
+						<li loop="$val1['list']=>$key2,$val2">
+						{@ if ($val2['selected']) $temp = $val2 ;}
+							
+							<div class="context menulinkall Hpadding">
+								<a id="{$val2['node_srl']}" class="nestedchild menulink" rel="{$val2['parent_srl']}" href="{$request_uri.$val2['url'].'/'}" target="_blank"|cond="$val2['open_window']=='Y'">{$val2['text']}</a>
+								<a class="fold" href="#"><span class="hidden">fold-unfold</span></a>
+							</div>
+						</li>
+					</ul>
+					
+					<div id="{$val2['node_srl']}container" loop="$val1['list']=>$key2,$val2" cond="$val1['list']"></div>
+					<div id="{$val1['node_srl']}container"></div>
+				</li>
+			</ul>
+			<div class="dyncont content padding Rpadding0" cond="$module_info->mid == $temp['url']">
+				<div class="body">
+					{$content}
+					<div class="curtainall">
+						<div class="curtain">
+							<!--  -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="footer HpaddingLg xs">
+			<span style="color:#777;">How to come to the Office</span>
+			<span class="dispBlock"></span>(143-180) 315-12 NeungDong GwangjinGu Seoul </span>
+			<span class="dispBlock">Tel) 02.556.6903 Fax) 02.556.6904</span>
+			<span class="dispBlock">Copyright(c) 2014, UTAA. All Rights Reserved.</span>
+		</div>
+		
+	
+	</div>
+
+	<div class="deepnav paddingLg">
+		<!-- 
+		<h2 class="XLg" loop="$main_menu->list=>$key1,$val1" cond="$val1['selected']">
+			<a href="{$val1['href']}" target="_blank"|cond="$val1['open_window']=='Y'">{$val1['link']}</a>
+		</h2> 
+		-->
+		<ul class="nested Hpadding" loop="$main_menu->list=>$key1,$val1" cond="$val1['selected'] && $val1['list']">
+			<li loop="$val1['list']=>$key2,$val2" class="active"|cond="$val2['selected']">
+				<a href="{$val2['href']}" target="_blank"|cond="$val2['open_window']=='Y'">{$val2['link']}</a>
+				<ul class="nested Hpadding" cond="$val2['list']">
+					<li loop="$val2['list']=>$key3,$val3" class="active"|cond="$val3['selected']">
+						<a href="{$val3['href']}" target="_blank"|cond="$val3['open_window']=='Y'">{$val3['link']}</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	
+	
+	<script type="text/javascript" src="/xe/test_xe/layouts/pcaa/js/strawnode.js?starter=./pcaa_app/" cond="!$act" />
+	
+	
+</div>

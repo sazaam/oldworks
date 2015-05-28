@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin>
+	<class ns="naja.prospect::HomeStep"  extends="naja.tools.steps::VirtualSteps" >
+		<dependency ns="flash.utils::Dictionary" />
+		<dependency ns="flash.display::Loader" />
+		<dependency ns="naja.model::Root" />
+		<dependency ns="naja.model.control.context::Context" />
+		<dependency ns="naja.tools.commands::Command" />
+		<dependency ns="naja.tools.api.geom::Draw" />
+		<dependency ns="pro.layer::Layer" />
+		<var>
+			<![CDATA[
+				private static var dict:Dictionary = new Dictionary() ;
+			]]>
+		</var>
+		<var>
+			<![CDATA[
+				protected var o:Object = {} ;
+			]]>
+		</var>
+		<var>
+			<![CDATA[
+				public static var arr:Array = [] ;
+			]]>
+		</var>
+		<constructor>
+			<![CDATA[
+				
+				init.apply(null, params);
+				trace('object '+this.constructor+' created');
+				
+				add(new VirtualSteps("AIME", new Command(this, onAime, true), new Command(this, onAime, false)));
+			]]>
+		</constructor>
+		<method>
+			<![CDATA[
+				private function onAime(cond:Boolean):void
+				{					
+					var layer:Layer ;
+					if (cond) {
+						trace("opening aime") ;
+						layer = Context.$get(Layer).attr( { id:"LAYER", name:"LAYER" } )[0] ;
+						Draw.draw("rect", { g:layer.graphics, color:0x0, alpha:.3 }, 0, 0, 600, 400) ;
+						Root.root.addChildAt(layer, 0) ;
+					}else {
+						trace("closing aime") ;
+						layer = Context.$get("#LAYER").remove()[0] ;
+					}
+				}
+			]]>
+		</method>
+	</class>
+	<class ns="naja.prospect::ASStep" extends="naja.tools.steps::VirtualSteps">
+		<constructor>
+			<![CDATA[
+				init.apply(null, params);
+				trace('object '+this.constructor+' created');
+			]]>
+		</constructor>
+	</class>
+	<class ns="naja.prospect::ASLoader">
+		<constructor>
+			<![CDATA[
+				//trace('object '+this.constructor+' created');
+			]]>
+		</constructor>
+	</class>
+	<class ns="naja.prospect::ASGates" extends="naja.tools.lists::Gates">
+		<constructor>
+			<![CDATA[
+				trace('object '+this.constructor+' created');
+			]]>
+		</constructor>
+	</class>
+</plugin>

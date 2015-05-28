@@ -1,0 +1,266 @@
+﻿
+/*
+**  @author : 
+* A. Librairies (CSS reset...)
+* B. Styles generaux (declarations defaut des Hx, strong)
+* C. Styles helpers (margins, paddings, txtX)
+* D. Structure principal (#page, #main, #menu, #nav...)
+* E. Contenus (listes ul.listPuce,  .mea, dataArray...)
+* F. Blocs conteneurs + structure contenu (line, unit, .block, .blockSimple....)
+* G. Custom (blocks spécifiques, contenus vraiment spécifiques à une page, non reutilisable ailleurs)
+* H. Fixs class for navigators (corners)
+* I. Classes spécifiques (lecteurs d'écran, javascript...)
+*/
+
+/****
+* A. Librairies (CSS reset...)
+****/
+html,body,span, applet,object,iframe, h1,h2,h3,h4,h5,h6,p,blockquote,pre, a,abbr,acronym,address,big,cite,code, del,dfn,em,font,img,ins,kbd,q,s,samp, small,strike,strong,sub,sup,tt,var, dd,dl,dt,li,ol,ul, fieldset,form,label,legend, table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;line-height:1.3em;font-family:inherit;text-align:inherit;vertical-align:baseline;}
+a img,:link img,:visited img{border:0;}
+table{border-collapse:collapse;border-spacing:0;}
+ol,ul{list-style:none;}
+q:before,q:after, blockquote:before,blockquote:after{content:"";}
+strong,h1,h2,h3,h4,h5,h6 {font-weight:bold;}
+em{font-style:italic;}
+input, textarea, select  {font-size:99%}
+* {border:0;margin:0;padding:0;}
+/****
+* B. Styles generaux (declarations defaut des Hx, strong, a (liens) )
+****/
+body {font-size:10px; *font-size:62.5%; font-family:Arial,sans-serif; background:#fff;} /* par defaut la hauteur du font-size est de 16px sur IE et FF, pour avoir un font-size relatif, il suffit de faire une division et indiquer le pourcentage correspondant */
+a {}
+a:hover {}
+h2 {}
+h3 {}
+h3 em {}
+h4 em {}
+h4 {}
+h5 {}
+p {}
+
+/**/
+
+h3.titleBigger {font-size:200%; color:#4C4C4C;}
+h3.titleLower {color:#E75353; font-size:110%;}
+h4.titleBigger {color:#4C4C4C; font-size:160%; font-weight:normal;}
+.title strong {font-weight:100;color:#DC0707;}
+
+/* contenus et separateurs */
+.highLight {color:#A45255;}
+.bold {font-weight:bold;}
+.mentionsLegales {font-style:italic; }
+.mentionsLegales .mentionsContent {overflow:hidden; width:100%}
+.noBrd {border:0 !important}
+.clear {clear:both;}
+.nuageMots {line-height:1.4em}
+
+/****
+* C. Styles helpers (margins, paddings, txtX)
+****/
+/* alignement (vertical-align, text-align */
+.txtL{text-align:left !important;} 
+.txtC{text-align:center !important;} 
+.txtR{text-align:right !important;} 
+.txtT{vertical-align:top !important;} 
+.txtM{vertical-align:middle !important;} 
+.txtB{vertical-align:bottom !important;} 
+
+/* positionnement flottant */
+.floatL, .float_l {float:left;}
+.floatR, .float_r {float:right;}
+.context {overflow:hidden; _overflow:visible; zoom:1}
+
+/* fullWidth (force une image ou un flash à prendre toute la largeur de son conteneur, cela evite de devoir calculer au pixel près la largeur d'une image. Utilisation : <div class="fullImg"><img src="image.gif" /></div>) */
+.fullImg img {width:100%; display:block;}
+.mediaSplit img, .mediaSplit object, .mediaSplit embed{width:100%; display:block; vertical-align:top;}
+
+/* marges des blocs */
+.Vspace, .Tspace {margin-top:12px !important}
+.Vspace, .Bspace {margin-bottom:12px !important}
+.home .block .Vspace, .home .block .Tspace {margin-top:6px !important}
+.home .block .Vspace, .home .block .Bspace {margin-bottom:6px !important}
+
+/* margins pour les contenus */
+.marginSm {margin:5px !important}
+.margin{margin:10px !important}
+.marginLg {margin:20px !important}
+.VmarginSm, .TmarginSm {margin-top:5px !important} .VmarginSm, .BmarginSm {margin-bottom:5px !important} .HmarginSm, .LmarginSm {margin-left:5px !important} .HmarginSm, .RmarginSm {margin-right:5px !important}
+.Vmargin, .Tmargin {margin-top:10px !important} .Vmargin, .Bmargin {margin-bottom:10px !important} .Hmargin, .Lmargin {margin-left:10px !important} .Hmargin, .Rmargin {margin-right:10px !important}
+.VmarginLg, .TmarginLg {margin-top:20px !important} .VmarginLg, .BmarginLg {margin-bottom:20px !important} .HmarginLg, .LmarginLg {margin-left:20px !important} .HmarginLg, .RmarginLg {margin-right:20px !important}
+.VmarginXLG, .TmarginXLG {margin-top:40px !important} .VmarginXLG, .BmarginXLG {margin-bottom:40px !important} .HmarginXLG, .LmarginXLG {margin-left:40px !important} .HmarginXLG, .RmarginXLG {margin-right:40px !important}
+
+/* paddings pour les contenus */
+.paddingSm {padding:5px !important}
+.padding{padding:10px !important}
+.paddingLg {padding:20px !important}
+.VpaddingSm, .TpaddingSm {padding-top:5px !important} .VpaddingSm, .BpaddingSm {padding-bottom:5px !important} .HpaddingSm, .LpaddingSm {padding-left:5px !important} .HpaddingSm, .RpaddingSm {padding-right:5px !important}
+.Vpadding, .Tpadding {padding-top:10px !important} .Vpadding, .Bpadding {padding-bottom:10px !important} .Hpadding, .Lpadding {padding-left:10px !important} .Hpadding, .Rpadding {padding-right:10px !important}
+.VpaddingLg, .TpaddingLg {padding-top:20px !important} .VpaddingLg, .BpaddingLg {padding-bottom:20px !important} .HpaddingLg, .LpaddingLg {padding-left:20px !important} .HpaddingLg, .RpaddingLg {padding-right:20px !important}
+.VpaddingXLG, .TpaddingXLG {padding-top:40px !important} .VpaddingXLG, .BpaddingXLG {padding-bottom:40px !important} .HpaddingXLG, .LpaddingXLG {padding-left:40px !important} .HpaddingXLG, .RpaddingXLG {padding-right:40px !important}
+
+.dispBlock{display:block;}
+.dispNone{display:none;}
+.hidden {visibility:hidden;}
+.noBG{background:0 !important;}
+.absolute {position:absolute !important;}
+.top0{top:0 !important;}
+
+/****
+* E. Contenus (listes ul.listPuce,  .mea, dataArray...)
+****/
+/* mea */
+.mea, .mea .text, .meaRight, .meaRight .text, .meaWrap {overflow:hidden; _overflow:visible; zoom:1;text-align:justify;}
+.mea .media {float:left; margin-right:10px; _margin-right:7px;}
+.mea .clearReturn {clear:left}
+.meaRight .clearReturn {clear:right}
+.meaRight .media {float:right; margin-left:10px; _margin-left:7px;}
+.meaWrap .text {overflow:visible; zoom:0;}
+
+/* content hide/show */
+.contentHide .show {display:none;} /* on met la classe show, pour cacher les éléments quand le block est en mode "hide" */
+.contentShow .hide {display:none;} /* on met la classe hide, pour cacher les éléments qui doivent l'etre quand le block est en mode "show" */
+
+
+
+
+
+
+/* == tableaux (dataArray) == */
+/* dataArray */
+/* boutons, (html : <a class="btn"><strong>texte bouton</strong></a> 
+   OU pour les formulaires :   <button class="btn"><span><strong>texte bouton</strong></span></button> */
+.btn {text-align:left;  overflow:hidden; _overflow:visible;font-size:100%;}
+.btn, .btn strong, button.btn span {background:url(skin/default/button.png) no-repeat left top; vertical-align:middle;_overflow:visible;}
+.btn_red, .btn_red strong, button.btn_red span {background-image:url(skin/default/button_red.png);}
+.btn, button.btn span {display:-moz-inline-box; display:inline-block; padding-left:5px;}
+.btn strong{display:block; height:18px;  color:#FFF; background-position:right top; line-height:18px; _width:1%; white-space:nowrap; padding-right:5px; cursor:pointer; font-weight:normal}
+.btn span {vertical-align:middle;}
+button.btn {border:0; margin:0; padding:0; padding-right:1px; display:inline; overflow:hidden; //overflow:visible; background:none; cursor:pointer}
+button.btn span {overflow:visible; display:block; _width:1%; /*haslayout correcting bug*/}
+button.btn span span {background:none; padding:0; width:auto; line-height:normal;}
+body:last-child:not(:root:root) button.btn {display:inline-block;}
+
+
+
+
+.hasJS .tabCtn {display:none;}
+.hasJS .tabCurrent {display:block;}
+.hasJS .tabTitle {display:none;}
+
+/****
+* F. Blocs conteneurs + structure contenu (line, unit, .block, .blockSimple....)
+****/
+/* line, unit */
+.line, .lastunit {overflow: hidden; _overflow: visible; zoom:1; margin:0; padding:0; display:block; }
+.unit{float:left;margin-right:10px; zoom:1;}
+.size1on1{float:none !important;margin-right:0; width:auto}
+.size1on2{width:49%;_width:49% !important;} 
+.size1on3{width:32.3%;_width:32.3% !important;}
+.size2on3{width:66%;_width:66% !important;}
+.size1on4{width:23.8%;_width:23.8% !important;} 
+.size3on4{width:74.8%;_width:74.8% !important;}
+.size1on5{width:18.8%;}
+.size2on5{width:39%;}
+.size3on5{width:58%;}
+.size4on5{width:78%;}
+.lastunit {float:none; width:auto !important; margin-right:0 !important; _margin-right:-3px; _left:-3px; _position:relative;}
+
+/* gestion padding/margin de block */
+.blockNWPadding .block{padding-top:10px;padding-left:10px;}/*NW = Nord West*/
+
+/* ** block structure -- */
+.block{overflow:hidden;_overflow:visible; zoom:1; position:relative;}
+.blockInside{position:relative; zoom:1; background:#fff}
+.body {overflow:hidden; _overflow:visible; zoom:1;}
+/* head */
+.head {overflow:hidden; _overflow:visible; zoom:1; margin:0; padding:1px 9px; color:#fff; background:#A45255; font-weight:bold; font-size:118%;}
+.head a{color:#fff !important}
+.headMiddle {overflow:hidden; _overflow:visible; zoom:1; margin:0; padding:3px 5px; color:#fff; background:#A45255; font-weight:bold; font-size:118%;}
+/* corners and sides (corners are user sometines for side */
+.tl, .tr, .bl, .br, .overtl{background-repeat:no-repeat; position:absolute; height:6px; width:6px; font-size:1%; overflow:hidden; z-index:10}
+.overtl {left:0; top:0;}
+.tl{background-position: left top;top:0; left:0;}
+.tr{background-position: right top;top:0; right:0}
+.bl{background-position: left bottom; bottom:0; left:0;} 
+.br{background-position: right bottom; bottom:0; right:0;}
+.bl, .br{display:none;} 
+	
+/* foot */
+.foot{overflow:hidden; _overflow:visible; zoom:1; padding:3px;}
+.footFilled {background-color:#E5E5E5}
+.footDark {background:#947E81}
+.footDark a {color:#fff}
+	
+/* blockSimple */
+.blockSimple .blockInside {border:1px solid #C3C3C3}
+.blockSimple .tl, .blockSimple .tr, .blockSimple .bl, .blockSimple .br{background-image:url(skin/blocks/blocksimple_corners.gif); height:6px; width:6px;}
+.blockSimple .tl{top:-1px; left:-1px;}
+.blockSimple .tr{top:-1px; right:-1px;}
+.blockSimple .bl{bottom:-1px; left:-1px;}
+.blockSimple .br{bottom:-1px; right:-1px;}
+
+/* blockTabsType2 */
+.blockTabsType2 .tabs {margin-bottom:-1px;position:relative; z-index:5}
+.blockTabsType2 .tabs li, .blockTabsType2 .tabs li a {background:url(skin/blocks/blocktabstype2_tabs.png) no-repeat left top;}
+.blockTabsType2 .tabs li {padding-left:17px;margin-left:13px; position:relative; z-index:1; border-bottom:1px solid #C3C3C3}
+.blockTabsType2 .tabs li.first {//display:inline;}
+.blockTabsType2 .tabs li a {background-position:right top; padding:2px 12px 1px; font-weight:bold; color:#696969; text-decoration:none !important;}
+.blockTabsType2 .tabs li.current {background-position:left -100px;z-index:4;border:0;}
+.blockTabsType2 .tabs li.current a {background-position:right -100px; padding-bottom:2px;}
+
+/* couleurs de fond de blocks */
+.blockFilled .blockInside {background-color:#F0F0F0}
+
+/****
+* G. Custom (blocks spécifiques, contenus vraiment spécifiques à une partie de la page, non reutilisable ailleurs)
+****/
+
+/****
+* H. Fixs class for navigators (corners, heights, most of the problems comes fron IE)
+****/
+/*
+html.IS_IE  body .tr, html.IS_IE  body .br, .IS_IE #page.home #rightCol  .block .tr, .IS_IE  #page.home #rightCol .block .br{_right:expression(cssRight(this))}
+/* autres corners à corriger */
+/*
+html.IS_IE body  .block .blockInside .bl,html.IS_IE body .block .blockInside .br{_bottom:expression(cssBottom(this, true))}
+/* heights */
+/*
+html.IS_IE body .blockSimpleShadow .bl, html.IS_IE body .blockSimpleShadow .tr, html.IS_IE body .blockSquareShadow .bl, html.IS_IE body .blockSquareShadow .tr {height:expression(cssHeight(this, true))}
+
+*/
+.hideCorners .br, .hideCorners .bl {display:none !important}
+
+/****
+* I. Classes spécifiques (lecteurs d'écran, javascript...)
+****/
+
+
+
+	/***** 
+	* form elements
+	*****/
+	input.text, select, textarea, span.text {border:1px solid #ccc}
+	.fline .inlineFields select {//font-size:95.59%;}
+	span.text input.text, span.text input, span.text textarea {margin:0; padding:0; border:0;}
+	.fline, .flineL {display:table; width:100%; _width:auto; _overflow:visible; zoom:1; }
+	
+	.fline label {float:left; font-weight:bold; margin-top:2px; margin-right:3px; _margin-right:0}
+	.flineL input {float:left; font-weight:normal; margin-top:2px; margin-right:3px; _margin-right:0}
+ 	.fline span, .fline .group {display:block; overflow:hidden; _overflow:visible; zoom:1;}
+	.fline span.text input, .fline span.text input.text,  .fline span.text textarea, .fline .group span.text input, .fline .group select, .fline .group textarea,  .fline span select, .fline span input.file {width:100%;}
+	.multifields label {width:auto !important}
+	.multilines label {float:none !important; display:block; width:auto !important}
+	.groupCheckLeft .check {float:left; margin-top:2px; //margin-top:-3px; margin-right:3px; _margin-right:0;}
+	.groupCheckLeft label {float:none; overflow:hidden; _overflow:visible; zoom:1; display:block; width:auto !important; margin-right:0 !important}
+	.inlineFields label, .inlineFields input, .inlineFields select, .inlineFields textarea {float:none; width:auto !important; display:inline; vertical-align:middle}
+	.inlineFields label {margin-right:5px; margin-left:3px;}
+	.label10 label {width:10% } .label20 label {width:20%} .label30 label {width:30%} .label33 label {width:33%} .label40 label {width:40%} .label50 label {width:50%} 
+	.label60 label {width:60%} .label70 label {width:70%} .label80 label {width:80%} .label90 label {width:90%}
+	.input10 {width:10% !important} .input20 {width:20% !important} .input30 {width:30% !important} .input40 {width:40% !important} .input50 {width:50% !important} 
+	.input60 {width:60% !important} .input70 {width:70% !important} .input80 {width:80% !important} .input90 {width:90% !important}
+	.input10, .input20, .input30, .input40, .input50, .input60, .input70, .input80, .input90{ float:none!important;} 
+	.errormsg {color:#DA0000; display:block; margin-top:-5px; margin-bottom:5px;}
+	.formTipLine span{float:left !important;}
+	.formTip {float:left; margin-top:2px; margin-left: 3px}
+	.formTip20 {width:29% !important} .formTip30 {width:28% !important}
+	textarea.noScroll {overflow:hidden;}

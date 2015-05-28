@@ -1,0 +1,258 @@
+/* CSS FILE */
+
+
+/* 
+	www.hermes.fr    SPILL for Paris mon Chéri
+	@author saz
+
+*/
+
+*{}
+/* GENERICS */
+a{color:white}
+body.MSIE #all{font-size:120%}
+.full{
+	background:url('') no-repeat 50% 50%;
+	-webkit-background-size:cover;
+	-moz-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	background-repeat:no-repeat!important;
+}
+
+/* END GENERICS */
+
+
+#all{display:block;}
+
+
+#all{
+	background:white;
+	height: 100%;
+	font-family:'Stample Garamond', Garamond, Georgia;
+	font-style:italic;
+}
+
+
+
+.header{
+	position:absolute;
+	top:0;
+	z-index:100;
+	height:25px;
+	width:100%;
+	background:white;
+	-moz-box-shadow:0px 1px 15px #000;
+	-webkit-box-shadow:0px -1px 15px #000;
+	-o-box-shadow:0px -1px 15px #000;
+	box-shadow:0px -1px 15px #000;
+}
+
+.header a{
+	padding-top:5px;
+	display:block;
+	color:black;
+}
+
+.footer{
+	height:25px;
+	position:absolute;
+	bottom:0; 
+	z-index:100;
+	width:100%;
+	background:white;
+	-moz-box-shadow:0px -1px 15px #000;
+	-webkit-box-shadow:0px -1px 15px #000;
+	-o-box-shadow:0px -1px 15px #000;
+	box-shadow:0px -1px 15px #000;
+}
+.footer a{
+	display:block;
+	padding-top:5px;
+	color:black;
+}
+
+
+
+.page{
+	text-align:left;
+	width:100%;
+	overflow:hidden;
+	overflow-x:hidden;
+	position:absolute;
+	z-index:1;
+	top:25px;
+	bottom:25px;
+	color:black;
+}
+
+
+.pageitem{
+	height:100%;
+	color:white;
+	position:relative;
+	overflow:hidden;
+	
+}
+
+.floating{
+	width:50%;
+	height:100%;
+	position:absolute;
+	top:-5000px;
+	left:25%;
+}
+
+.floatinginside{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:auto;
+	top:-50%;
+	-webkit-background-size:100% auto;
+	-moz-background-size:100% auto;
+	-o-background-size:100% auto;
+	background-size:100% auto;
+}
+
+.navitem{
+	position:absolute;
+	width:100%;
+	bottom:0;
+	text-align:center;
+	color:#000;
+}
+.navitem ul{
+	display:-moz-inline-box; /* FF2 and K-Meleon */    
+    display:inline-block; /* DO NOT ALTER RULE */ 
+    *display:inline;zoom:1;
+    word-spacing:0; /* DO NOT ALTER RULE */
+   	margin:0 auto;
+   	padding:5px 15px;
+	background:white;
+}
+
+.navitem li{
+	display:-moz-inline-box; /* FF2 and K-Meleon */    
+    display:inline-block; /* DO NOT ALTER RULE */ 
+    *display:inline;zoom:1;
+    word-spacing:0; /* DO NOT ALTER RULE */
+   	padding:5px 5px;
+}
+.navitem li a{
+   	color:#000;
+}
+
+
+.pagesnav{
+	position:absolute;
+	top:20%;
+	right:0;
+	z-index:2;
+}
+.pagesnav ul{
+	
+}
+
+.pagesnav li{
+	position:relative;
+   	padding:5px 5px;
+}
+.pagesnav li a{
+   	display:block;
+   	width:10px;
+   	height:10px;
+   	background:white;
+   	-moz-box-shadow:0px 1px 2px rgba(0,0,0,.4);
+	-webkit-box-shadow:0px 1px 2px rgba(0,0,0,.4);
+	-o-box-shadow:0px 1px 2px rgba(0,0,0,.4);
+	box-shadow:0px 1px 2px rgba(0,0,0,.4);
+}
+.pagesnav li a span{
+	display:block;
+   	background:white;
+   	color: black;
+    padding: 5px 10px;
+    text-align: center;
+	width:80px;
+	
+    -moz-box-shadow:0px 1px 5px rgba(0,0,0,.4);
+	-webkit-box-shadow:0px 1px 5px rgba(0,0,0,.4);
+	-o-box-shadow:0px 1px 5px rgba(0,0,0,.4);
+	box-shadow:0px 1px 5px rgba(0,0,0,.4);
+}
+
+.pagesnav li a b{
+	visibility:hidden;
+   	background:url(../img/arrow.png) no-repeat left top;
+   	color: black;
+    position: absolute;
+    right: 60px;
+    top: -5px;
+}
+
+.pagesnav li a strong{
+	display:block;
+   	background:url(../img/arrow.png) no-repeat left top;
+	color: black;
+    height: 30px;
+    position: absolute;
+    right: -10px;
+    top: 8px;
+    width: 10px;
+    
+}
+
+
+
+
+
+
+/* BANGLEJACKPOT */
+.viewport{
+	width:100%;
+	height:100%;
+}
+.play{
+	display:block;
+	position:absolute;
+	bottom:80px;
+	right:50px;
+	background:white;
+	padding:20px 15px;
+	color:black;
+	z-index:2;
+	-moz-box-shadow:0px 1px 2px rgba(0,0,0,.4);
+	-webkit-box-shadow:0px 1px 2px rgba(0,0,0,.4);
+	-o-box-shadow:0px 1px 2px rgba(0,0,0,.4);
+	box-shadow:0px 1px 2px rgba(0,0,0,.4);
+	
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	-o-border-radius:50px
+	border-radius:50px;
+}
+
+.visualbg{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.visualitem{
+	float:left;
+	width: 25%;
+    height: 100%;
+    
+    
+    -webkit-background-size:100% auto;
+	-moz-background-size:100% auto;
+	-o-background-size:100% auto;
+	background-size:100% auto;
+	
+}
+
+

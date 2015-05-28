@@ -1,0 +1,52 @@
+friends = user.friends -1
+coco = 'shplouff', peyote = { foo: 'bar' }
+h4#actions.block.context.#{user.id}
+	saz = user.id
+	a(href="/api/new/" + (saz == 'sazaam' ? 'concon' : 'ornorm'), rel=(saz == 'sazaam' ? 'popo' : 'fw'))
+		span.dispBlock + #{saz == 'sazaam' ? 'ornorm' : 'sazaam'}
+		| Add New APIElement
+	p Hello there !!!
+	| <h4>#{coco} is back and for real with #{friends} friends</h4>
+	case friends
+		when 3
+			- for(var i = 0 ; i < friends ; i++){
+				p you have #{i} friends
+			- }
+		default
+			if user.id == "ornorm"
+				#gnoo rhaaaaaaaaaa helloooo thereeee
+			else
+				#gnoo rhaaaaaaaaaa helloooo thereeee 2
+				case friends
+					when 4
+						#gnoo rhaaaaaaaaaa helloooo thereeee 3
+			p you have #{friends} friends
+				a(href="NOURL", class="dispBlock") you have #{friends} friends
+			p: a.red(href="NOURL")  you have #{friends} friends
+			include ./test2
+			//
+				.sizeXXLg pihihophopi
+					.sizeR sflisolsl
+	#TITLE SAZAAMUS THE GREAT
+	img(alt="", src="./img/los1.png")
+	.red.sizeXXLg= user.id
+	- if (user.id == 'ornorm')
+		#prout Coucou sa mere
+	- else if (user.id == 'sazaam')
+		#prout Tonton sa race
+			#mc toto héhéééé
+		#gnaaa gnaaaaaaaaaaaaa
+	- else
+		#prout Grand CACA
+#yooooo Konnichiwa Nagasaki
+	.Vmargin
+		//
+		- if(vanilla = user.id == 'sazaam')
+			.red= vanilla
+			.light coucou
+			.light couocu
+		- else if(user.id == 'ornorm')
+			.gray YESSSS
+		- else
+			.gray NOOOO
+		h1.Tmargin HIROSHIMA YO

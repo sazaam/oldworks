@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="MediaUtil,org.libspark.utils.MediaUtil,computeSpectrum,getCamera,getMicrophone,playSound" name="keywords">
+<title>org.libspark.utils.MediaUtil</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'MediaUtil - SPARK Project Utils Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?org/libspark/utils/MediaUtil.html&amp;org/libspark/utils/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;MediaUtil</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class MediaUtil"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.libspark.utils</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class MediaUtil</td>
+</tr>
+</table>
+<p></p>
+ flash.media パッケージのためのユーティリティクラスです
+ <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#computeSpectrum()">computeSpectrum</a>(FFTMode:Boolean = false, stretchFactor:int = 0):ByteArray</div>
+<div class="summaryTableDescription">[static]
+  現在のサウンド波形からのスナップショットを ByteArray オブジェクトに配置した状態で取得します.</div>
+</td><td class="summaryTableOwnerCol">MediaUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCamera()">getCamera</a>(name:String = null):Object</div>
+<div class="summaryTableDescription">[static]
+  ビデオをキャプチャする Camera オブジェクトへの参照を返します.</div>
+</td><td class="summaryTableOwnerCol">MediaUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getMicrophone()">getMicrophone</a>(index:int = 0, showSettings:Boolean = false, loopBack:Boolean = true, useEchoSuppression:Boolean = false):Microphone</div>
+<div class="summaryTableDescription">[static]
+  マイクを取得します.</div>
+</td><td class="summaryTableOwnerCol">MediaUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#playSound()">playSound</a>(url:String, loops:uint = 0, sndTransform:SoundTransform = null, bufferTime:Number = 1000, checkPolicyFile:Boolean = false):Object</div>
+<div class="summaryTableDescription">[static]
+  外部MP3ファイルを指定してサウンドを再生します.</div>
+</td><td class="summaryTableOwnerCol">MediaUtil</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="computeSpectrum()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">computeSpectrum</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function computeSpectrum(FFTMode:Boolean = false, stretchFactor:int = 0):ByteArray</code><p>
+  現在のサウンド波形からのスナップショットを ByteArray オブジェクトに配置した状態で取得します.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">FFTMode</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; サウンドデータに対して最初にフーリエ変換を実行するかどうかを示すブール値です。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stretchFactor</span>:int</code> (default = <code>0</code>)<code></code> &mdash; サウンドサンプリングの解像度です。
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>ByteArray</code> &mdash;  現在のサウンド波形からのスナップショットを配置した ByteArray オブジェクト。
+  </td>
+</tr>
+</table>
+</div>
+<a name="getCamera()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCamera</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getCamera(name:String = null):Object</code><p>
+  ビデオをキャプチャする Camera オブジェクトへの参照を返します.
+  <br />
+  戻り値のオブジェクトには camera と video が含まれています。<br />
+  camera : Camera クラスのインスタンスオブジェクト<br />
+  video : Video クラスのインスタンスオブジェクト<br />
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">name</span>:String</code> (default = <code>null</code>)<code></code> &mdash; 取得するカメラを names プロパティで返される配列から決定します。
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash;  Camera オブジェクトと Video オブジェクトへの参照を保持するオブジェクト
+  </td>
+</tr>
+</table>
+</div>
+<a name="getMicrophone()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getMicrophone</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getMicrophone(index:int = 0, showSettings:Boolean = false, loopBack:Boolean = true, useEchoSuppression:Boolean = false):Microphone</code><p>
+  マイクを取得します.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:int</code> (default = <code>0</code>)<code></code> &mdash; マイクのインデックス値です。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">showSettings</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; セキュリティパネルのマイクの設定を表示の有無。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">loopBack</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; マイクによってキャプチャされたオーディオをローカルスピーカーに転送するかどうかを指定します。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">useEchoSuppression</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; オーディオコーデックのエコー抑制機能を使用するかどうかを指定します。
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Microphone</code> &mdash;  オーディオをキャプチャする Microphone オブジェクトの参照を返します。
+  </td>
+</tr>
+</table>
+</div>
+<a name="playSound()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">playSound</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function playSound(url:String, loops:uint = 0, sndTransform:SoundTransform = null, bufferTime:Number = 1000, checkPolicyFile:Boolean = false):Object</code><p>
+  外部MP3ファイルを指定してサウンドを再生します.
+  <br />
+  戻り値のオブジェクトには sound と channel が含まれています。<br />
+  sound : Sound クラスのインスタンスオブジェクト<br />
+  channel : SoundChannel クラスのインスタンスオブジェクト<br />
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">url</span>:String</code> &mdash; 外部の MP3 ファイルを指定する URL です。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">loops</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; サウンドチャネルの再生が停止するまで startTime 値に戻ってサウンドの再生を繰り返す回数を定義します。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sndTransform</span>:SoundTransform</code> (default = <code>null</code>)<code></code> &mdash; サウンドチャンネルに割り当てられた初期 SoundTransform オブジェクトです。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">bufferTime</span>:Number</code> (default = <code>1000</code>)<code></code> &mdash; サウンドのストリーミングを開始するまでに、バッファにストリーミングサウンドをプリロードする秒数です。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">checkPolicyFile</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; サウンドのロードを開始する前に、Flash Player が、ロードされるサウンドのサーバーからのクロスドメインポリシーファイルのダウンロードを試行するかどうかを指定します。
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash;  Sound オブジェクトと SoundChannel オブジェクトへの参照を保持するオブジェクト
+  </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

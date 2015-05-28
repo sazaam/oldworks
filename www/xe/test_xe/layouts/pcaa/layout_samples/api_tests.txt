@@ -1,0 +1,22 @@
+ node_srl : 167
+parent_srl : 172
+menu_name_key : Company
+isShow : 1
+text : Company
+href : /xe/test_xe/index.php?mid=Company
+url : Company
+is_shortcut : N
+open_window : N
+normal_btn :
+hover_btn :
+active_btn :
+selected : 0
+expand : N
+list : Array
+link : Company
+
+
+
+<div loop="$val2=>$key3, $val3" > 
+	{$key3} : {$val3}
+</div>

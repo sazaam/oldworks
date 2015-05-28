@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<section id="1" label="about 1" url="about/_1.xml" />
+	<section id="2" label="about 2" url="about/_2.xml" />
+	<section id="3" label="about 3" url="about/_3.xml" />
+</data>

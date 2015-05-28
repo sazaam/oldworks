@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      SAMUAE
+    </title>
+	<meta http-equiv="Content-Type" Content="text/html; charset=UTF-8" />
+	<link rel="shortcut icon" href="../html/favicon.ico" />
+	<link rel="icon" type="image/png" href="../html/favicon.png" />
+	<link rel="stylesheet" type="text/css" href="../css/default.css" />
+	<link rel="stylesheet" type="text/css" href="../css/landing.css" />
+	<script type="text/javascript" src="../js/swfobject.js"></script>
+	<script type="text/javascript" src="../js/swfaddress.js"></script>
+	<script type="text/javascript" src="../js/default.js"></script>
+	<script type="text/javascript" src="../js/netobjects.js"></script>
+	
+	
+	<script type="text/javascript">
+		function goToAdobe(){
+			window.document.location = 'http://www.google.com';
+		}
+		function greenMouse(cond){
+			cond = cond == undefined? true : false ;
+			this.className = cond == true ? 'paddingLg context black' : 'paddingLg context' ;
+			
+			console.log(this, cond)
+			//console.log(this, cond)
+		}
+		
+		var flashvars = {
+			root:"../../www/" ,
+			//conf:"http://127.0.0.1:8000/datas/" ,
+			conf:"__conf__/config.xml",
+			//conf:"http://127.0.0.1:8000/teststudy/studies/AG0001s/" ,
+			html:"html/",
+			xml:"xml/",
+			swf:"swf/",
+			img:"img/", 
+			flv:"flv/",
+			stage:{
+				align:"TL",
+				scaleMode:"noScale",
+				frameRate:30
+			}
+		};
+		
+		flashvars.stage = objToString(flashvars.stage) ;
+		
+		//cl(objToString(flashvars.stage))
+		
+		var params = {
+			allowFullScreen:"true",
+			allowScriptAccess:"sameDomain",
+			allowNetworking:"all",
+			wmode:'transparent'
+		};
+		var attributes = {
+		  id: "FLASH",
+		  name: "FLASH"
+		};
+		//swfobject.embedSWF(flashvars.root+flashvars.swf+"main.swf", "flashInside", "100%", "100%", "10", "expressInstall.swf", flashvars, params, attributes);
+	</script>
+</head>
+<body>
+	<div id="flashInside">
+		<div id="content">
+			<div id="message" class="paddingLg context" onclick="javascript:goToAdobe()" onmouseover="javascript:greenMouse.apply(this)" onmouseout="javascript:greenMouse.apply(this, [false])">
+				<p class="floatL txtL">
+					<span>
+						Sorry, you don't seem to have the Adobe Flash Plugin for your browser...
+						Click here in case you want to download latest version now.
+					</span>
+				</p>
+				<a id="getIt" class="floatR RmarginLg" href="http://www.adobe.com/support/flashplayer/downloads.html"><span>Get It &gt;</span></a>
+			</div>
+		</div>
+	</div>
+	<!--  
+	<div id="cheat">
+		<div id="all" class="context">
+			<a class="test" href="http://www.google.com">prout</a>
+		</div>
+	</div>
+	-->
+</body>
+</html>

@@ -1,0 +1,4 @@
+{
+	"name" : "conf",
+	"main" : "./index.js"
+}

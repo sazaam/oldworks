@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<section id="about">
+	<category name="portrait">
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Born April 17, 1977 in Togo, a country where the word Design means little to most, Kossi Aguessy wanted to create with his hands. From making models of the egyptian pyramids to building scaled machines as a child,
+						his passion for archeology and the universal futurists Bilal and Lucas made him a perfectionist in an industry that strikes a balance between art and engineering.
+						Kossi Aguessy left Togo in 1980 and first went to the United States. He then obtained a BA at Central St Martins in London, left again for Brazil (his mother\'s birthplace) and settled in France in 1998.</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+			<source url="about/portrait.jpg" />
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Kossi Aguessy passes from one medium to another with ease. His aesthetic is influenced by several different cultures, human values as well as by strong visual references.
+						Renault, Yves Saint-Laurent, Cartier, Swarovski, ST Dupont, Branex and art galleries have trusted and searched for his artistic richness to their benefit.
+						The designer has already been head of architectural projects in France, Turkey, and South Africa. He can already count on numerous collaborations, using furniture machinery at a rate of production clearly showing this industrial artist has no limits.</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Passionate and driven by strong determination, ironical and deeply concerned with contemporary world matters, Kossi Aguessy believes: the world is what you make of it.
+						Child of Africa, the artist pays no attention to the boundaries being then the son of a global education with deep multicultural roots.</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Hervé Lacombe's writings on Aguessy best emphatise this crossing boundaries:
+						"He's powerful, a person comprised of a mixture of intelligence, talent, strength and fragility who manages to break and blow past all your traditional references, borders and divisions. Kossi Aguessy is one of those humans who is both complex and simplesomeone who emphasizes that humanity is more valuable in its ability to create beautiful, true, and sentient objects with confidence and hope.
+						In using what he has available to him and generating what he doesn't, this young man can bring together the best with the possible."</p>
+						<p>All is said.</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+	</category>
+	<category name="team">
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<h1>Team</h1>
+						<p>Kossi Aguessy<br />Designer / Creative Director
+						Thibaut Perrin-Faivre<br />Development Director
+						Pierre Gillet<br />Financial Director
+						Richard Mugni<br />Legal Director
+						Valerie Viscardi<br />PR</p>
+						]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p><br /><br />Christophe Dietch<br />Architect
+						Nicolas Vivien<br />Designer / Interior Designer
+						Clement Genuini<br />Designer / Interior Designer
+						Cedric Monteiro<br />Decorator
+						Wojcheick Chilinsky<br />3D Designer</p>
+						]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+	</category>
+	<category name="exhibitions">
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="false" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<h1>2008</h1>
+						<p>Etoile du Design Awards,<br />Autonoma</p>
+						<p>Please Do Not Sit, Group Show,<br />Tools Galerie, Paris, France</p>
+						<p>L'Observeur du Design 2008,<br />Cité des Sciences et de l'Industrie,<br />Paris, France</p>
+						]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<h1>2007</h1>
+						<p>Python<br />Danish Museum of Art and Design,<br />Copenhagen, Danemark</p>
+						<p>Desire<br />Swarovski Designer's Day<br />Paris, France</p>
+						<p>BXP<br />Istanbul Design Week<br />Istanbul, Turkey</p>
+						]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+	</category>
+	<category name="awards">
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<h1>2007</h1>
+						<p>Fifi Design Awards 2007,<br />Best 20 Perfume Design,<br />Stella MacCartney,<br />Paris, France</p>
+						<p>Fifi Design Awards 2007,<br />Best 20 Perfume Design,<br />Stella In Two,<br />Paris, France</p>
+						]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+	</category>
+	<category name="legal">
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Editeur : Kossigan Aguessy Industry<br />Siège social : 114 Avenue Victor Hugo, 75016 PARIS</p>
+						<p>Droits de reproduction Droits d'auteurs
+							L'accès au site www.aguessy.com vous confère un droit d'usage privé et non exclusif de ce site.<br/>L'ensemble des éléments édités sur ce site, incluant notamment les textes, photographies, infographies, logos, marques, morceaux ou partitions de musique,… constituent des œuvres au sens du code de la Propriété Intellectuelle. En conséquence, toute représentation ou reproduction, intégrale ou partielle, qui pourrait être faite sans le consentement de leurs auteurs ou de leurs ayants-droit, est illicite.</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Le site de Kossigan Aguessy relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle.<br />Tous les droits de reproduction y sont réservés, y compris les représentations iconographiques et photographiques.
+							La reproduction des textes sur support papier est autorisée dans un cadre pédagogique et non commercial, sous réserve des trois conditions suivantes :
+							- gratuité de la diffusion,
+							- respect de l'intégrité des documents reproduits (pas de modification ni d'altération),
+							- citation claire et lisible de la source sous le forme suivante : 'document issu de site Internet www.aguessy.fr les droits de reproduction sont réservés et strictement limités.'</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>La présentation générale du site est originale et également protégée.
+							La reproduction du code html des pages de ce serveur dans le but de diffusion publique est de ce fait interdite.
+							La reproduction de tout ou partie de ce site sur un support quel qu'il soit, est formellement interdite sauf autorisation expresse du directeur de la publication.
+							Pour toute autre utilisation, veuiller contacter notre chargé de partenariat ou notre webmestre à l'adresse suivante : 
+							webmaster@aguessy.com.]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Liens vers des sites tiers
+						Kossigan Aguessy propose sur son site www.aguessy.com des liens vers des sites tiers. Ces liens sont établis en accord avec les sites concernés à un moment où Kossigan Aguessy a pu juger opportun de le faire, compte tenu des contenus et services de ces sites.	Kossigan Aguessy ne pourra être tenu responsable du contenu de ces sites et de l'usage qui pourra en être fait par les utilisateurs.Les utilisateurs, de ce site sont tenus de respecter la légalité et en particulier les dispositions de la loi Informatique et libertés dont la violation est sanctionnée pénalement.</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Ils doivent notamment s'abstenir, s'agissant des informations auxquelles ils accèdent, de toute collecte, captation, déformation ou utilisation et d'une manière générale de tout acte susceptible de porter atteinte à la vie privée ou à la réputation des personnes. Les utilisateurs sont informés, conformément aux dispositions de la loi Informatique et libertés qu'ils disposent d'un droit d'accès et de rectification relativement aux informations les concernant auprès de Kossigan aguessy, 114 Avenue Victor Hugo 75016 PARIS</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+		<source>
+			<flash.display.Sprite>
+				<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+					<htmlText>
+						<![CDATA[<p>Indisponibilité du site www.aguessy.com.
+							Kossigan Aguessy  s'engage à faire ses meilleurs efforts pour assurer aux utilisateurs une accessibilité du site à tout moment. Kossigan Aguessy ne pourra être tenu responsable, en cas d'indisponibilité du site, pour quelque cause que ce soit.</p>]]>
+					</htmlText>
+					<defaultTextFormat>
+						<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+					</defaultTextFormat>
+				</flash.text.TextField>
+			</flash.display.Sprite>
+		</source>
+	</category>
+</section>

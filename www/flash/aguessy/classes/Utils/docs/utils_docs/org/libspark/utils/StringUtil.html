@@ -1,0 +1,331 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="StringUtil,org.libspark.utils.StringUtil,camelize,decamelize,fitTextField,replaceLineFeed,strpow,toUpperCaseFirstLetter" name="keywords">
+<title>org.libspark.utils.StringUtil</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'StringUtil - SPARK Project Utils Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?org/libspark/utils/StringUtil.html&amp;org/libspark/utils/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;StringUtil</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class StringUtil"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.libspark.utils</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class StringUtil</td>
+</tr>
+</table>
+<p></p>
+  文字列のためのユーティリティクラスです
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#camelize()">camelize</a>(str:String):String</div>
+<div class="summaryTableDescription">[static]
+  半角スペースを削除し、次の文字を大文字に変換します。
+  </div>
+</td><td class="summaryTableOwnerCol">StringUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#decamelize()">decamelize</a>(str:String, separater:String = " "):String</div>
+<div class="summaryTableDescription">[static]
+  大文字の String を、区切り文字と小文字化した String に変換します。
+  </div>
+</td><td class="summaryTableOwnerCol">StringUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fitTextField()">fitTextField</a>(textField:TextField, width:Number, param:String = ""):void</div>
+<div class="summaryTableDescription">[static]
+         テキストフィールドの横幅を維持するためにtextプロパティに指定されている文字列の末尾を削ります。
+         テキストフィールドが単一行の設定でなければ効果はありません。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">StringUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#replaceLineFeed()">replaceLineFeed</a>(str:String):String</div>
+<div class="summaryTableDescription">[static]
+         改行コードをすべて\r（CR）に変換します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">StringUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#strpow()">strpow</a>(value:String, len:uint):String</div>
+<div class="summaryTableDescription">[static]
+         同じ文字列を複数連結した文字列を返します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">StringUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toUpperCaseFirstLetter()">toUpperCaseFirstLetter</a>(str:String):String</div>
+<div class="summaryTableDescription">[static]
+  String の最初の文字を大文字にし、以降の文字を小文字に変換して返します。
+  </div>
+</td><td class="summaryTableOwnerCol">StringUtil</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="camelize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">camelize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function camelize(str:String):String</code><p>
+  半角スペースを削除し、次の文字を大文字に変換します。
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash;  変換したい String です。
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;   変換後の String です。
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br>以下のコードでは action script 3.0 language reference という文字列を変換し出力ます。
+  <div class='listing'><pre>
+  var str:String = "action script 3.0 language reference";
+  
+  trace(StringUtil.camelize(str));
+  // output : ActionScript3.0LanguageReference
+  
+  trace(StringUtil.decamelize(StringUtil.camelize(str)));
+  // output : action script 3.0 language reference
+  </pre></div>
+  <p></p>
+</div>
+<a name="decamelize()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">decamelize</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function decamelize(str:String, separater:String = " "):String</code><p>
+  大文字の String を、区切り文字と小文字化した String に変換します。
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash;   変換したい String です。
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">separater</span>:String</code> (default = "<code> </code>")<code></code> &mdash; 区切り文字として使用したい String です。
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;    変換後の String です。
+  </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br>以下のコードでは action script 3.0 language reference という文字列を変換し出力ます。
+  <div class='listing'><pre>
+  var str:String = "action script 3.0 language reference";
+  
+  trace("output : " + StringUtil.camelize(str));
+  // output : ActionScript3.0LanguageReference
+  
+  trace("output : " + StringUtil.decamelize(StringUtil.camelize(str)));
+  // output : action script 3.0 language reference
+  </pre></div>
+  <p></p>
+</div>
+<a name="fitTextField()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fitTextField</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function fitTextField(textField:TextField, width:Number, param:String = ""):void</code><p>
+         テキストフィールドの横幅を維持するためにtextプロパティに指定されている文字列の末尾を削ります。
+         テキストフィールドが単一行の設定でなければ効果はありません。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">textField</span>:TextField</code> &mdash; 対象となるテキストフィールド
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:Number</code> &mdash; 制限する横幅
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">param</span>:String</code> (default = "<code></code>")<code></code> &mdash; 末尾を3点リーダ等に置き換える場合に指定する文字列
+         </td>
+</tr>
+</table>
+</div>
+<a name="replaceLineFeed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">replaceLineFeed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function replaceLineFeed(str:String):String</code><p>
+         改行コードをすべて\r（CR）に変換します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash; 変換対象の文字列
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;  変換後の文字列を返します
+         </td>
+</tr>
+</table>
+</div>
+<a name="strpow()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">strpow</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function strpow(value:String, len:uint):String</code><p>
+         同じ文字列を複数連結した文字列を返します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">value</span>:String</code> &mdash; 文字列
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">len</span>:uint</code> &mdash; 連結数
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;  新しい文字列を返します
+         </td>
+</tr>
+</table>
+</div>
+<a name="toUpperCaseFirstLetter()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toUpperCaseFirstLetter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function toUpperCaseFirstLetter(str:String):String</code><p>
+  String の最初の文字を大文字にし、以降の文字を小文字に変換して返します。
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">str</span>:String</code> &mdash;  変換したい String です。
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;   変換後の String です。
+  </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

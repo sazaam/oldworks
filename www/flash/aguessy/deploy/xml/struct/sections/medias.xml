@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<section id="medias">
+	<fieldset id="" errorMsg="Wrong password !" welcomeMsg="Welcome, please follow to Medias...">
+		<flash.display.Sprite>
+			<flash.text.TextField id="desc" gridFitType="subpixel" alpha=".65" blendMode="invert" antiAliasType="advanced" selectable="true" x="20" y="20"  width="280" height="100" wordWrap="true" kerning="true" autoSize="none" multiline="true">
+				<htmlText>
+					<![CDATA[<h1>MEDIA ZONE</h1><br /><br /><p>The media zone allows you to download all contents from this website, the access to this zone is restricted to press professionals. To obtain a password, please contact us :<br /><br />valerie.viscardi@aguessy.com</p>]]>
+				</htmlText>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="warning" gridFitType="subpixel" visible="false" alpha=".65" antiAliasType="advanced" selectable="false" x="90" y="106"  width="80" height="13" wordWrap="true" kerning="true" autoSize="none">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="center" size="8" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="password_txt" text="password" gridFitType="subpixel" blendMode="invert" alpha=".65" antiAliasType="advanced" selectable="true" x="20" y="120" autoSize="none" wordWrap="true" width="80" multiline="true" height="13">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="8" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField type="input" id="password" text="****" background="true" border="true" borderColor="0xAAAAAA" backgroundColor="0xF8F8F8" displayAsPassword="true" gridFitType="subpixel" sharpness="200" thickness="400" antiAliasType="advanced" alpha="1" selectable="true" x="90" y="120" width="100" height="13">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="10" bold="false"  color="0xAAAAAA" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.display.Sprite id="submit">
+				<flash.text.TextField text="log in" background="true" border="true" borderColor="0xCCCCCC" backgroundColor="0xAAAAAA" gridFitType="subpixel" alpha=".65" antiAliasType="advanced" x="210" y="120" autoSize="none" wordWrap="true" selectable="false" height="13" width="65">
+					<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" leading="3" align="center" size="8" bold="false"  color="F8F8F8" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			</flash.display.Sprite>
+			<flash.text.TextField id="medias_link" visible="false" text="go to Medias" blendMode="invert" gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="false" x="25" y="50" autoSize="none" wordWrap="true" width="80" multiline="true" height="13">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+	</fieldset>
+</section>

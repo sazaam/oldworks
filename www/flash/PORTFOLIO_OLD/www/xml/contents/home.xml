@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<content>
+	<dependancies>
+		<dependancy id="backImage" url="" />
+	</dependancies>
+	<articles>
+		<article id="Brands" label="Brands" size="1">
+			<h3>A wannabe dream</h3>
+			<hidden>
+				<quote><![CDATA['They represent the ideal the closer the dream to the people the less success']]></quote>
+				<link label="Visit project" url=""  />
+			</hidden>
+		</article>
+		<article id="Ideas" label="Ideas" size="2">
+			<h3>A quick walkthrough</h3>
+			<hidden>
+				<quote><![CDATA['They represent the ideal the closer the dream to the people the less success']]></quote>
+				<link label="Visit project" url="" />
+			</hidden>
+		</article>
+		<article id="Test" label="Test" size="3">
+			<h3>A quick walkthrough</h3>
+			<hidden>
+				<quote><![CDATA['They represent the ideal the closer the dream to the people the less success']]></quote>
+				<link label="Visit project" url="" />
+			</hidden>
+		</article>
+		<article id="Other" label="Other" size="1">
+			<h3>A quick walkthrough</h3>
+			<hidden>
+				<quote><![CDATA['They represent the ideal the closer the dream to the people the less success']]></quote>
+				<link label="Visit project" url="" />
+			</hidden>
+		</article>
+	</articles>
+</content>

@@ -1,0 +1,46 @@
+
+
+/* Ars Maquette Pro */
+/*
+@font-face {
+    font-family: "ARS-Maquette-Web-Pro-1";
+    font-style: normal;
+    src: url("./fonts/arsmaquettewebproone-SH.eot?iefix") format("eot"), url("./fonts/arsmaquettewebproone-SH.woff") format("woff"), url("./fonts/arsmaquettewebproone-SH.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ARS-Maquette-Web-Pro-1";
+    font-style: italic;
+    src: url("./fonts/arsmaquettewebproone-italic-SH.eot?iefix") format("eot"), url("./fonts/arsmaquettewebproone-italic-SH.woff") format("woff"), url("./fonts/arsmaquettewebproone-italic-SH.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ARS-Maquette-Web-Pro-1";
+    font-style: normal;
+    font-weight: bold;
+    src: url("./fonts/arsmaquettewebproone-bold-SH.eot?iefix") format("eot"), url("./fonts/arsmaquettewebproone-bold-SH.woff") format("woff"), url("./fonts/arsmaquettewebproone-bold-SH.ttf") format("truetype");
+}
+@font-face {
+    font-family: "ARS-Maquette-Web-Pro-1";
+    font-style: italic;
+    font-weight: bold;
+    src: url("./fonts/arsmaquettewebproone-bolditalic-SH.eot?iefix") format("eot"), url("./fonts/arsmaquettewebproone-bolditalic-SH.woff") format("woff"), url("./fonts/arsmaquettewebproone-bolditalic-SH.ttf") format("truetype");
+}
+*/
+/* US 101 
+
+@font-face {
+    font-family: "U.S. 101";
+    font-style: normal;
+    src: url("./fonts/us101-webfont.eot?iefix") format("eot"), url("./fonts/us101-webfont.woff") format("woff"), url("./fonts/us101-webfont.ttf") format("truetype");
+}*/
+
+@font-face {
+    font-family: 'SaintsSquareRegular';
+    src: url('./fonts/saintssquare-webfont.eot');
+    src: url('./fonts/saintssquare-webfont.eot?#iefix') format('embedded-opentype'),
+         url('./fonts/saintssquare-webfont.woff') format('woff'),
+         url('./fonts/saintssquare-webfont.ttf') format('truetype'),
+         url('./fonts/saintssquare-webfont.svg#SaintsSquareRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

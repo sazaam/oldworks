@@ -1,0 +1,102 @@
+
+	ProxyLite Version 1.0
+
+	@author saz aka True
+	Inspired by Mitsuhiko's Classy (http://classy.pocoo.org)
+
+
+
+How to use
+
+1.Purpose :
+
+Ok, jQuery already exists, and does quite a similar thing (behaves as a proxy), plus some more, 
+which is exactly why ProxyLite is here.
+Yet another Proxy implementation, but does ONLY that.
+For both performance and theorical reasons, it is best to have it as light/small as possible, 
+the implicit reason for a proxy to be is still to be lighter than its 'proxied' object.
+That makes real-amplitude projects unable to take jQuery as the Proxy pattern as well, embedding too much 
+wide-wise and unconnected functionalities (Event gesture, DOM objects, etc).
+
+That proxy implementation tries just to fulfill one basic purpose :
+beeing able to have cross-browser getter-setter simulation, connected to a class cache system that enables more for OOP fans.
+(create proxy Class models, enable class-like and/or on-demand overrides).
+
+Of course, ProxyLite has a secundary use for cross-browser coders, which makes possible another abstraction layer between base objects native APIs and your code,
+always keeping a backtrace of the original method, letting you code your own implementation along preferences.
+
+Your project's framework can now use many proxies, won't try to extend existing Native object's prototype, 
+well it is more like re-writing what's missing on-demand, with in your project some low-importance objects you can use and destroy.
+
+Anyway, I can agree this project is more like a 'pattern-implementation research', that probably leads to nowhere in special but 
+having done it !
+The brave and curious ones could see through it the start of a cross-browser API for all native (and tough) objects, 
+but I won't argue with the ones that see no importance in it.
+
+
+
+2.Some API principles
+
+For once the API could look a little complex at start, it is just to avoid a confusion tha goes with that pattern.
+Well the first thing to remember, is how to attack the procedure :
+Do you need to cache the new type of Proxy object you're achieving, (in sight of building a class model), 
+or will you need single base proxies, here and there... or both.
+
+That is why there are here two ways of creating proxies, 
+each of them having in sight a differnet goal.
+
+When you finish coding your single Proxy 'test' object, it is also easily transformed into a class model, to make multiple instances posiible then.
+Keep in mind those two approaches and targets, for understanding quickly the tiny but important differences in these API elements.
+
+
+3. API
+
+
+
+new Proxy(target, override) ;
+Creates a single-use Proxy object (created Class and overrides will not be cached, heavy in data if too many instances, since all objects
+created via this method will have different prototypes, constructors) and won't be really comparable between each others.
+
+
+
+Proxy(target, override) ;
+Reproduces the last kind of proxy model (in cache) instantiation. Thus you have another instance of your last Proxy described, with on-demand overrides if desired.
+The only difference, as you realized, is tha absence of the 'new' keyword in call. Not to omit, if you don't want unexpected cache conflicts.
+Those two first methods are the most one-shot type of Proxy generation, yet the next one will become your favorite once you stop testing and should go on 
+modeling larger-scale, through Classes that you can set and store yourself, let's say 'Persistent ProxyClass models' in your project.
+
+
+
+Proxy.Class(target, override) (or) new Proxy.Class() ;
+Creates a Class now, not an instance. The 'new' keyword'presence has no importance now.
+That class will be created and stored, by the provided cache system.
+Of course, that cache storing only one classmodel for one type, if you need multiple models for the same type of objects, 
+you can just store the result of that function as the class itself, having no longer problems with cache's overwriting.
+(var MyCustomProxyClass = Proxy.Class etc...)
+(new (MyCustomProxyClass) // this doesn't call any inner-cached data)
+
+
+
+Proxy.getProxy(target) ;
+Each proxy assigned to a target will establish itself as the target's __proxy__ property. With no extra checks, so if ou set another proxy to that same target, 
+__proxy__ will then point towards this new proxy. 
+Proxy.getProxy returns the last proxy stored in the __proxy__ property of that target. returns undefined if never attached to a proxy.
+
+
+
+A little more on the cache system :
+
+Cache system for this generation method will store Proxy classmodels by type of target, the type beeing HTMLElements, window, document, etc...
+The issue with IE>8 beeing the lack of proper recognizable constructors for base objects makes it hard to have concrete 'inspection', so base objects
+were repertorized for IE. And for your custom objects if you have any, remember to provide them with a conventional toString method, 
+in order to have them stored as something else than just Object
+That same issue beeing the same root-problem to describe Class-associated proxies, it makes impossible to associate ProxyClass directly to a class, 
+(classes in IE<8 beeing really awkward)
+so we need to always associate a ProxyClass to an existing instance and not a Class, if need IE<8 to work.
+
+between the Sngleton user-un-instanciable native objects(window, document, documentElement, body) and the multiple-instances-allowed types, you'll see
+that system appears a quite reasonnable deal afterall.
+
+
+See examples for concrete use of ProxyLite.
+

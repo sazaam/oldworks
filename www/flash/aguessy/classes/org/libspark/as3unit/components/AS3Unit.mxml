@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright(c) 2006-2007 the Spark project.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, 
+ * either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ -->
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
+	width="100%" height="100%" creationComplete="creationCompleteHandler()">
+    <mx:Script>
+        <![CDATA[
+            import org.libspark.as3unit.runner.AS3UnitCore;
+            import org.libspark.as3unit.runner.Result;
+            import org.libspark.as3unit.runner.notification.Failure;
+            import org.libspark.as3unit.inter.runners.XMLListener;
+            
+            [Embed(source="resources/iconO.png")]
+            public const o:Class;
+            
+            [Embed(source="resources/iconF.png")]
+            public const f:Class;
+            
+            [Embed(source="resources/iconI.png")]
+            public const i:Class;
+            
+            [Bindable]
+            public var testResult:XML;
+            
+            private function creationCompleteHandler():void
+            {
+                resultTab.selectedIndex = 0;
+            }
+            
+            public function run(...classes:Array):void
+            {
+                var runner:AS3UnitCore = new AS3UnitCore();
+                var listener:XMLListener = new XMLListener();
+                runner.addListener(listener);
+                var result:Result = runner.runClasses.apply(runner, classes);
+                updateResult(result, listener.result);
+            }
+            
+            private function updateResult(result:Result, resultXML:XML):void
+            {
+                testProgress.label = createProgressLabel(result);
+                testProgress.setProgress(1, 1);
+                testProgress.setStyle("barColor", result.failureCount > 0 ? 0xFF0000 : 0x00FF00);
+                testResult = resultXML;
+                callLater(initializeTestTree);
+            }
+            
+            private function createProgressLabel(result:Result):String
+            {
+            	return "Run: " + result.runCount + "  Failure: " + result.failureCount + "  Ignore: " + result.ignoreCount + "  Time: " + formatTime(result.runTime);
+            }
+            
+            private function formatTime(time:uint):String
+            {
+            	return (time / 1000).toString();
+            }
+            
+            private function initializeTestTree():void
+            {
+                for each (var suiteXML:XML in testResult..suite) {
+                    if (suiteXML..test.(@status == "f").length() > 0) {
+                        testTree.setItemIcon(suiteXML, f, f);
+                    }
+                    else {
+                        testTree.setItemIcon(suiteXML, o, o);
+                    }
+                }
+                testTree.expandChildrenOf(testResult, true);
+            }
+            
+            private function testTreeItemClickHandler():void
+            {
+                updateItemDetail(testTree.selectedItem as XML);
+            }
+            
+            private function failuresListItemClickHandler():void
+            {
+                updateItemDetail(failuresList.selectedItem as XML);
+            }
+            
+            private function updateItemDetail(item:XML):void
+            {
+                if (item && item.localName() == "test") {
+                    if (item.@status == "f") {
+                        detailField.text = item.@trace;
+                        testTree.selectedItem = item;
+                        testTree.firstVisibleItem = item;
+                        failuresList.selectedItem = item;
+                    }
+                    else {
+                        detailField.text = "";
+                    }
+                }
+            }
+        ]]>
+    </mx:Script>
+    <mx:VBox width="100%" height="100%">
+	<mx:ProgressBar id="testProgress" width="100%" mode="manual"
+        labelPlacement="bottom" label="Run: 0  Failure: 0  Ignore: 0  Time: 0" trackHeight="20"/>
+	<mx:HRule width="100%" />
+	<mx:Label text="Results:" />
+	<mx:VDividedBox width="100%" height="100%">
+		<mx:TabNavigator id="resultTab" width="100%" height="50%" selectedIndex="1">
+			<mx:VBox label="Failures">
+				<mx:List id="failuresList" width="100%" height="100%"
+				    labelField="@qualifiedName" iconField="@status"
+				    dataProvider="{testResult..test.(@status == 'f')}"
+				    itemClick="failuresListItemClickHandler()"/>
+			</mx:VBox>
+			<mx:VBox label="Test Hierarchy">
+				<mx:Tree id="testTree" width="100%" height="100%"
+				    labelField="@name" iconField="@status" showRoot="false"
+				    dataProvider="{testResult}" itemClick="testTreeItemClickHandler()"/>
+			</mx:VBox>
+		</mx:TabNavigator>
+		<mx:TextArea id="detailField" width="100%" height="50%" editable="false" wordWrap="false" verticalScrollPolicy="auto" horizontalScrollPolicy="auto"/>
+	</mx:VDividedBox>
+    </mx:VBox>
+</mx:Canvas>

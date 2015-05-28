@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>
+      OF NAJA Open Framework
+    </title>
+	<meta http-equiv="Content-Type" Content="text/html; charset=UTF-8" />
+		<link rel="shortcut icon" href="../html/favicon.ico" />
+		<link rel="icon" type="image/png" href="../html/favicon.png" />
+		<script type="text/javascript" src="../js/swfobject.js"></script>
+		<script type="text/javascript" src="../js/swfaddress.js"></script>
+		<script type="text/javascript" src="../js/default.js"></script>
+		<script type="text/javascript" src="../js/netobjects.js"></script>
+		
+		
+		<script type="text/javascript">
+			var flashvars = {
+				root:"../../www/" ,
+				//conf:"http://127.0.0.1:8000/datas/" ,
+				conf:"__conf__/config.xml",
+				//conf:"http://127.0.0.1:8000/teststudy/studies/AG0001s/" ,
+				html:"html/",
+				xml:"xml/",
+				swf:"swf/",
+				img:"img/", 
+				flv:"flv/",
+				stage:{
+					align:"TL",
+					scaleMode:"noScale",
+					frameRate:30
+				}
+			};
+			
+			flashvars.stage = objToString(flashvars.stage) ;
+			
+			//cl(objToString(flashvars.stage))
+			
+			var params = {
+				allowFullScreen:"true",
+				allowScriptAccess:"sameDomain",
+				allowNetworking:"all"
+			};
+			var attributes = {
+			  id: "FLASH",
+			  name: "FLASH"
+			};
+			swfobject.embedSWF(flashvars.root+flashvars.swf+"main.swf", "flashInside", "100%", "100%", "10", "expressInstall.swf", flashvars, params, attributes);
+		</script>
+	<style type="text/css">
+		<!--
+		  html, body, #flashInside{ height:100%; width:100%;  background:#FFF;}
+		  body { margin:0; padding:0; overflow:auto;text-align:center; }
+		  object{outline:none}
+		  #flashInside { min-height:600px; width:1000px; overflow:auto; }
+		-->
+	</style>
+</head>
+<body>
+	<div id="flashInside">
+		<!-- -->
+			<p>Vous n'avez pas Flash Player...
+			Cliquez <a href="http://www.adobe.com/support/flashplayer/downloads.html">ici</a>
+			pour le t&eacute;l&eacute;charger.
+			</p>
+	</div>
+</body>
+</html>

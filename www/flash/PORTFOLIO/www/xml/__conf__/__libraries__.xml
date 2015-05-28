@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scheme merged="true">
+	<!--
+	<zip id="libraries" url="../zip/libraries.zip" />
+	-->
+	<xml id="sections" url="sections/sections.xml" />
+	<fonts id="NeoTechDaciaRegular" url="NeoTechDaciaRegular.swf"/>
+	<!-- 
+	<fonts id="KozGothProL" url="KozGothProL.swf"/>
+	<fonts id="KozGothProH" url="KozGothProH.swf"/>
+	 -->
+	<swf id="classes" url="annexes.swf"/>
+	<img id="shoe" url="shoe.png"/>
+	<img id="screen" url="home/screen.png"/>
+	<!--<swf id="clips" url="graphics.swf"/>
+	<img id="home" url="home.jpg"/>
+	<img id="facebook" url="home2.jpg"/>
+	-->
+</scheme>
+

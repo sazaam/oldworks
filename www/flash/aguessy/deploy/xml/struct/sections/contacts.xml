@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<section id="contacts">
+	<source>
+		<flash.display.Sprite>
+			<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+				<htmlText>
+					<![CDATA[<p>UNITED KINGDOM
+					USA
+					CANADA
+					SCANDINAVIA
+					9 Crinan Street, N1 9sq London, UK
+					+44 7899963805
+					Brian Robinson
+					brian@brianrobinson.com
+					contact@aguessy.com
+					</p>
+					]]>
+				</htmlText>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+	</source>
+	<source>
+		<flash.display.Sprite>
+			<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+				<htmlText>
+					<![CDATA[<p>FRANCE
+					9 place de la Coupole
+					94220 Charenton le pont
+					France
+					+33 1 43687016
+					contact@aguessy.com
+					</p>
+					]]>
+				</htmlText>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+	</source>
+	<source>
+		<flash.display.Sprite>
+			<flash.text.TextField gridFitType="subpixel" alpha=".65" antiAliasType="advanced" selectable="true" x="10" y="10" autoSize="none" wordWrap="true" width="200" multiline="true">
+				<htmlText>
+					<![CDATA[<p>THE NETHERLANDS
+					Nieuwe Crooswijkseweg 70D II
+					3034 PS
+					Rotterdam
+					The Netherlands
+					contact@aguessy.com
+					</p>
+					]]>
+				</htmlText>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+	</source>
+</section>

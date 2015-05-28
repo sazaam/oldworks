@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<section id="1" label="news 1" url="news/_1.xml" />
+	<section id="2" label="news 2" url="news/_2.xml" />
+	<section id="3" label="news 3" url="news/_3.xml" />
+</data>

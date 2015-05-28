@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		
+		<!-- DEFAULT HEAD -->
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>sazaam JS Works</title><!-- -->
+		<meta name="description" content="" />
+		<meta name="generator" content="Studio 3 http://aptana.com/" />
+		<meta name="author" content="True" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<!-- END DEFAULT HEAD -->
+		
+		<!-- SAZ HEAD -->
+		<link rel="stylesheet" href="./css/default.css" />
+		<link rel="stylesheet" href="./css/base.css" />
+		<link rel="stylesheet" href="./css/all.css" />
+		<link rel="stylesheet" href="./css/extra.css" />
+		<!-- END SAZ HEAD -->
+	</head>
+	<body class="ns">
+		<div class="wrapper" id="extra">
+			<div class="header context">
+				<ul class="headerleft">
+					<li><a>TestCanvas</a></li>
+					<li class="floatRR"><a id="close" class="button" href="#">close</a></li>
+					<li class="floatRR"><a id="launch" class="button" href="#">launch</a></li>
+				</ul>
+			</div>
+			<div class="page newback">
+
+				<div id="canvas" class="canvas">
+					<!-- -->
+				</div>
+				<div class="projectsnav" id="projectsnav">
+					<ol>
+						<li class="toplevel"><a href="#">docs</a></li>
+						<li class="toplevel"><a href="#">standards</a></li>
+						<li class="toplevel"><a href="#">experiments</a></li>
+						<li class="toplevel"><a href="#">core</a></li>
+						<li class="toplevel"><a href="#">fx</a></li>
+						
+
+					
+					</ol>
+				</div>
+			</div>
+			<div class="footer context">
+				<ul class="footerleft">
+					<li><a class="button" href="#">download</a></li>
+					<li><a class="button" href="#">more</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="./js/plugins/jquery-1.6.1.min.js"></script>
+		<script type="text/javascript" src="./js/plugins/underscore.js"></script>
+		<script type="text/javascript" src="./js/plugins/sugar-0.9.1.min.js"></script>
+		<script type="text/javascript" src="./js/plugins/classy.js"></script>
+		<script type="text/javascript" src="./js/plugins/ns.js"></script>
+		<script type="text/javascript" src="./js/base.js"></script>
+		
+		<script type="text/javascript" src="./js/plugins/Three.js"></script>
+		<script type="text/javascript" src="./js/plugins/RequestAnimationFrame.js"></script>
+		<script type="text/javascript" src="./js/test/tests.js"></script>
+		<script type="text/javascript">
+		trace(new TestCanvas('#canvas', '#launch', '#close')) ;	
+		</script>
+		<!---->
+		
+	</body>
+</html>

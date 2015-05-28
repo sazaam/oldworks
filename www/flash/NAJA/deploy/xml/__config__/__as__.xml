@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<plugin>
+	<class ns="naja.prospect::ASStep"  extends="naja.tools.steps::VirtualSteps" >
+		<dependency ns="flash.utils::Dictionary" />
+		<dependency ns="flash.display::Loader" />
+		<var>
+			<![CDATA[
+				private static var dict:Dictionary = new Dictionary() ;
+			]]>
+		</var>
+		<var>
+			<![CDATA[
+				protected var o:Object = {} ;
+			]]>
+		</var>
+		<var>
+			<![CDATA[
+				public static var arr:Array = [] ;
+			]]>
+		</var>
+		<constructor>
+			<![CDATA[
+				init.apply(null, params);
+				samere();
+				samerealui();
+				samereaelle() ;
+				trace(o);
+				trace('object '+this.constructor+' created');
+			]]>
+		</constructor>
+		<method>
+			<![CDATA[
+				public function samere():void{
+					trace('sa mere') ;
+				}
+			]]>
+		</method>
+		<method>
+			<![CDATA[
+				protected function samerealui():void{
+					trace('sa mere a lui') ;
+				}
+			]]>
+		</method>
+		<method>
+			<![CDATA[
+				private function samereaelle():void{
+					trace('sa mere a elle') ;
+				}
+			]]>
+		</method>
+	</class>
+	<class ns="naja.prospect::ASSprite" extends="flash.display::Sprite">
+		<constructor>
+			<![CDATA[
+				trace('object '+this.constructor+' created');
+			]]>
+		</constructor>
+	</class>
+	<class ns="naja.prospect::ASLoader" implements="naja.tools::ITestInterface">
+		<constructor>
+			<![CDATA[
+				//trace('object '+this.constructor+' created');
+			]]>
+		</constructor>
+		<method>
+			<![CDATA[
+				public function willTrigger (type:String) : Boolean{
+					return true ;
+				}
+			]]>
+		</method>
+	</class>
+	<class ns="naja.prospect::ASGates" extends="naja.tools.lists::Gates">
+		<constructor>
+			<![CDATA[
+				trace('object '+this.constructor+' created');
+			]]>
+		</constructor>
+	</class>
+</plugin>

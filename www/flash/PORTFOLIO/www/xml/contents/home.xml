@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<content>
+	<articles>
+		<article id="Brands" label="Brands of the world" size="1">
+			<h3>A wannabe dream</h3>
+			<hidden>
+				<load url="./home/plug002.swf"/>
+				<quote><![CDATA['They represent the ideal the closer the dream to the people the less success']]></quote>
+				<link label="Enter" url="WORKS"  />
+			</hidden>
+		</article>
+		<article id="Ideas" label="Ideas" size="2">
+			<h3>A quick walk through Ideas</h3>
+			<hidden>
+				<load url="./home/screens/spikes.png" backUrl="./home/backs/trees.png" />
+				<quote><![CDATA['They represent the ideal the closer the dream to the people the less success']]></quote>
+				<link label="Enter" url="WORKS" />
+			</hidden>
+		</article>
+		<article id="Draw" label="Draw" size="3">
+			<h3>A quick walk through Test</h3>
+			<hidden>
+				<load url="./home/screens/tribes.png" backUrl="./home/backs/abstract.png" />
+				<quote><![CDATA['They represent the ideal the closer the dream to the people the less success']]></quote>
+				<link label="Enter" url="WORKS" />
+			</hidden>
+		</article>
+		<article id="Wonderfl" label="Wonderfl" size="2">
+			<h3>A quick walk through Other</h3>
+			<hidden>
+				<load url="./home/screens/wonderfl.png"  backUrl="./home/backs/fuji.png" />
+				<quote><![CDATA['They represent the ideal the closer the dream to the people the less success']]></quote>
+				<link label="Enter" url="WORKS" />
+			</hidden>
+		</article>
+	</articles>
+</content>

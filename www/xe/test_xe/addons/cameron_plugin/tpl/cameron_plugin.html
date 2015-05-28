@@ -1,0 +1,20 @@
+<load target="../js/cameron_plugin.js" />
+<load target="../css/cameron_plugin.css" />
+<block cond="!$addon_info->positionx">{@ $addon_info->positionx='left'}</block>
+<div id="cameron_plugin"|cond="!$addon_info->positiony" class="cameron_plugin" style="{$addon_info->positionx}:0<!--@if($addon_info->positiony)-->; top:{$addon_info->positiony}px<!--@endif-->">
+	<ul>
+		<li id="cameron-lang"><a href="#" class="icon langToggle" title="Select Language">{$lang_type}</a>
+			<ul class="selectLang" style="{$addon_info->positionx}:41px">
+				<li loop="$lang_supported=>$key,$val" cond="$key!=$lang_type"><a href="#" onclick="doChangeLangType('{$key}');return false;">{$val}</a></li>
+			</ul>
+		</li>
+		<li cond="$addon_info->fb"><a class="icon cameron-facebook" href="{$addon_info->fb}" title="Facebook" target="_blank"></a></li>
+		<li cond="$addon_info->tw"><a class="icon cameron-twitter" href="{$addon_info->tw}" title="Twitter" target="_blank"></a></li>
+		<li cond="$addon_info->rss"><a class="icon cameron-rss" href="{$addon_info->rss}" title="RSS" target="_blank"></a></li>
+		<li cond="$addon_info->uurl">
+			<block cond="!$addon_info->utitle">{@ $addon_info->utitle='CAMERON'}</block>
+			<block cond="!$addon_info->ubgcolor">{@ $addon_info->ubgcolor='#cc3e3e'}</block>
+			<a href="{$addon_info->uurl}" class="icon cameron-user" title="{$addon_info->utitle}" target="_blank" style="background-color:{$addon_info->ubgcolor}<!--@if($addon_info->uicon)-->; background-image:url({$addon_info->uicon})<!--@endif-->"></a>
+		</li>
+	</ul>
+</div>

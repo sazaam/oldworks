@@ -1,0 +1,25 @@
+/// TODO
+
+WORKS 
+
+Works selection
+
+x main item Smarts = x3 panel
+x each smart >>
+
+x	left  + center + right
+x	(prev)  (cur)  (next)
+
+x	each block >>
+	x	text filling
+	x	w = totalSize /3 (incl margin)
+	x	define h ;
+	x	load Logo
+	x	create Over Effect + selected graphics
+	x	display timeout load visual + background + tween
+
+
+Works inside
+
+
+Works detail

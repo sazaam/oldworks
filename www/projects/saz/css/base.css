@@ -1,0 +1,80 @@
+body, html{background:#000;overflow:hidden;height:100%}
+body{font-family:"DejaVu Sans","Century Gothic", Arial, sans-serif;}
+
+
+a{outline:none;text-decoration:none;}
+
+
+
+
+
+body{color:#FFF}
+
+
+
+
+/* NEW BASE */
+
+
+/*
+
+
+*/
+
+body, html{background:#FFF;height:100%}
+
+
+body{font-family:"DejaVu Sans","Century Gothic", Arial, sans-serif;}
+
+
+a{outline:none;text-decoration:none;}
+body{color:#000}
+
+
+/***** 
+* form elements
+*****/
+input.text, select, textarea, span.text {border:1px solid #ccc}
+.fline .inlineFields select {//font-size:95.59%;}
+span.text input.text, span.text input, span.text textarea {margin:0; padding:0; border:0;}
+.fline, .flineL {width:100%; _width:auto; _overflow:visible; zoom:1; }
+
+.fline label {float:left; font-weight:bold; margin-top:2px; /*margin-right:3px;*/ _margin-right:0}
+.flineL input {float:left; font-weight:normal; margin-top:2px; margin-right:3px; _margin-right:0}
+.fline span, .fline .group {display:block; overflow:hidden; _overflow:visible; zoom:1;}
+.fline span.text input, .fline span.text input.text,  .fline span.text textarea, .fline .group span.text input, .fline .group select, .fline .group textarea,  .fline span select, .fline span input.file {width:100%;}
+.multifields label {width:auto !important}
+.multilines label {float:none !important; display:block; width:auto !important}
+.groupCheckLeft .check {float:left; margin-top:2px; //margin-top:-3px; margin-right:3px; _margin-right:0;}
+.groupCheckLeft label {float:none; overflow:hidden; _overflow:visible; zoom:1; display:block; width:auto !important; margin-right:0 !important}
+.inlineFields label, .inlineFields input, .inlineFields select, .inlineFields textarea {float:none; width:auto !important; display:inline; vertical-align:middle}
+.inlineFields label {margin-right:5px; margin-left:3px;}
+.label10 label {width:10% } .label20 label {width:20%} .label30 label {width:30%} .label33 label {width:33%} .label40 label {width:40%} .label50 label {width:50%} 
+.label60 label {width:60%} .label70 label {width:70%} .label80 label {width:80%} .label90 label {width:90%}
+.input10 {width:10% !important} .input20 {width:20% !important} .input30 {width:30% !important} .input40 {width:40% !important} .input50 {width:50% !important} 
+.input60 {width:60% !important} .input70 {width:70% !important} .input80 {width:80% !important} .input90 {width:90% !important}
+.input10, .input20, .input30, .input40, .input50, .input60, .input70, .input80, .input90{ float:none!important;}
+
+.errormsg {color:#DA0000; display:block; margin-top:-5px; margin-bottom:5px;}
+.formTipLine span{float:left !important;}
+.formTip {float:left; margin-top:2px; margin-left: 3px}
+.formTip20 {width:29% !important} .formTip30 {width:28% !important}
+textarea.noScroll {overflow:hidden;}
+
+.dispNone{display:none}
+.dispBlock{display:block}
+.floatL{float:left}
+.floatR{float:right}
+.floatN{float:none}
+.floatLL{float:left !important}
+.floatRR{float:right !important}
+.floatNN{float:none !important}
+
+.inlineblock{
+    display:-moz-inline-box; /* FF2 and K-Meleon */    
+    display:inline-block; /* DO NOT ALTER RULE */
+    *display:inline;zoom:1;
+    word-spacing:0; /* DO NOT ALTER RULE */
+}
+
+

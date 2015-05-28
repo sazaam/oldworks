@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<__sections__>
+	<section id="HOME" label="Home" class="pro.steps::HomeStep" content="contents/home.xml" />
+	<section id="WORKS" label="Works" class="pro.steps::CustomStep" sections="sections/works.xml" />
+	<section id="ABOUT" label="About" class="pro.steps::CustomStep" sections="sections/about.xml" />
+	<section id="CONTACT" label="Contact" class="pro.steps::CustomStep" sections="sections/contact.xml" />
+</__sections__>

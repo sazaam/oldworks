@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon version="0.2">
+	<title xml:lang="ko">카메론 플러그인 애드온</title>
+	<description xml:lang="ko">
+		카메론 플러그인 애드온입니다. 화면 좌우측에 언어선택, 소셜아이콘을 표시합니다.
+	</description>
+	<version>1.0.1</version>
+	<date>2014-02-14</date>
+	<author email_address="mail@cameron.co.kr" link="http://cameron.co.kr/">
+		<name xml:lang="ko">CAMERON</name>
+	</author>
+	<extra_vars>
+		<group>
+			<title>위치설정</title>
+			<var name="positionx" type="select">
+				<title xml:lang="ko">좌우위치</title>
+				<options value="left">
+					<title xml:lang="ko">Left</title>
+				</options>
+				<options value="right">
+					<title xml:lang="ko">Right</title>
+				</options>
+			</var>
+			<var name="positiony" type="text">
+				<title xml:lang="ko">상단위치</title>
+				<description xml:lang="ko">예) 200 ※ 숫자만큼 상단에서 띄웁니다. 입력하지 않으면 화면비율에 맞춰 적절히 위치됩니다.</description>
+			</var>
+		</group>
+		<group>
+			<title>추가링크</title>
+			<var name="fb" type="text">
+				<title xml:lang="ko">페이스북 주소</title>
+				<description xml:lang="ko">예) http://www.facebook.com/xe.cameron</description>
+			</var>
+			<var name="tw" type="text">
+				<title xml:lang="ko">트위터 주소</title>
+				<description xml:lang="ko">예) http://twitter.com/xecameron</description>
+			</var>
+			<var name="rss" type="text">
+				<title xml:lang="ko">RSS 주소</title>
+				<description xml:lang="ko">예) http://홈페이지주소/rss</description>
+			</var>
+		</group>
+		<group>
+			<title>사용자링크</title>
+			<var name="utitle" type="text">
+				<title xml:lang="ko">사용자링크 이름</title>
+				<description xml:lang="ko">예) 카메론 공식홈페이지</description>
+			</var>
+			<var name="uurl" type="text">
+				<title xml:lang="ko">사용자링크 주소</title>
+				<description xml:lang="ko">예) http://사이트주소</description>
+			</var>
+			<var name="uicon" type="text">
+				<title xml:lang="ko">사용자링크 아이콘이미지 주소</title>
+				<description xml:lang="ko">예) http://사이트주소/icon.png</description>
+			</var>
+			<var name="ubgcolor" type="text">
+				<title xml:lang="ko">사용자링크 박스색</title>
+				<description xml:lang="ko">예) #000000</description>
+			</var>
+		</group>
+	</extra_vars>
+</addon>

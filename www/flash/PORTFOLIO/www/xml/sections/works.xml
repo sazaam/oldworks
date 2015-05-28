@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<__sections__>
+	<section id="STUDIES"  label="Studies" class="pro.exec.steps::WorksInsideStep" sections="sections/works/studies.xml" back="screen_studies.png"/>
+	<section id="IMAGE" label="Image" colorExtraOver="0x288cd9" class="pro.exec.steps::WorksInsideStep" sections="sections/works/image.xml"  back="screen_image.png" />
+	<section id="DRAWINGS" label="Drawings" color="0x0"  colorExtraOver="0xFF0000" class="pro.exec.steps::WorksInsideStep" sections="sections/works/drawings.xml" back="screen_drawings.png" />
+	<section id="CODE" label="Code" colorExtraOver="0xb3c31a" class="pro.exec.steps::WorksInsideStep" sections="sections/works/code.xml" back="screen_code.png" />
+</__sections__>

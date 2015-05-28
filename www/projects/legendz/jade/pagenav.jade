@@ -1,0 +1,12 @@
+- projects = user.projects
+div.abs.slidebottom.bottom0.fullH.flowvisible(style="left:42%;right:42%;top:0%")
+	- for(var i = 0 ; i < projects.length ; i++){
+		- project = user.projects[i]
+		div.abs.thumbscont.fullW.fullH(style="left:0%;top:#{(i * 100) + '%'}")
+			div.thumbs.fullH.fullW.context(style="width:20000%")
+				- for(var j = 0 ; j < project.pages.length ; j++){
+					- page = project.pages[j]
+					a.abs.dispBlock.floatL.context(style="top:0;;bottom:0;width:100%;left:#{(j * 100) + '%'};background:#{project.styles.background}")
+						img.dispBlock.fullH.marginAuto(alt="", src="#{page}")
+				- }
+	- }

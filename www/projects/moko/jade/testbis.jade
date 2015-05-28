@@ -1,0 +1,38 @@
+#actions.block.context.light.#{user.id == 'sazaam' ? 'plouf' : 'plif'}(rel="stylesheet", name="cancelled")
+	- friends = user.friends
+	- coco = "shplouff", peyote = { foo: "bar" }
+	- neu = "neurones"
+	- ggg = "<script></script>"
+	- while(friends--) {
+		- switch(user.id) {
+			- case 'sazaam' : {
+				- if(user.id == 'ornorm') {
+					h4.sizeLg You have #{friends} friends
+				- } else {
+					h5.sizeLg(style='color:orange') You have #{friends + ' ' + peyote.foo} friends
+				- }
+				h2 Fine wiT ME
+					h3 !{ggg + " hooo, escaped text too !!! ^&#@?!"}
+				- break ;
+			- }
+			- default : {
+				h5.sizeXXLg You have #{friends} friends
+			- }
+		- }
+		h6.red You have #{friends + ' ' + neu}
+			| <h4>#{coco} is back and for real with #{friends} friends</h4>
+	- }
+	- for(var s in {'coucou':1, 'sazaam':2, 'toto':3}) {
+		h5.action.network(rel="helllooo") #{ s + ' Alors sa glisse' }
+	- }
+	include ./test2
+	.ornorm: a.red SAZAAMUS
+	- if(vanilla = user.id == 'sazaam') {
+		.red= vanilla
+		.light coucou
+		.light coucou
+	- } else if(user.id == 'ornorm') {
+		.gray YESSSS
+	- } else {
+		.gray NOOOO
+	- }

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration title="Aguessy3D" version="0.1" defaultAddress="HOME">
+	<links>
+		<link id="facebook" url="http://www.facebook.com/pages/Kossi-Aguessy/22006539427" target="_blank" />
+	</links>
+	<stage align="TL" scaleMode="noScale" />
+	<scheme>
+		<flash.display.Sprite id="all" name="all">
+			<flash.display.Sprite id="background" name="background" />
+			<flash.display.Sprite id="logo" name="logo" x="40" y="20" buttonMode="true" />
+			<flash.display.Sprite id="video" name="logo" x="360" y="127" />
+			<flash.display.Sprite id="nav3D" name="nav3D" x="0" y="0" />
+		</flash.display.Sprite>
+	</scheme>
+	<debug>
+		<!-- debug textfield  visible="false"-->
+		<flash.text.TextField gridFitType="subpixel" visible="false" antiAliasType="advanced" blendMode="invert" selectable="true" x="20" y="350" autoSize="left" multiline="true" kerning="true">
+			<htmlText><![CDATA[<b>Kossi Aguessy</b><br/>Debug zone]]></htmlText>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+	</debug>
+	<textfields>
+		<!-- templatized testfields -->
+		<flash.text.TextField gridFitType="subpixel" sharpness="200" thickness="400" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="2" autoSize="left" multiline="true" kerning="true">
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="8" bold="false"  color="0x000000" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+		<flash.text.TextField gridFitType="subpixel" sharpness="200" thickness="400" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="2" autoSize="left" multiline="true" kerning="true">
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="8" bold="false"  color="0x000000" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+	</textfields>
+	<sprites>
+		<flash.display.Sprite id="INFOS" name="portfolio_infos">
+			<flash.text.TextField id="editor" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="2" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="date" gridFitType="subpixel" sharpness="200" thickness="400" text="2008" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="75" autoSize="left" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="cat" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="32" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="materials" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="44" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+		<flash.display.Sprite id="NEWS" name="news_infos">
+			<flash.text.TextField id="event" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="2" wordWrap="true" width="250" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="link" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="22" wordWrap="true" width="250" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="resume" gridFitType="subpixel" sharpness="200" thickness="400" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="44" wordWrap="true" width="250" multiline="true" kerning="true">
+				<htmlText>
+					<![CDATA[
+						<p>Kossi Aguessy passes from one medium to another with ease. His aesthetic is influenced by several different cultures, human values as well as by strong visual references.
+						Renault, Yves Saint-Laurent, Cartier, Swarovski, ST Dupont, Branex and art galleries have trusted and searched for his artistic richness to their benefit.
+						The designer has already been head of architectural projects in France, Turkey, and South Africa. He can already count on numerous collaborations, using furniture machinery at a rate of production clearly showing this industrial artist has no limits.
+						Passionate and driven by strong determination</p>
+					]]>
+				</htmlText>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Arial" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+	</sprites>
+</configuration>

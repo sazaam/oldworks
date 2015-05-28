@@ -1,0 +1,23 @@
+<?php
+$lang->syndication='シンディケーション';
+$lang->about_syndication='シンディケーションとは、検索サービス業者とsyndicationという標準規約を通じて検索の品質を向上させる機能です。<br/>最小限の要求だけで、検索サービス業者とコンテンツを効果的に同期させます。';
+$lang->syndication_service='Syndication Service';
+$lang->about_syndication_service='シンディケーション標準規約に沿ってシンディケーションサービスを提供します。<br/>[適用]ボタンをクリックすると、選択、または解除されているサービスにPingを通じて結果を通報します。';
+$lang->my_syndication_url='サイトアドレス';
+$lang->about_my_syndication_url='シンディケーション情報を提供するときに使用されるサイトのアドレスを入力してください。このアドレスは、代表アドレスを利用し、できれば変更しないでください。';
+$lang->except_module='除くモジュール';
+$lang->about_except_module='シンディケーション対象から除き、検索サービス業者と同期化させないモジュールを選択してください。';
+$lang->msg_site_url_is_null='サイトアドレスを入力してください。';
+$lang->success_applied='適用しました。';
+$lang->msg_ping_test_error='Ping テストエラーです。ドメイン、およびサーバー設定を確認してください。';
+$lang->msg_success_ping_test='正常動作を確認しました。';
+$lang->cmd_check_syndication_echo='Syndication記事の出力動作確認';
+$lang->cmd_check_syndication_status='接続状態確認';
+$lang->site='サイト';
+$lang->syndication_synic_start_date='サーバー登録日';
+$lang->syndication_synic_last_date='最後のアップデート';
+$lang->syndication_visit_ok_count='Ping連続接続成功回数';
+$lang->syndication_visit_fail_count='失敗回数';
+$lang->syndication_status_result='状態情報';
+$lang->syndication_sync_article='同期化された書き込み';
+$lang->syndication_status='同期化状態';

@@ -1,0 +1,1 @@
+var STR  = window.STR = 'sazaam' ;

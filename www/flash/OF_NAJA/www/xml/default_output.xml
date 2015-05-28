@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<django-objects version="1.0">
+	<object pk="1" model="studies.study">
+		<field type="CharField" name="OTN_ID">AG0001s</field>
+		<field to="clients.client" name="contractor" rel="ManyToOneRel">1</field>
+		<field type="CharField" name="label">V1 study</field>
+		<field type="DateTimeField" name="launch_date">2010-05-24 07:23:39</field>
+		<field type="DateTimeField" name="publication_date">2010-05-24 07:23:40</field>
+	</object>
+</django-objects>

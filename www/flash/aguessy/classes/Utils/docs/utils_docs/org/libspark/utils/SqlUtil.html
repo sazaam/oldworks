@@ -1,0 +1,971 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="SqlUtil,org.libspark.utils.SqlUtil,buildInsert,buildSelectAll,buildTableDefs,createIndex,createTable,deleteRow,dropIndex,dropTable,executeSQLStatement,existsIndex,existsTable,getColumnDef,getData,getIndexList,getRowCount,getTableList,insertRow,trancateTable,updateRow" name="keywords">
+<title>org.libspark.utils.SqlUtil</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'SqlUtil - SPARK Project Utils Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?org/libspark/utils/SqlUtil.html&amp;org/libspark/utils/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;SqlUtil</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class SqlUtil"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.libspark.utils</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class SqlUtil</td>
+</tr>
+</table>
+<p></p>
+  <span style="color:#FF0000; font-weight:bold;">(Flex Only)</span>
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#SqlUtil()">SqlUtil</a>()</div>
+<div class="summaryTableDescription">
+        Constructor
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#buildInsert()">buildInsert</a>(table:String, rows:ArrayCollection):String</div>
+<div class="summaryTableDescription">[static]
+        Build Insert SQL Statement
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#buildSelectAll()">buildSelectAll</a>(db:SQLConnection, table:String):String</div>
+<div class="summaryTableDescription">[static]
+        Build Select All SQL Statement
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#buildTableDefs()">buildTableDefs</a>(db:SQLConnection, table:String):Array</div>
+<div class="summaryTableDescription">[static]
+        Build Create Table SQL Statement
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createIndex()">createIndex</a>(db:SQLConnection, table:String, indexDefs:ArrayCollection):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Create index of the specified table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#createTable()">createTable</a>(db:SQLConnection, table:String, tableDefs:ArrayCollection):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Create table to the specified database
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#deleteRow()">deleteRow</a>(db:SQLConnection, table:String, keyColumn:String, keyValue:int):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Delete row from the specified table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dropIndex()">dropIndex</a>(db:SQLConnection, index:String):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Drop the specified index from the DataBase
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dropTable()">dropTable</a>(db:SQLConnection, table:String):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Drop the specified table from the DataBase
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#executeSQLStatement()">executeSQLStatement</a>(db:SQLConnection, sql:String):Object</div>
+<div class="summaryTableDescription">[static]
+        private method
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#existsIndex()">existsIndex</a>(db:SQLConnection, table:String, index:String):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Check if the index exists in the specified table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#existsTable()">existsTable</a>(db:SQLConnection, table:String):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Check if the table exists in the database
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getColumnDef()">getColumnDef</a>(db:SQLConnection, table:String):ArrayCollection</div>
+<div class="summaryTableDescription">[static]
+        Get the columns definition of the specified table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getData()">getData</a>(db:SQLConnection, sql:String):Array</div>
+<div class="summaryTableDescription">[static]
+        Get the Data & Column Defs of the table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getIndexList()">getIndexList</a>(db:SQLConnection, table:String):ArrayCollection</div>
+<div class="summaryTableDescription">[static]
+        Get the index list of the specified table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRowCount()">getRowCount</a>(db:SQLConnection, table:String):uint</div>
+<div class="summaryTableDescription">[static]
+        Get the row count of the table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getTableList()">getTableList</a>(db:SQLConnection):Array</div>
+<div class="summaryTableDescription">[static]
+        Get the table list of the specified DataBase
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#insertRow()">insertRow</a>(db:SQLConnection, table:String, rows:ArrayCollection):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Insert row to the specified table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#trancateTable()">trancateTable</a>(db:SQLConnection, table:String, keyColumn:String):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Remove the whole data of the specified table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#updateRow()">updateRow</a>(db:SQLConnection, table:String, keyColumn:String, keyValue:int, updateColumn:String, updateValue:String, updateType:String):Boolean</div>
+<div class="summaryTableDescription">[static]
+        Update row of the specified table
+        </div>
+</td><td class="summaryTableOwnerCol">SqlUtil</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="SqlUtil()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SqlUtil</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function SqlUtil()</code><p>
+        Constructor
+        </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="buildInsert()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">buildInsert</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function buildInsert(table:String, rows:ArrayCollection):String</code><p>
+        Build Insert SQL Statement
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash; Table to insert data
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rows</span>:ArrayCollection</code> &mdash; Data to insert
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;  Insert SQL Statement
+        </td>
+</tr>
+</table>
+</div>
+<a name="buildSelectAll()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">buildSelectAll</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function buildSelectAll(db:SQLConnection, table:String):String</code><p>
+        Build Select All SQL Statement
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash; The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash; Table to build the SQL statement
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;  Select All SQL Statement
+        </td>
+</tr>
+</table>
+</div>
+<a name="buildTableDefs()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">buildTableDefs</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function buildTableDefs(db:SQLConnection, table:String):Array</code><p>
+        Build Create Table SQL Statement
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash; The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash; Table to build the SQL statement
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash;  Create Table SQL Statement
+        </td>
+</tr>
+</table>
+</div>
+<a name="createIndex()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function createIndex(db:SQLConnection, table:String, indexDefs:ArrayCollection):Boolean</code><p>
+        Create index of the specified table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The table to create index
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">indexDefs</span>:ArrayCollection</code> &mdash; ArrayCollection of the index definition
+           and it contains the following params.
+                                       - name   : Index name
+            - columns: The list of the column
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If it succeed to create the index
+        </td>
+</tr>
+</table>
+</div>
+<a name="createTable()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">createTable</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function createTable(db:SQLConnection, table:String, tableDefs:ArrayCollection):Boolean</code><p>
+        Create table to the specified database
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The table name
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">tableDefs</span>:ArrayCollection</code> &mdash; ArrayCollection of the table definition
+           and it contains the following params.
+            - name         : Column name
+            - type         : The data type of the column
+            - primaryKey   : If the column is primary key
+            - autoIncrement: If it will increment the value automatically
+            - allowNull    : If the column allows null value
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If it succeed to create the table
+        </td>
+</tr>
+</table>
+</div>
+<a name="deleteRow()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">deleteRow</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function deleteRow(db:SQLConnection, table:String, keyColumn:String, keyValue:int):Boolean</code><p>
+        Delete row from the specified table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The table to delete the row
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keyColumn</span>:String</code> &mdash; The column name that specify the row
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keyValue</span>:int</code> &mdash; The column value that specify the row
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If it succeed to delete the row
+        </td>
+</tr>
+</table>
+</div>
+<a name="dropIndex()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dropIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function dropIndex(db:SQLConnection, index:String):Boolean</code><p>
+        Drop the specified index from the DataBase
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:String</code> &mdash;  The Index to drop from DataBase
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If it succed to drop the index 
+        </td>
+</tr>
+</table>
+</div>
+<a name="dropTable()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dropTable</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function dropTable(db:SQLConnection, table:String):Boolean</code><p>
+        Drop the specified table from the DataBase
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The Table to drop from DataBase
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If it succed to drop the table 
+        </td>
+</tr>
+</table>
+</div>
+<a name="executeSQLStatement()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">executeSQLStatement</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function executeSQLStatement(db:SQLConnection, sql:String):Object</code><p>
+        private method
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sql</span>:String</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code></td>
+</tr>
+</table>
+</div>
+<a name="existsIndex()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">existsIndex</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function existsIndex(db:SQLConnection, table:String, index:String):Boolean</code><p>
+        Check if the index exists in the specified table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The table if contains the index
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">index</span>:String</code> &mdash;  The index name to check
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash;       true/false If the index exists in the table
+        </td>
+</tr>
+</table>
+</div>
+<a name="existsTable()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">existsTable</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function existsTable(db:SQLConnection, table:String):Boolean</code><p>
+        Check if the table exists in the database
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The table name to check
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If the table exists in the table
+        </td>
+</tr>
+</table>
+</div>
+<a name="getColumnDef()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getColumnDef</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getColumnDef(db:SQLConnection, table:String):ArrayCollection</code><p>
+        Get the columns definition of the specified table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash; The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash; The table name which you want the column defs
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>ArrayCollection</code> &mdash;  The ArrayCollection of the columns definition
+           and it contains the following params
+            - name         : Column name
+            - type         : The Data type of the column
+            - primaryKey   : If this column is primary key
+            - autoIncrement: If this column increment automatically
+            - allowNull    : If this column allow null value
+        </td>
+</tr>
+</table>
+</div>
+<a name="getData()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getData</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getData(db:SQLConnection, sql:String):Array</code><p>
+        Get the Data & Column Defs of the table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash; The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">sql</span>:String</code> &mdash; The SQL string
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash; result The Array which contains column defs and data
+          The following are the description
+           - result[0]: The Array of the columns name
+           - result[1]: The SQLResult of the sql which executed
+        </td>
+</tr>
+</table>
+</div>
+<a name="getIndexList()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getIndexList</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getIndexList(db:SQLConnection, table:String):ArrayCollection</code><p>
+        Get the index list of the specified table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash; The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash; The table to get the list of index
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>ArrayCollection</code> &mdash;  The ArrayCollection of the index
+           and it contains the following params
+            - name   : Index name
+            - columns: The column list
+        </td>
+</tr>
+</table>
+</div>
+<a name="getRowCount()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRowCount</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getRowCount(db:SQLConnection, table:String):uint</code><p>
+        Get the row count of the table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash; The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash; The table name which you want to get the row count
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code> &mdash;  The row count of the table
+        </td>
+</tr>
+</table>
+</div>
+<a name="getTableList()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getTableList</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getTableList(db:SQLConnection):Array</code><p>
+        Get the table list of the specified DataBase
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash; The SQLConnection of the specified DataBase
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash;  The Array of the table name
+        </td>
+</tr>
+</table>
+</div>
+<a name="insertRow()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">insertRow</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function insertRow(db:SQLConnection, table:String, rows:ArrayCollection):Boolean</code><p>
+        Insert row to the specified table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The table to insert the data
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rows</span>:ArrayCollection</code> &mdash;  The ArrayCollection of the data to insert
+           and it contains the following params
+            - column: Column name 
+            - value : Column value
+            - type  : Data type of the column
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If it succeed to insert the row data
+        </td>
+</tr>
+</table>
+</div>
+<a name="trancateTable()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">trancateTable</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function trancateTable(db:SQLConnection, table:String, keyColumn:String):Boolean</code><p>
+        Remove the whole data of the specified table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The table to remove the whole data
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keyColumn</span>:String</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If it succed to trancate the table 
+        </td>
+</tr>
+</table>
+</div>
+<a name="updateRow()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateRow</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function updateRow(db:SQLConnection, table:String, keyColumn:String, keyValue:int, updateColumn:String, updateValue:String, updateType:String):Boolean</code><p>
+        Update row of the specified table
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">db</span>:SQLConnection</code> &mdash;  The SQLConnection of the specified DataBase
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">table</span>:String</code> &mdash;  The table to update the data
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keyColumn</span>:String</code> &mdash; The column name to specify the row
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">keyValue</span>:int</code> &mdash; The column value to specify the row
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">updateColumn</span>:String</code> &mdash; The column name to update
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">updateValue</span>:String</code> &mdash; The column value to update
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">updateType</span>:String</code> &mdash; The data type of the column to update
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code> &mdash; true/false If it succeed to update the row data
+        </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

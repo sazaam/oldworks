@@ -1,0 +1,8 @@
+<flex-config>
+ <default-frame-rate>30</default-frame-rate>
+ <default-size>
+  <width>300</width>
+  <height>180</height>
+ </default-size>
+ <default-background-color>0x000000</default-background-color>
+</flex-config>

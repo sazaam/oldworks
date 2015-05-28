@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<section id="1" label="portfolio 1" sections="portfolio/_1.xml" />
+	<section id="2" label="portfolio 2" sections="portfolio/_2.xml" />
+	<section id="3" label="portfolio 3" sections="portfolio/_3.xml" />
+	<section id="4" label="portfolio 4" sections="portfolio/_4.xml" />
+	<section id="5" label="portfolio 5" sections="portfolio/_5.xml" />
+</data>

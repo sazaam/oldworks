@@ -1,0 +1,327 @@
+
+
+body, html {
+    height: 100%;
+}
+body {
+    color: #F3F3F3;
+    text-align: center;
+}
+a {
+    color: #CCC;
+    text-decoration:none;
+    outline:none !important;
+}
+
+
+
+a:hover, .active a{
+    color: #333;
+}
+.inactive {
+    color: #666666 !important;
+}
+.inactive:hover {
+    color: black !important;
+}
+.pentone , .pentone a{
+    color: #A40133;
+}
+.pentone2 , .pentone2 a{
+    color: #912738;
+}
+
+.pentone3 , .pentone3 a{
+    color: #ed014a;
+}
+
+.error {
+    color: #A40133;
+}
+.darkest {
+    color: #000000;
+}
+.darker {
+    color: #121212;
+}
+.dark {
+    color: #434343;
+}
+.shady {
+    color: #666666;
+}
+.faded {
+    color: #363636;
+}
+.foggy {
+    color: #BBBBBB;
+}
+.light {
+    color: #CDCDCD;
+}
+.lighter {
+    color: #E4E4D8;
+}
+.lightest {
+    color: #FFFFFF;
+}
+.courrier {
+    font-family: "Courier New","Times New Roman",Times,serif;
+}
+.typo {
+    /* font-family: "Kozuka Gothic Pro EL", "DFPKaiSho-Md", "Georgia" ; */
+    font-family: "Kozuka Gothic Pro EL" ;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.italic {
+    font-style: italic;
+}
+.ls1 {
+    letter-spacing: .5em;
+}
+.ls2 {
+    letter-spacing: .3em;
+}
+.ls4 {
+    letter-spacing: 1.5em;
+}
+.ls10 {
+    letter-spacing: 2.5em;
+}
+.sizeXSm {
+    font-size: 8px;
+}
+.sizeSm {
+    font-size: 10px;
+}
+.sizeR {
+    font-size: 14px;
+}
+.sizeM {
+    font-size: 18px;
+}
+.sizeLg {
+    font-size: 24px;
+}
+.sizeXLg {
+    font-size: 36px;
+}
+.sizeXXLg {
+    font-size: 44px;
+}
+.sizeXXXLg {
+    font-size: 54px;
+}
+html, body {
+    -webkit-text-size-adjust: 100%;
+}
+
+.clickable{
+	cursor:url('../img/pointer.png'), -moz-zoom-in;
+}
+
+.movable, .movable *{
+	cursor:url('../img/move.png'), -moz-zoom-in;
+}
+.movableleft, .movableleft *{
+	cursor:url('../img/moveleft.png'), -moz-zoom-in;
+}
+
+.movableright, .movableright *{
+	cursor:url('../img/moveright.png'), -moz-zoom-in;
+}
+.movableup, .movableup *{
+	cursor:url('../img/moveup.png'), -moz-zoom-in;
+}
+
+.movabledown, .movabledown *{
+	cursor:url('../img/movedown.png'), -moz-zoom-in;
+}
+.unclickable{
+	cursor:default;
+}
+
+
+/* GENERICS */
+
+/* backgrounds */
+.blackBG{background-color:#000;}
+.whiteBG{background-color:#FFF;}
+.lightgrayBG, .lightgrayBG{background-color:#CCC;}
+.grayBG, .greyBG{background-color:#999;}
+.darkgrayBG, .darkgreyBG{background-color:#666;}
+.anthraciteBG{background-color:#333;}
+.antBG{background-color:#222;}
+.darkBG, .darkBG{background-color:#121212;}
+.anthraxBG{background-color:#F7F7F7;}
+
+/* ELEMENTS */
+
+body, html{
+	background:#111;
+}
+
+.all{
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background:#000;
+}
+
+.project{
+	background-color:#222;
+}
+
+
+
+.universe{
+	
+}
+
+.universe .arr a{
+	background:#111;
+}
+
+
+.universe, .universe a{
+	font-family:'U.S. 101' ;
+}
+
+.saint, .saint a{
+	font-family:'SaintsSquareRegular' ;
+}
+
+.zone{
+	top:0;
+	bottom:0;
+}
+
+.zone.left{
+	left:0%;
+	right:50%;
+	
+}
+
+.zone.right{
+	left:50%;
+	right:0%;
+	
+}
+
+.zone .page{
+	height:100%;
+	right:0;
+	left:0;
+	overflow:hidden;
+}
+.zone.left .pages{
+	top:0%;
+}
+.zone.right .pages{
+	bottom:0%;
+}
+.zone .page{
+	/* background:#D4D4D4; */
+}
+
+
+.corner{
+	width:10px;height:10px;
+}
+
+.corner.tl{
+	top:40%;
+	left:40%;
+}
+
+.corner.tr{
+	top:40%;
+	right:40%;
+}
+
+.corner.bl{
+	bottom:40%;
+	left:40%;
+}
+
+.corner.br{
+	bottom:40%;
+	right:40%;
+}
+
+.corner a{
+	width:100%;height:100%;
+}
+
+
+
+
+.arr{
+	/* background:rgba(12,12,12,.78); */
+}
+.arr a{
+	height:50px;
+	line-height:50px;
+}
+
+.imghold{
+	top:0;
+	bottom:0;
+	width:200%;
+}
+.left .imghold{
+	left:0;
+}
+.right .imghold{
+	right:0;
+}
+
+.imganchor{
+	left:-50%;
+	right:-50%;
+	
+}
+
+.imghold img{
+	display:block;
+	margin:0 auto;
+	width:auto !important;
+}
+
+.centerblock{overflow:hidden}
+
+.title{
+	line-height:.8em;
+}
+
+
+.marginAuto{
+	margin:0 auto;
+}
+
+/* DISPLAY TABLE VALIGN */
+
+.dispTable{
+	display:table;
+}
+.dispCell{
+	display:table-cell;
+	position:relative;
+}
+.MSIE .dispTable{
+	//position:relative;
+	//height:auto !important;
+	//top:50%;
+	zoom:1;
+}
+
+
+.MSIE .dispCell{
+	//display:table-cell;
+	//position:relative;
+	//top:-50%;
+	zoom:1;
+}

@@ -1,0 +1,430 @@
+body, html {
+    background: none repeat scroll 0 0 #FFFFFF;
+    height: 100%;
+}
+body {
+    color: #000000;
+    text-align: center;
+}
+a {
+    color: #666;
+    text-decoration:none;
+    outline:none !important;
+}
+a:hover, .active a{
+    color: #111;
+}
+.inactive {
+    color: #666666 !important;
+}
+.inactive:hover {
+    color: black !important;
+}
+.pentone , .pentone a{
+    color: #A40133;
+}
+.pentone2 , .pentone2 a{
+    color: #912738;
+}
+
+.pentone3 , .pentone3 a{
+    color: #112233;
+}
+
+a.pentone:hover, a.pentone2:hover, .pentone2 a:hover, .pentone2 a:hover{
+    color: #dc0a3c ;
+}
+.error {
+    color: #A40133;
+}
+.darkest {
+    color: #000000;
+}
+.darker {
+    color: #121212;
+}
+.dark {
+    color: #333333;
+}
+
+
+
+.shady {
+    color: #666666;
+}
+.faded {
+    color: #555;
+}
+.foggy {
+    color: #BBBBBB;
+}
+.light {
+    color: #CDCDCD;
+}
+.lighter {
+    color: #E4E4D8;
+}
+.lightest {
+    color: #FFFFFF;
+}
+.courrier {
+    font-family: "Courier New","Times New Roman",Times,serif;
+}
+.typo {
+    font-family: "U.S. 101", "Impact", Helvetica ,Tahoma,sans-serif;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.italic {
+    font-style: italic;
+}
+.ls1 {
+    letter-spacing: .5em;
+}
+.ls2 {
+    letter-spacing: .3em;
+}
+.ls4 {
+    letter-spacing: 1.5em;
+}
+.ls10 {
+    letter-spacing: 2.5em;
+}
+.sizeXSm {
+    font-size: 8px;
+}
+.sizeSm {
+    font-size: 10px;
+}
+.sizeR {
+    font-size: 14px;
+}
+.sizeM {
+    font-size: 18px;
+}
+.sizeLg {
+    font-size: 34px;
+}
+.sizeXLg {
+    font-size: 44px;
+}
+.sizeXXLg {
+    font-size: 54px;
+}
+.sizeXXXLg {
+    font-size: 64px;
+}
+html, body {
+    overflow: hidden;
+    width:100%;
+    height:100%;
+    -webkit-text-size-adjust: 100%;
+}
+.fullBg{
+	-webkit-background-size:cover !important;
+	-moz-background-size:cover !important;
+	-o-background-size:cover !important;
+	background-size:cover !important;
+}
+
+html{
+	font-size:70%;
+}
+body{
+	background:#111;
+}
+
+.wrapped{
+	margin:0 auto;
+	/*width:950px;*/
+	width:38em;
+}
+
+#back{
+	position:absolute;
+	bottom:0px;
+    overflow:hidden;
+    top:3em;
+    right:0;
+    bottom:3em;
+    left:0;
+    /*background:url('./skin/killerinstinct.png') no-repeat 0 0;*/
+    z-index:1;
+}
+
+
+
+
+.mediabox .viewport{
+	background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-size:cover;
+}
+
+.blogged .mediabox{
+	position:relative;
+	top:25%;
+	height:50%;
+}
+
+#frame{
+	position:relative;
+	z-index:3;
+   	height:100%;
+    width:100%;
+    overflow:hidden;
+}
+
+#frameInside{
+	/*background:#000;*/
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top:3em;
+    bottom:3em;
+}
+
+
+
+
+*:focus{
+	color:#FFF !important;
+	outline:none;
+}
+.shadow{
+	text-shadow:0 1px 0 #777777;
+}
+
+
+.topnav{
+	position:absolute;
+	background:#BBBBBB;
+	padding:1em;
+	top:0;
+	left:0;
+	right:0;
+	height:1em;
+	line-height:1em;
+	min-height:1em;
+	z-index: 3000;
+}
+.topnav ol{	
+	
+}
+.bottomnav{	
+	position:absolute;
+	background:#BBBBBB;
+	padding:1em;
+	bottom:0;
+	left:0;
+	right:0;
+	height:1em;
+	line-height:1em;
+	min-height:1em;
+	z-index: 3000;
+}
+
+
+.arrow{
+	/*font-size:49px;*/
+}
+
+.topnav .navitem{
+	line-height: 1em;
+}
+
+
+.blocImg{
+	width:100%;
+	overflow:hidden;
+	text-align:center;
+	height:100%;
+	background:#151515;
+	/*
+	background:url("../img/path3455.png") no-repeat 50% 50%;
+	*/
+}
+
+
+.blocImg {
+	display:none;
+}
+.blocTxt{
+	height:200px;
+	background:#333;
+}
+
+
+.navdiv{
+    height: 100px;
+    left: 50%;
+    margin-top: -50px;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+
+.navstep{
+	width:6000px;
+	position:relative;
+	left:-50%;
+	line-height:1em ;
+	height: 100%;
+	z-index: 70;
+}
+
+.navstep li{
+	
+	line-height:1em ;
+	height:1em ;
+}
+
+.navstepitem{
+	color:#580707;
+	margin-top: -0.5em;
+    position: relative;
+    top: 50%;
+    
+    max-width: 70%;
+    
+	cursor:default;
+}
+
+.navstep li.floaL{
+	position:relative;
+	z-index:1000;
+}
+
+.navstep a{
+	display:block;
+	line-height:1em ;
+}
+
+.topstep{
+	position:absolute;
+	top:0;
+	line-height:1em ;
+}
+
+
+.enterstep{
+	position:absolute;
+	bottom:0;
+	line-height:1em ;
+	margin-left:2px;
+}
+
+.navstepitem a{
+	position: relative;
+	max-width: 11em;
+	min-width:50px;
+	text-align:center;
+	
+}
+
+.hierarchical a{
+	width:30px;
+	height:.5em;
+	text-align:center;
+}
+
+.steparrows{
+	position:absolute;
+	left:0;
+	top: 50%;
+	z-index:1000;
+	width:0px;
+	line-height:1em ;
+}
+
+.stepnext{
+	right:-1.25em;
+}
+.stepprev{
+	left:-1.25em;
+}
+
+.steparrow{
+	margin-top: -0.5em;
+    position: absolute;
+    top: 50%;
+	line-height:1em ;
+	width:30px;
+}
+
+
+.navstep li.Rmargin{
+	margin-right:.3em !important;
+	
+}
+
+#canvas{
+	position:absolute;
+	/*width:500px;
+	height:500px;
+	left:50%;
+	top:50%;
+	margin-top:-250px;
+	margin-left:-250px;*/
+	
+	top:0;
+	left:0;
+	
+}
+
+.particle {
+	left:0px;
+	top:0px;
+}
+
+
+
+.desc{
+	right:0;
+	top:0;
+	left:0;
+	height:25%;
+	/*background:#5368aa;*/
+}
+
+.t1{
+	position:relative;
+	text-align:left;
+	padding:3em 0;
+	/*padding:0 5em;*/
+}
+.t1 h2{
+	line-height: 1em;
+}
+.t1 .indicator{
+	text-align:center;
+	display:block;
+	float:left;
+	
+	width:1.5em;
+	height:1.5em;
+	line-height: 1em;
+	
+	position:absolute;
+	top:3.5em;
+	left:-2em;
+	
+	color:#FFF;
+}
+
+
+.wikiTxt{
+	max-width:20em;
+	font-size:200%;
+}
+
+.wikiTxt p{
+	font-size:.5em;
+}
+
+.wikiTxt .year{
+	font-size:.7em;
+}
+

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<section id="press">
+	<category name="furniture">
+		<item id="sculpt">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[SCULPT]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+				<exhibition><![CDATA[Tools Gallery, Paris]]></exhibition>
+			</informations>
+			<!-- subitems -->
+			<source url="portfolio/furniture/sculpt.jpg" />
+		</item>
+		<item id="prototype">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[prototype]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+				<exhibition><![CDATA[Tools Gallery, Paris]]></exhibition>
+			</informations>
+			<!-- subitems -->
+			<source url="portfolio/furniture/2004.jpg" />
+		</item>
+	</category>
+</section>

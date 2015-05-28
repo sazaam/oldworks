@@ -1,0 +1,100 @@
+
+	ClassLite Version 1.0
+
+	@author saz aka True
+	Inspired by Mitsuhiko's Classy (http://classy.pocoo.org)
+
+
+
+How to use
+
+1. Modelizing classes :
+
+var Dummy = Class('test.core::Dummy', {
+	__classvars__:{
+		staticProp:NaN,
+		__static__:function(){
+			this.staticProp = 1024 ;
+		}
+	},
+	charisma:200,
+	charming:true,
+	__init__:function(param1, param2){
+		
+		trace(param1, param2) ; // hello, world
+		
+		trace(this, this instanceof Dummy) ;
+		// [object test.core.Dummy], true
+		trace(this.constructor, this.constructor.staticProp) ;
+		// [object test.core.Dummy], 1024
+		trace(this.charisma, this.charming) ;
+		// 200, true
+		
+		return this ;
+	},
+	doSome:function(){
+		trace('doing some...', this) ;
+	}
+}) ;
+
+var d = new Dummy('hello', 'world') ;
+d.doSome() ; // doing some, [object test.core.Dummy]
+
+
+
+There you are, having just created a Class object, with the following first instance of it, d.
+As you can see, some basic wording needs to be remembered :
+	- the '$ns' property of a class oject retrieves the full path of that class (ex:test.core.Dummy, even when entered with test.core::Dummy)
+	- similarily, '$pkg' will retrieve the package string and '$classname' the short class name
+	- '__init__' in the given anonymous object simulates a consructor initialization.
+	Best if, of course you finish this block with a good old 'return this'.
+	- '__classvars__' is also one restricted nomination for all static properties you want in the Class.
+	only for this classvars sub-object, the 'this' keyword will point to the class object, not to the instance
+	- '__static__' method in classvars will behave like a static initializing method, 
+	setting in this example, Dummy.testProp to 1024, instead of leaving it to NaN.
+In other words, except in classvars, 'this' will represent the instance, 
+and the class object still remains accessible through this.constructor or this.$class
+
+
+
+2. Extending classes
+
+Let's keep our first example as our base class, that we shall extend now,
+by adding this right after the current code.
+
+
+trace('-----------extends---------------')
+	
+var CoolDummy = Class('test.core::CoolDummy', {
+	/* __classvars__:{
+		staticProp:NaN,
+		__static__:function(){
+			this.staticProp = 4096 ;
+			trace(this.$super.staticProp) // reference to superclass > 1024
+		}
+	}, */
+	charisma:800,
+	__init__:function(param1, param2){
+		trace(this instanceof Dummy, this instanceof CoolDummy) ; // true, true
+		return this.$super(param1, param2) ;
+	},
+	doSome:function(){
+		trace('doing some cool stuff dude...', this) ;
+	}
+}, Dummy) ;
+
+var cd = new CoolDummy('hello', 'cool world') ;
+cd.doSome() ; // doing some cool stuff dude..., [object test.core.Dummy]
+
+
+
+Our superclass Dummy has now CoolDummy as a sub-class
+	- Dummy is passed as a parameter of the second class modelization CoolDummy.
+	- All superclass prototype-like vars will be copied over,
+	with some exceptions for the __classvars__ object (such as toString, __static__ and other restricted values).
+	- CoolDummy has 800 in charisma, but is also charming.
+	- In all instance-scope methods, the same function in the superclass prototype is accessible through the 'this.$super' property. 
+	- In all static-scope methods, the 'this.$super' property will represent the superclass itself.
+	* Uncomment the __classvars__ block to see the staticProp of the new CoolDummy class climb up to 4096 instead of 1024.
+
+And that's quite it ! for this base implemetation of class prototyping and inheritance.

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<section id="NEWS" label="news" url="news.xml" />
+	<section id="ABOUT" label="about" url="about.xml" />
+	<section id="CONTACT" label="contact" url="contact.xml" />
+	<section id="PORTFOLIO" label="portfolio" url="portfolio.xml" />
+	<section id="ONLINE_STORE" label="online store" url="online_store.xml" />
+</data>

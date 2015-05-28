@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<debug>
+		<!-- debug textfield visible="false" -->
+		<flash.text.TextField gridFitType="subpixel" visible="true" antiAliasType="advanced" embedFonts="false" selectable="true" x="20" y="100" autoSize="left" multiline="true" kerning="true">
+			<htmlText><![CDATA[<b>Samuae</b> v 0.1<br/>]]></htmlText>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="10" bold="false"  color="0xFF0000" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+	</debug>
+	<textfields>
+		<!-- templatized textfields -->
+		<flash.text.TextField id="navItem1" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="left" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Neo Tech Dacia Regular" leftMargin="5" rightMargin="5" letterSpacing="0" align="left" size="12" bold="false"  color="0x9" />
+			</defaultTextFormat>
+				<!-- 
+				DropShadowFilter (distance:Number = 4, angle:Number = 45, color:uint = 0, alpha:Number = 1, blurX:Number = 4, blurY:Number = 4, strength:Number = 1, quality:int = 1, inner:Boolean = false, knockout:Boolean = false, 
+				 -->
+		</flash.text.TextField>
+		<flash.text.TextField id="encartTitle" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="left" wordwrap="true" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Neo Tech Dacia Regular" leftMargin="5" rightMargin="5" letterSpacing="0" align="left" size="30" bold="false"  color="0x0" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+		<flash.text.TextField id="encartFakeTitle" gridFitType="pixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="right" wordwrap="true" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Neo Tech Dacia Regular" leftMargin="5" rightMargin="5" letterSpacing="0" align="right" size="30" bold="false"  color="0x0" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+				<flash.text.TextField id="encartCenterTitle" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="center" wordwrap="true" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Neo Tech Dacia Regular" leftMargin="5" rightMargin="5" letterSpacing="0" align="center" size="30" bold="false"  color="0x0" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+		<flash.text.TextField id="encartAccroche" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="left" wordwrap="true" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Neo Tech Dacia Regular" leftMargin="5" rightMargin="5" letterSpacing="0" align="left" size="14" bold="false"  color="0x0" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+		<flash.text.TextField id="encartFakeAccroche" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="right" wordwrap="true" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Neo Tech Dacia Regular" leftMargin="5" rightMargin="5" letterSpacing="0" align="right" size="14" bold="false"  color="0x0" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+		<flash.text.TextField id="encartLink" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="left" wordwrap="true" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Neo Tech Dacia Regular" leftMargin="5" rightMargin="5" letterSpacing="0" align="left" size="14" bold="false"  color="0x0" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+		<flash.text.TextField id="encartSimpleLink" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="center" wordwrap="true" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Neo Tech Dacia Regular" leftMargin="5" rightMargin="5" letterSpacing="0" align="center" size="14" bold="false"  color="0x0" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+		<flash.text.TextField id="encartNombreTitre" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="0" y="0" autoSize="center" wordwrap="true" multiline="false" kerning="true">
+			<text></text>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Agency FB" leftMargin="5" rightMargin="5" letterSpacing="0" align="center" size="14" bold="true"  color="0x0" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+	</textfields>
+	<sprites>
+		<flash.display.Sprite id="layer_404" name="layer_404">
+			<flash.text.TextField mouseEnabled="false" id="layer_404_title" name="layer_404_title" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="50" y="50" autoSize="left" multiline="true" kerning="true">
+				<text>404</text>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Agency FB" leftMargin="15" rightMargin="15" letterSpacing="1" align="left" size="72" bold="false"  color="0x2A2A2A" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField mouseEnabled="false" id="layer_404_h3" name="layer_404_h3" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="50" y="130" autoSize="left" multiline="true" kerning="true">
+				<text>Section not found...</text>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Agency FB" leftMargin="15" rightMargin="15" letterSpacing="1" align="left" size="15" bold="false"  color="0x2A2A2A" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+				<flash.text.TextField mouseEnabled="false" id="layer_404_txt" name="layer_404_txt" gridFitType="subpixel" antiAliasType="advanced" embedFonts="false" selectable="false" x="50" y="210" autoSize="left" multiline="true" kerning="true">
+				<text>You will be redirected to >></text>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Agency FB" leftMargin="15" rightMargin="15" letterSpacing="1" align="left" size="25" bold="false"  color="0x2A2A2A" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+	</sprites>
+	<svgs>
+		
+	</svgs>
+	<!-- 
+	<sprites>
+		<flash.display.Sprite id="INFOS" name="portfolio_infos">
+			<flash.text.TextField id="editor" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="2" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="date" gridFitType="subpixel" sharpness="200" thickness="400" text="2008" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="75" autoSize="left" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="cat" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="32" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="materials" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="44" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+		<flash.display.Sprite id="NEWS" name="news_infos">
+			<flash.text.TextField id="event" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="2" wordWrap="true" width="250" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="link" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="22" wordWrap="true" width="250" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="resume" gridFitType="subpixel" sharpness="200" thickness="400" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="44" wordWrap="true" width="250" multiline="true" kerning="true">
+				<htmlText>
+					<![CDATA[
+						<p>Kossi Aguessy passes from one medium to another with ease. His aesthetic is influenced by several different cultures, human values as well as by strong visual references.
+						Renault, Yves Saint-Laurent, Cartier, Swarovski, ST Dupont, Branex and art galleries have trusted and searched for his artistic richness to their benefit.
+						The designer has already been head of architectural projects in France, Turkey, and South Africa. He can already count on numerous collaborations, using furniture machinery at a rate of production clearly showing this industrial artist has no limits.
+						Passionate and driven by strong determination</p>
+					]]>
+				</htmlText>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+	</sprites>
+	-->
+</elements>

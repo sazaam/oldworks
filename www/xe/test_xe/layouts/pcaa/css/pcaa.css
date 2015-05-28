@@ -1,0 +1,372 @@
+*{
+
+}
+
+html, body{
+	background:#FFF;
+}
+
+
+html, body{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	overflow:auto;
+	
+}
+
+body{
+	color:#a6ce32;
+	font-family:'BentonSans';
+	font-size:130%;
+}
+
+
+
+a{
+	color:#777;
+}
+
+.color, a.active, .active a, a:hover{
+	color:#a6ce32;
+}
+
+.text{
+	color:#777;
+}
+
+.xxxs{font-size:50%}
+.xxs{font-size:60%}
+.xs{font-size:70%}
+.s{font-size:80%}
+.m{font-size:100%}
+.l{font-size:110%}
+.xl{font-size:120%}
+.xxl{font-size:130%}
+.xxxl{font-size:150%}
+
+
+.logo{
+	width:280px;
+	height:60px;
+	background:url('./skin/logo.png') no-repeat left top;
+}
+
+
+.search .input{
+	width:215px;
+	height:22px;
+	border:0px;
+	color:#a6ce32;
+	font-family:"BentonSans";
+	position:relative;
+	top:-6px;
+	border-right:1px solid #444;
+	background:transparent;
+}
+
+.search .submit{
+	width:26px;
+	height:26px;
+	border:0px;
+	background:url('./skin/search.png') no-repeat left top;
+	text-indent:-5000px;
+}
+
+
+.sidenav{
+	width:280px;
+	float:left;
+}
+
+.menulink{
+	position:relative;
+	float:left;
+}
+
+.buttons{
+	display:none;
+	position:relative;
+}
+
+.fold{
+	display:none;
+	width:20px;
+	height:15px;
+	float:left;
+	margin:4px 0 0 10px;
+	background:url('./skin/fold.png') no-repeat 50% 50%;
+}
+
+.show{
+	
+	/* display:none; */
+	float:left;
+	display:block;
+	width:20px;
+	height:15px;
+	
+	background:url('./skin/show.png') no-repeat 50% 50%;
+	
+}
+
+.deepnav{display:none}
+
+/*
+.nested{display:none}
+*/
+
+
+
+.dyncont{
+	position:absolute;
+	top:0px;
+	left:280px;
+	right:0px;
+	bottom:0px;
+	overflow:auto;
+}
+
+.dyncont .body{
+
+	position:relative;
+	margin-top:120px;
+	margin-right:280px;
+	margin-bottom:60px;
+}
+
+.curtainall{
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+.curtain{
+	background:#FFF url(./skin/hex-loader2.gif) no-repeat 50% top;
+	position:absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+}
+
+.act .curtain{display:none;}
+.cameron_plugin{top:0 !important;}
+
+
+.content{}
+
+/* Base Article Page */
+
+.articletitle{
+	padding:10px 0 20px 0;
+	font-size:120%;
+}
+
+
+.articletext{
+	padding:0 0 40px 0;
+}
+
+
+
+/* Home Page */
+
+.home{
+	padding:0 !important;
+}
+
+
+.home h1{
+	display:none;
+}
+.home .body{
+	height:100%;
+	margin-top:0;
+	margin-bottom:0;
+	position:relative;
+}
+
+.home .xe_content{
+	height:100%;
+}
+
+.home .btnArea{
+	position:absolute;
+	bottom:0;
+	right:0;
+	left:0;
+	padding-right:15px;
+}
+
+.homegallery{
+	height:100%;
+	margin-left:20px;
+}
+
+.galleryall{
+	height:100%;
+	overflow:hidden;
+}
+
+ol.gallery{
+	position:relative;
+	height:100%;
+	width:2000%;
+}
+
+ol.gallery li{
+	width:5%;
+	height:100%;
+	float:left;
+	background:#333;
+}
+
+ol.gallery li a.gallerylink{
+	display:none;
+}
+
+ol.gallery li img{
+	display:block;
+	width:100% !important;
+}
+
+
+/* Projects Home Page */
+
+.projectsall{
+	
+}
+
+.projectsall ul.projects{
+	
+}
+
+.projectsall ul.projects li.projectall{
+	float:left;
+	/* width:250px; */
+	width:33%;
+}
+
+.projectsall ul.projects li.projectall .project{
+	position:relative;
+}
+
+
+.projectsall ul.projects li.projectall .project a.projectlink{
+	display:block;
+	/* display:none; */
+	position:absolute;
+	bottom:0;
+	left:0;
+	right:0;
+	padding:10px 10px 5px;
+	background:#FFF;
+	background:rgba(255, 255, 255, .8);
+}
+
+.projectsall ul.projects li.projectall .project img{
+	display:block;
+	width:100%;
+}
+
+
+
+
+
+
+
+/* Project Page */
+
+
+
+
+
+
+
+
+/* STUPID OVERRIDES */
+
+.xe_content{
+	font-size:inherit;
+	line-height:inherit;
+	color:inherit;
+}
+.document_popup_menu{
+	display:none;
+}
+
+.userMenu{
+	display:none;
+}
+
+.login {
+	display:none;
+}
+
+.userName a{
+	display:block;
+	float:left;
+	margin-left:10px;
+}
+
+.latestLogin{
+	display:none;
+}
+
+
+
+
+.lang{
+	margin-top:5px;
+}
+.langList{
+	float:right;
+}
+
+.userLang{
+	display:block;
+	width:16px;
+	height:11px;
+	margin-right:10px;
+	background-image:url(./skin/lang.png);
+	background-repeat:no-repeat;
+}
+
+.userLang.en{
+	background-position:0px top;
+}
+.userLang.en:hover, strong.en.userLang{
+	background-position:0px bottom !important;
+}
+
+.userLang.fr{
+	background-position:-20px top;
+}
+.userLang.fr:hover, strong.fr.userLang{
+	background-position:-20px bottom !important;
+}
+
+.userLang.ko{
+	background-position:-60px top;
+}
+
+.userLang.ko:hover, strong.ko.userLang{
+	background-position:-60px bottom !important;
+}
+
+.userLang.jp{
+	background-position:-40px top;
+}
+.userLang.jp:hover, strong.jp.userLang{
+	background-position:-40px bottom !important;
+}
+
+.langList li{
+	float:right;
+	overflow:hidden;
+}

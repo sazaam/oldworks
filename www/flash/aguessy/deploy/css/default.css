@@ -1,0 +1,59 @@
+﻿/*GENERICS */
+
+.trebuchet{font-family:"Trebuchet MS";}
+.green{color:#B2D201 !important;}
+.gold{color:#c2b393 !important;}
+.white{color:#888 !important;}
+
+
+
+/*--------------------------- KOSSI AGUESSY prehome Specials--------------------------*/
+/*------------------------LE VERT AGUESSY	==                # B2D201                            */
+/*------------------------LE GRIS 			==                # 121212                            */
+
+/*--------------------------- ELEMENTS --------------------------*/
+body {text-align:center;background:#FFF url(skin/motif.png) repeat left top;color:#c6c6c6;min-height:768px;min-width:950px;}
+body a{color:#c6c6c6;text-decoration:none;}
+
+
+
+
+/*--------------------------- ALL --------------------------*/
+#all{height:100%;width:100%;}
+
+/*--------------------------- LEFT BLOCK --------------------------*/
+#left{position:absolute;width:326px;height:620px;top:40px;left:40px;}
+
+#logo{width:100%;height:44px;background:url(skin/logo.png) no-repeat left top;}
+#logo span{visibility:hidden}
+#enter{height:18px;background:black;cursor:pointer}
+#enter h2{float:left;padding:2px 0 0 5px;text-transform:uppercase;}
+#enter a{outline:none;display:block;float:right;padding:2px 5px 0 0;text-transform:uppercase;}
+#requirements{color:black;background:url(skin/requirements.jpg) no-repeat left top;height:146px;padding:10px;}
+
+#requirements dl{}
+#requirements dl dt{margin-bottom:10px;}
+#requirements dl dd{}
+#requirements dl dd p{}
+#requirements a:hover{color:black;}
+#facebook{}
+#facebook h3{width:63px}
+#facebook h3 a{outline:none;display:block;background:url(skin/facebook.png) no-repeat left top;height:22px;}
+#facebook h3 a span{visibility:hidden;}
+#extras{margin-top:70px}
+#extras p{}
+#extras #copyright{color:#9A9A9A;}
+
+
+/*--------------------------- RIGHT BLOCK --------------------------*/
+#right{margin-left:333px;text-align:center;padding-top:170px;}
+#right #panel{margin:0 auto;width:422px;height:492px;background:url(skin/xplain.jpg) no-repeat left top;}
+/*
+#enter{height:100px;width:145px;margin:auto;cursor:pointer}
+#enter h1, #enter h2{font-size:10px;letter-spacing:4px}
+#enter h2{color:#5e5f60;padding-top:5px;}
+#enter #logo{display:block;width:137px;height:44px;background:url(skin/logo.png) no-repeat left top;}
+#enter #front{padding:2px 5px 3px;background:#232323;width:122px;}
+#enter #front a{outline:none}
+#enter #front a:hover{color:#E8E8E8}
+*/

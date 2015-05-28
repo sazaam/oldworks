@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<__sections__>
+	<section id="HOME" label="Home" class="pro.exec.steps::HomeStep" content="contents/home.xml" color="0x454545"  colorExtraOver="0xC8003e" back="screen_home.png" />
+	<section id="WORKS" label="Works" class="pro.exec.steps::WorksStep" sections="sections/works.xml" color="0x2a2a2a" colorExtraOver="0xC8003e" content="contents/works.xml" back="screen_works.png" />
+	<section id="ABOUT" label="About" class="pro.exec.steps::AboutStep" sections="sections/about.xml" color="0x454545" colorExtraOver="0xd40000" content="contents/about.xml" back="screen_about.png" />
+	<section id="CONTACT" label="Contact" class="pro.exec.steps::ContactStep" sections="sections/contact.xml" color="0x2a2a2a" colorExtraOver="0xf1c73d" content="contents/about.xml" back="screen_contact.png" />
+</__sections__>

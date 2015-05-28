@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<content>
+	<articles>
+		<article id="STUDIES" label="Studies">
+			<h3>Walk through Studies</h3>
+			<hidden>
+				<load url="./works/studies_visual.png" />
+			</hidden>
+		</article>
+		<article id="IMAGE" label="Image">
+			<h3>Walk through Image</h3>
+			<hidden>
+				<load url="./works/image_visual.png" />
+			</hidden>
+		</article>
+		<article id="DRAWINGS" label="Drawings">
+			<h3>Walk through Drawings</h3>
+			<hidden>
+				<load url="./works/drawings_visual.png" />
+			</hidden>
+		</article>
+		<article id="CODE" label="Code">
+			<h3>Walk through Code</h3>
+			<hidden>
+				<load url="./works/code_visual.png" />
+			</hidden>
+		</article>
+	</articles>
+</content>

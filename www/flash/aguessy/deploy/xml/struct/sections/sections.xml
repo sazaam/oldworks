@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sections color="0xACDD4D">
+	<section id="portfolio" url="datas/sections/portfolio.xml" />
+	<section id="about" url="datas/sections/about.xml" />
+	<section id="news" url="datas/sections/news.xml" />
+	<section id="press" url="datas/sections/press.xml" />
+	<section id="medias" url="datas/sections/medias.xml" />
+	<section id="contacts" url="datas/sections/contacts.xml" />
+</sections>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<__sections__>
+	<section id="1KSABLE" label="1ksable" class="pro.exec.steps::ProjectStep" year="2008" content="contents/works/studies/1ksable.xml">
+		<launch txt="launch 1" url="http://www.google.com" />
+		<launch txt="launch 2" url="http://www.google.com" />
+		<launch txt="launch 3" url="http://www.google.com" />
+		<launch txt="launch 4" url="http://www.google.com" />
+	</section>
+	<section id="JIM" label="Jim" class="pro.exec.steps::ProjectStep">
+		
+	</section>
+	<section id="SAZAAM" label="Sazaam" class="pro.exec.steps::ProjectStep">
+		
+	</section>
+	<section id="AGUESSY1" label="Aguessy1" class="pro.exec.steps::ProjectStep">
+		
+	</section>
+</__sections__>

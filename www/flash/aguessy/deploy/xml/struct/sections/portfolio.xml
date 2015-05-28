@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<section id="portfolio">
+	<category name="furniture" color="0x5a3ea5">
+		<item id="useless_tool" color="0x5a3ea5">
+			<informations>
+				<editor href="http://www.toolsgalerie.com"><![CDATA[TOOLS GALERIE PARIS]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[useless tool]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Stainless steel + carbon + nextel]]></materials>
+			</informations>
+			<source url="portfolio/furniture/useless_tool_1.jpg" />
+		</item>
+		<item id="smile" color="0x5a3ea5">
+			<informations>
+				<editor href="http://www.branex-design.com"><![CDATA[BRANEX]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[smile]]></usename>
+				<cat><![CDATA[Stool]]></cat>
+				<materials><![CDATA[Metacrylath]]></materials>
+			</informations>
+			<source url="portfolio/furniture/smile_1.jpg" />
+			<source url="portfolio/furniture/smile_2.jpg" />
+		</item>
+		<item id="champ" color="0x5a3ea5">
+			<informations>
+				<editor href="http://www.ekobo.org"><![CDATA[EKOBO]]></editor>
+				<date year="2007" />
+				<usename><![CDATA[champ]]></usename>
+				<cat><![CDATA[Stool]]></cat>
+				<materials><![CDATA[Moulted bamboo fibers]]></materials>
+			</informations>
+			<source url="portfolio/furniture/champ.jpg" />
+		</item>
+		<item id="tn4" color="0x5a3ea5">
+			<informations>
+				<editor><![CDATA[AX/AGUESSY EXCLUSIVE STUDIO LINE]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[tn4]]></usename>
+				<cat><![CDATA[Desk / Table]]></cat>
+				<materials><![CDATA[Stainless steel + glass + silicon]]></materials>
+			</informations>
+			<source url="portfolio/furniture/tn4_1.jpg" />
+			<source url="portfolio/furniture/tn4_2.jpg" />
+		</item>
+		<item id="sparkling_joke" color="0x5a3ea5">
+			<informations>
+				<editor><![CDATA[the coca-cola company]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[sparkling joke]]></usename>
+				<cat><![CDATA[Coffee table]]></cat>
+				<materials><![CDATA[Recycled plastic bottles]]></materials>
+			</informations>
+			<source url="portfolio/furniture/sparkling_joke_1.jpg" />
+		</item>
+		<item id="osby" color="0x5a3ea5">
+			<informations>
+				<editor><![CDATA[AX/AGUESSY EXCLUSIVE STUDIO LINE]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[osby]]></usename>
+				<cat><![CDATA[Dining table / Storage]]></cat>
+				<materials><![CDATA[OSB / Compressed wood pieces]]></materials>
+			</informations>
+			<source url="portfolio/furniture/osby_1.jpg" />
+			<source url="portfolio/furniture/osby_2.jpg" />
+		</item>
+		<item id="buddha_cheik" color="0x5a3ea5">
+			<informations>
+				<editor><![CDATA[AX/AGUESSY EXCLUSIVE STUDIO LINE]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[buddha cheik]]></usename>
+				<cat><![CDATA[Bed]]></cat>
+				<materials><![CDATA[Lacqued wood + corian]]></materials>
+			</informations>
+			<source url="portfolio/furniture/buddha_cheik.jpg" />
+		</item>
+		<item id="kuba" color="0x5a3ea5">
+			<informations>
+				<editor><![CDATA[AX/AGUESSY EXCLUSIVE STUDIO LINE]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[kuba]]></usename>
+				<cat><![CDATA[Table / Stool]]></cat>
+				<materials><![CDATA[Wood + aluminium]]></materials>
+			</informations>
+			<source url="portfolio/furniture/kuba.jpg" />
+		</item>
+		<item id="sculpt" color="0x5a3ea5">
+			<informations>
+				<editor><![CDATA[AX/AGUESSY EXCLUSIVE STUDIO LINE]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[SCULPT]]></usename>
+				<cat><![CDATA[AD Table]]></cat>
+				<materials><![CDATA[Fiber glass + lacqued resina]]></materials>
+			</informations>
+			<source url="portfolio/furniture/sculpt.jpg" />
+		</item>
+		<item id="damn" color="0x5a3ea5">
+			<informations>
+				<editor href="http://www.fermob.com"><![CDATA[Fermob]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[damn !!!]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Laser cutted aluminium]]></materials>
+			</informations>
+			<source url="portfolio/furniture/damn_2.jpg" />
+			<source url="portfolio/furniture/damn_3.jpg" />
+			<source url="portfolio/furniture/damn_4.jpg" />
+			<source url="portfolio/furniture/damn_5.jpg" />
+		</item>
+		<item id="green_carpet" color="0x5a3ea5">
+			<informations>
+				<editor><![CDATA[Prototype]]></editor>
+				<date year="2007" />
+				<usename><![CDATA[green carpet]]></usename>
+				<cat><![CDATA[Sofa]]></cat>
+				<materials><![CDATA[Stainess steel + lacqued plywood + fabrics]]></materials>
+			</informations>
+			<source url="portfolio/furniture/2004.jpg" />
+		</item>
+	</category>
+	<!--
+	<category name="interior" color="0x038ac2">
+		<item id="ps_apartment" color="0x038ac2">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[ps apartment]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/interior/ps_apartment1.jpg" />
+			<source url="portfolio/interior/ps_apartment2.jpg" />
+			<source url="portfolio/interior/ps_apartment3.jpg" />
+			<source url="portfolio/interior/ps_apartment4.jpg" />
+			<source url="portfolio/interior/ps_apartment5.jpg" />
+		</item>
+		<item id="rs_house" color="0x038ac2">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[rs house]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/interior/rs_house1.jpg" />
+			<source url="portfolio/interior/rs_house2.jpg" />
+			<source url="portfolio/interior/rs_house3.jpg" />
+			<source url="portfolio/interior/rs_house4.jpg" />
+			<source url="portfolio/interior/rs_house5.jpg" />
+			<source url="portfolio/interior/rs_house6.jpg" />
+			<source url="portfolio/interior/rs_house7.jpg" />
+		</item>
+		<item id="riad_tamsna" color="0x038ac2">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[riad tamsna]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/interior/riad_tamsna1.jpg" />
+			<source url="portfolio/interior/riad_tamsna2.jpg" />
+			<source url="portfolio/interior/riad_tamsna3.jpg" />
+			<source url="portfolio/interior/riad_tamsna4.jpg" />
+		</item>
+	</category>
+	 -->
+	<category name="object" color="0x79d721">
+		<item id="organicology" color="0x79d721">
+			<informations>
+				<editor href="http://www.aitali.com"><![CDATA[Aitali]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[organicology]]></usename>
+				<cat><![CDATA[3D wall decors]]></cat>
+				<materials><![CDATA[Moulted acrylic]]></materials>
+			</informations>
+			<source url="portfolio/object/organicology_1.jpg" />
+			<source url="portfolio/object/organicology_2.jpg" />
+		</item>
+		<item id="stella" color="0x79d721">
+			<informations>
+				<editor href="http://www.stellamaccartney.com"><![CDATA[Stella Maccartney]]></editor>
+				<date year="2004" />
+				<usename><![CDATA[stella]]></usename>
+				<cat><![CDATA[Perfume bottle]]></cat>
+				<materials><![CDATA[Crystal + backelite + aluminium]]></materials>
+			</informations>
+			<source url="portfolio/object/stella_1.jpg" />
+			<source url="portfolio/object/stella_2.jpg" />
+		</item>
+		<item id="stella_sheer" color="0x79d721">
+			<informations>
+				<editor href="http://www.stellamaccartney.com"><![CDATA[Stella Maccartney]]></editor>
+				<date year="2004" />
+				<usename><![CDATA[stella sheer]]></usename>
+				<cat><![CDATA[Perfume bottle]]></cat>
+				<materials><![CDATA[Lacqued glass + backelite + aluminium]]></materials>
+			</informations>
+			<source url="portfolio/object/stella_3.jpg" />
+		</item>
+		<item id="sketch" color="0x79d721">
+			<informations>
+				<editor href="http://www.wildatheart.com"><![CDATA[WILD AT HEART]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[sketch]]></usename>
+				<cat><![CDATA[Vases]]></cat>
+				<materials><![CDATA[Porcelain + corian]]></materials>
+			</informations>
+			<source url="portfolio/object/sketch_1.jpg" />
+			<source url="portfolio/object/sketch_2.jpg" />
+			<source url="portfolio/object/sketch_3.jpg" />
+			<source url="portfolio/object/sketch_4.jpg" />
+		</item>
+		<item id="three_some" color="0x79d721">
+			<informations>
+				<editor><![CDATA[Prototype]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[3some]]></usename>
+				<cat><![CDATA[Vase]]></cat>
+				<materials><![CDATA[Ceramic]]></materials>
+			</informations>
+			<source url="portfolio/object/3some_1.jpg" />
+		</item>
+		<item id="gang_bang" color="0x79d721">
+			<informations>
+				<editor><![CDATA[Prototype]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[gang bang]]></usename>
+				<cat><![CDATA[Vase]]></cat>
+				<materials><![CDATA[Ceramic]]></materials>
+			</informations>
+			<source url="portfolio/object/gang_bang_1.jpg" />
+		</item>
+		<item id="the_virgin" color="0x79d721">
+			<informations>
+				<editor><![CDATA[Luigi Lupo]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[the virgin]]></usename>
+				<cat><![CDATA[Bathtube]]></cat>
+				<materials><![CDATA[Acrylic + aluminium gelcoated fiberglass]]></materials>
+			</informations>
+			<source url="portfolio/object/the_virgin_1.jpg" />
+			<source url="portfolio/object/the_virgin_2.jpg" />
+		</item>
+		<item id="ampm_watch" color="0x79d721">
+			<informations>
+				<editor><![CDATA[PROJECT PUMA]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[ampm - watch]]></usename>
+				<cat><![CDATA[Watch]]></cat>
+				<materials><![CDATA[Plastic + silicon]]></materials>
+			</informations>
+			<source url="portfolio/object/ag01_2.jpg" />
+		</item>
+		<item id="ampm_sneaker" color="0x79d721">
+			<informations>
+				<editor><![CDATA[PROJECT PUMA]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[ampm - sneaker]]></usename>
+				<cat><![CDATA[Sneaker]]></cat>
+				<materials><![CDATA[Plastic + silicon + leather + fabric]]></materials>
+			</informations>
+			<source url="portfolio/object/wazabi_2.jpg" />
+			<source url="portfolio/object/wazabi_1.jpg" />
+			<source url="portfolio/object/wazabi_3.jpg" />
+		</item>
+		<item id="zu" color="0x79d721">
+			<informations>
+				<editor><![CDATA[AX/AGUESSY EXCLUSIVE STUDIO LINE]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[zu]]></usename>
+				<cat><![CDATA[Mask]]></cat>
+				<materials><![CDATA[Fiber glass + lacqued resina]]></materials>
+			</informations>
+			<source url="portfolio/object/zu_mask_1.jpg" />
+		</item>
+		<item id="widejet" color="0x79d721">
+			<informations>
+				<editor><![CDATA[ST DUPONT]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[widejet]]></usename>
+				<cat><![CDATA[Lighter]]></cat>
+				<materials><![CDATA[Plastic + silicon]]></materials>
+			</informations>
+			<source url="portfolio/object/widejet_1.jpg" />
+			<source url="portfolio/object/widejet_2.jpg" />
+			<source url="portfolio/object/widejet_3.jpg" />
+		</item>
+		<item id="baiser-dragon" color="0x79d721">
+			<informations>
+				<editor href="http://www.cartier.com"><![CDATA[Cartier]]></editor>
+				<date year="2009" />
+				<usename><![CDATA[le baiser du dragon]]></usename>
+				<cat><![CDATA[Perfume bottle]]></cat>
+				<materials><![CDATA[Backelite + glass]]></materials>
+			</informations>
+			<source url="portfolio/object/baiser_1.jpg" />
+			<source url="portfolio/object/baiser_3.jpg" />
+		</item>
+		<!--
+		<item id="i-dolls" color="0x79d721">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[i-dolls]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/object/idolls_1.jpg" />
+			<source url="portfolio/object/idolls_2.jpg" />
+			<source url="portfolio/object/idolls_3.jpg" />
+			<source url="portfolio/object/idolls_4.jpg" />
+		</item>
+		<item id="b-boy" color="0x79d721">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[b-boy]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/object/b-boy_1.jpg" />
+			<source url="portfolio/object/b-boy_2.jpg" />
+			<source url="portfolio/object/b-boy_3.jpg" />
+		</item>
+		-->
+	</category>
+	<!--
+	<category name="transport" color="0xecc600">
+		<item id="espace_IV" color="0xecc600">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[espace IV]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/transport/espace_IV1.jpg" />
+			<source url="portfolio/transport/espace_IV2.jpg" />
+		</item>
+	</category>
+	<category name="scenography" color="0xff8a00">
+		<item id="dinah_s_blues" color="0xff8a00">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[dinah's blues]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/scenography/dinah_s_blues1.jpg" />
+			<source url="portfolio/scenography/dinah_s_blues2.jpg" />
+		</item>
+	</category>
+	-->
+	<!--
+	<category name="lights" color="0xfb0f11">
+		<item id="fogo" color="0xfb0f11">
+			<informations>
+				<editor href=""><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[fogo]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/lights/fogo.jpg" />
+		</item>
+		<item id="one_thing" color="0xfb0f11">
+			<informations>
+				<editor href=""><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[one thing]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/lights/one_thing_1.jpg" />
+			<source url="portfolio/lights/one_thing_2.jpg" />
+			<source url="portfolio/lights/one_thing_3.jpg" />
+		</item>
+		<item id="and_bullet" color="0xfb0f11">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[...and bullet]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/lights/and_bullet.jpg" />
+		</item>
+		<item id="soissons" color="0xfb0f11">
+			<informations>
+				<editor href="http://www.google.com"><![CDATA[Stylique Front]]></editor>
+				<date year="2008" />
+				<usename><![CDATA[soissons]]></usename>
+				<cat><![CDATA[Chair]]></cat>
+				<materials><![CDATA[Bronze, Iron, Plastic]]></materials>
+			</informations>
+			<source url="portfolio/lights/soissons.jpg" />
+		</item>
+	</category>
+	-->
+</section>

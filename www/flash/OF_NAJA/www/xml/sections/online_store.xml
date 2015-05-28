@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<section id="1" label="online store 1" url="online_store/_1.xml" />
+	<section id="2" label="online store 2" url="online_store/_2.xml" />
+	<section id="3" label="online store 3" url="online_store/_3.xml" />
+</data>

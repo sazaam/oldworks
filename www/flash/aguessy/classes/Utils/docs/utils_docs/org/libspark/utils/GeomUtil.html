@@ -1,0 +1,899 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="GeomUtil,org.libspark.utils.GeomUtil,addPolar,angle,circumference,cubicBezier,degradeBox,ellipseArea,getCurveControlPoint,getPoint,getPositionFromMatrix,getRect,getRotateFromMatrix,getScaleFromMatrix,intersection,polygonArea,quadraticBezier,setPoint,setRect,spline,toString" name="keywords">
+<title>org.libspark.utils.GeomUtil</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'GeomUtil - SPARK Project Utils Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?org/libspark/utils/GeomUtil.html&amp;org/libspark/utils/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;GeomUtil</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class GeomUtil"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.libspark.utils</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class GeomUtil</td>
+</tr>
+</table>
+<p></p>
+     図形計算のためのユーティリティクラスです
+     <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addPolar()">addPolar</a>(pt:Point, len:Number, angle:Number):Point</div>
+<div class="summaryTableDescription">[static]
+         極座標ペアを直交点座標に変換し、指定のポイント（座標）に加算した新しいポイントを作成します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#angle()">angle</a>(pt1:Point, pt2:Point):Number</div>
+<div class="summaryTableDescription">[static]
+         2つのPoint間の角度を求めます
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#circumference()">circumference</a>(width:Number, height:Number):Number</div>
+<div class="summaryTableDescription">[static]
+        楕円形の円周の近似値を求めます（楕円積分）.</div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#cubicBezier()">cubicBezier</a>(a:Number, b:Number, c:Number, d:Number, t:Number):Number</div>
+<div class="summaryTableDescription">[static]
+         4つの座標数値から3次ベジェ曲線の中間座標を取得します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#degradeBox()">degradeBox</a>(mt:Matrix):Object</div>
+<div class="summaryTableDescription">[static]
+         指定のマトリックスオブジェクトから Matrix.createBox の逆算を行います。
+         getRotateFromMatrix や getScaleFromMatrix で得られる結果とは異なりますので注意してください。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#ellipseArea()">ellipseArea</a>(width:Number, height:Number):Number</div>
+<div class="summaryTableDescription">[static]
+        楕円形の面積を求めます.</div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCurveControlPoint()">getCurveControlPoint</a>(start:Number, passage:Number, anchor:Number):Number</div>
+<div class="summaryTableDescription">[static]
+         3つの座標数値から2次ベジェ曲線のコントロールポイントの座標を取得します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPoint()">getPoint</a>(target:Object):Point</div>
+<div class="summaryTableDescription">[static]
+         指定オブジェクトのプロパティ x, y から新しい Point インスタンスを作成します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getPositionFromMatrix()">getPositionFromMatrix</a>(mt:Matrix):Point</div>
+<div class="summaryTableDescription">[static]
+         指定のマトリックスオブジェクトから位置情報を調べ、ポイントオブジェクトを作成します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRect()">getRect</a>(target:Object):Rectangle</div>
+<div class="summaryTableDescription">[static]
+         指定オブジェクトのプロパティ x, y, width, height から新しい Rectangle インスタンスを作成します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getRotateFromMatrix()">getRotateFromMatrix</a>(mt:Matrix):Number</div>
+<div class="summaryTableDescription">[static]
+         指定のマトリックスオブジェクトから回転値（ラジアン単位）を調べます。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getScaleFromMatrix()">getScaleFromMatrix</a>(mt:Matrix):Point</div>
+<div class="summaryTableDescription">[static]
+         指定のマトリックスオブジェクトから拡大・縮小値を調べます。
+         scaleX 、 scaleY は、それぞれ新たに作成されたポイントオブジェクトの x , y に代入されます。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#intersection()">intersection</a>(a:Object, b:Object, c:Object, d:Object):Point</div>
+<div class="summaryTableDescription">[static]
+        直線AB と直線CD の交点を求めます.</div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#polygonArea()">polygonArea</a>(... points):Number</div>
+<div class="summaryTableDescription">[static]
+        ３つ以上の直線によって構成された多角形の面積を求めます.</div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#quadraticBezier()">quadraticBezier</a>(a:Number, b:Number, c:Number, t:Number):Number</div>
+<div class="summaryTableDescription">[static]
+         3つの座標数値から2次ベジェ曲線の中間座標を取得します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setPoint()">setPoint</a>(target:Object, pt:Point):void</div>
+<div class="summaryTableDescription">[static]
+         指定オブジェクトのプロパティ x, y に、それぞれポイントの値を代入します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setRect()">setRect</a>(target:Object, rect:Rectangle):void</div>
+<div class="summaryTableDescription">[static]
+         指定オブジェクトのプロパティ x, y, width, height に、それぞれ Rectangle の値を代入します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#spline()">spline</a>(p0:Number, p1:Number, p2:Number, p3:Number, t:Number):Number</div>
+<div class="summaryTableDescription">[static]
+   4つの座標数値からスプライン曲線の中間座標を取得します。
+   
+   </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toString()">toString</a>(target:Object):String</div>
+<div class="summaryTableDescription">[static]
+         指定されたオブジェクトのストリング表現を返します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">GeomUtil</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addPolar()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addPolar</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function addPolar(pt:Point, len:Number, angle:Number):Point</code><p>
+         極座標ペアを直交点座標に変換し、指定のポイント（座標）に加算した新しいポイントを作成します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pt</span>:Point</code> &mdash; 追加するポイント
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">len</span>:Number</code> &mdash; 極座標ペアの長さ座標
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">angle</span>:Number</code> &mdash; 極座標ペアの角度 (ラジアン単位) 
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code> &mdash;  新しいポイント
+         </td>
+</tr>
+</table>
+</div>
+<a name="angle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">angle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function angle(pt1:Point, pt2:Point):Number</code><p>
+         2つのPoint間の角度を求めます
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pt1</span>:Point</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pt2</span>:Point</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash;  2点間の角度
+         </td>
+</tr>
+</table>
+</div>
+<a name="circumference()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">circumference</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function circumference(width:Number, height:Number):Number</code><p>
+        楕円形の円周の近似値を求めます（楕円積分）.
+        楕円を求めるには最短の直径と最長の直径が分かっていないといけません.
+        
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:Number</code> &mdash;  楕円の最短の直径
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">height</span>:Number</code> &mdash;  楕円の最長の直径
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash; 円周の近似値
+        </td>
+</tr>
+</table>
+</div>
+<a name="cubicBezier()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">cubicBezier</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function cubicBezier(a:Number, b:Number, c:Number, d:Number, t:Number):Number</code><p>
+         4つの座標数値から3次ベジェ曲線の中間座標を取得します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">a</span>:Number</code> &mdash; 始点の座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:Number</code> &mdash; 点 a のコントロールポイントの座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:Number</code> &mdash; 点 b のコントロールポイントの座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:Number</code> &mdash; 終点の座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">t</span>:Number</code> &mdash; 曲線の進度値。0 から 1 の小数値で指定します。
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash;  指定された時点におけるベジェ式の値。
+         </td>
+</tr>
+</table>
+</div>
+<a name="degradeBox()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">degradeBox</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function degradeBox(mt:Matrix):Object</code><p>
+         指定のマトリックスオブジェクトから Matrix.createBox の逆算を行います。
+         getRotateFromMatrix や getScaleFromMatrix で得られる結果とは異なりますので注意してください。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mt</span>:Matrix</code> &mdash; 対象となるマトリックスオブジェクト
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Object</code> &mdash;  scaleX, scaleY, rotation, x, y のプロパティを持つオブジェクト
+         得られた結果オブジェクトは toString() で内容を確認用の文字列に変換します。
+         </td>
+</tr>
+</table>
+</div>
+<a name="ellipseArea()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">ellipseArea</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function ellipseArea(width:Number, height:Number):Number</code><p>
+        楕円形の面積を求めます.
+        楕円を求めるには最短の直径と最長の直径が分かっていないといけません.
+        
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">width</span>:Number</code> &mdash;  楕円の最短の直径
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">height</span>:Number</code> &mdash;  楕円の最長の直径
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash; 面積
+        </td>
+</tr>
+</table>
+</div>
+<a name="getCurveControlPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCurveControlPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getCurveControlPoint(start:Number, passage:Number, anchor:Number):Number</code><p>
+         3つの座標数値から2次ベジェ曲線のコントロールポイントの座標を取得します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">start</span>:Number</code> &mdash; 始点の座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">passage</span>:Number</code> &mdash; 通過点の座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">anchor</span>:Number</code> &mdash; 終点の座標数値
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash;  コントロールポイントの座標数値
+         </td>
+</tr>
+</table>
+</div>
+<a name="getPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getPoint(target:Object):Point</code><p>
+         指定オブジェクトのプロパティ x, y から新しい Point インスタンスを作成します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Object</code> &mdash; 指定オブジェクト
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code> &mdash;  新しい Point インスタンス
+         </td>
+</tr>
+</table>
+</div>
+<a name="getPositionFromMatrix()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getPositionFromMatrix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getPositionFromMatrix(mt:Matrix):Point</code><p>
+         指定のマトリックスオブジェクトから位置情報を調べ、ポイントオブジェクトを作成します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mt</span>:Matrix</code> &mdash; 対象となるマトリックスオブジェクト
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code> &mdash;  位置情報を持つポイントオブジェクト
+         </td>
+</tr>
+</table>
+</div>
+<a name="getRect()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getRect(target:Object):Rectangle</code><p>
+         指定オブジェクトのプロパティ x, y, width, height から新しい Rectangle インスタンスを作成します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Object</code> &mdash; 指定オブジェクト
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Rectangle</code> &mdash;  新しい Rectangle インスタンス
+         </td>
+</tr>
+</table>
+</div>
+<a name="getRotateFromMatrix()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getRotateFromMatrix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getRotateFromMatrix(mt:Matrix):Number</code><p>
+         指定のマトリックスオブジェクトから回転値（ラジアン単位）を調べます。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mt</span>:Matrix</code> &mdash; 対象となるマトリックスオブジェクト
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash;  回転値（ラジアン単位）
+         </td>
+</tr>
+</table>
+</div>
+<a name="getScaleFromMatrix()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getScaleFromMatrix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function getScaleFromMatrix(mt:Matrix):Point</code><p>
+         指定のマトリックスオブジェクトから拡大・縮小値を調べます。
+         scaleX 、 scaleY は、それぞれ新たに作成されたポイントオブジェクトの x , y に代入されます。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mt</span>:Matrix</code> &mdash; 対象となるマトリックスオブジェクト
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code> &mdash;  拡大率の情報を持つポイントオブジェクト
+         </td>
+</tr>
+</table>
+</div>
+<a name="intersection()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">intersection</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function intersection(a:Object, b:Object, c:Object, d:Object):Point</code><p>
+        直線AB と直線CD の交点を求めます.
+        2つの直線が平行である場合は null を返します.
+        
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">a</span>:Object</code> &mdash;  直線AB の点Aの座標（ x, y の数値プロパティを持つオブジェクト ）
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:Object</code> &mdash;  直線AB の点Bの座標（ x, y の数値プロパティを持つオブジェクト ）
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:Object</code> &mdash;  直線CD の点Cの座標（ x, y の数値プロパティを持つオブジェクト ）
+        </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:Object</code> &mdash;  直線CD の点Dの座標（ x, y の数値プロパティを持つオブジェクト ）
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Point</code> &mdash; 2直線の交点座標
+        </td>
+</tr>
+</table>
+</div>
+<a name="polygonArea()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">polygonArea</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function polygonArea(... points):Number</code><p>
+        ３つ以上の直線によって構成された多角形の面積を求めます.
+        引数には x, y の数値プロパティを持つオブジェクトを3つ以上渡す必要があります.
+        
+        </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code>... <span class="label">points</span></code> &mdash;  x, y の数値プロパティを持つオブジェクト
+        </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash; 面積
+        </td>
+</tr>
+</table>
+</div>
+<a name="quadraticBezier()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">quadraticBezier</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function quadraticBezier(a:Number, b:Number, c:Number, t:Number):Number</code><p>
+         3つの座標数値から2次ベジェ曲線の中間座標を取得します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">a</span>:Number</code> &mdash; 始点の座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:Number</code> &mdash; コントロールポイントの座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:Number</code> &mdash; 終点の座標数値
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">t</span>:Number</code> &mdash; 曲線の進度値。0 から 1 の小数値で指定します。
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash;  指定された時点におけるベジェ式の値。
+         </td>
+</tr>
+</table>
+</div>
+<a name="setPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function setPoint(target:Object, pt:Point):void</code><p>
+         指定オブジェクトのプロパティ x, y に、それぞれポイントの値を代入します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Object</code> &mdash; 指定オブジェクト
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pt</span>:Point</code> &mdash; 適応する Point オブジェクト
+         </td>
+</tr>
+</table>
+</div>
+<a name="setRect()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setRect</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function setRect(target:Object, rect:Rectangle):void</code><p>
+         指定オブジェクトのプロパティ x, y, width, height に、それぞれ Rectangle の値を代入します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Object</code> &mdash; 指定オブジェクト
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rect</span>:Rectangle</code> &mdash; 適応する Rectangle オブジェクト
+         </td>
+</tr>
+</table>
+</div>
+<a name="spline()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">spline</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function spline(p0:Number, p1:Number, p2:Number, p3:Number, t:Number):Number</code><p>
+   4つの座標数値からスプライン曲線の中間座標を取得します。
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">p0</span>:Number</code> &mdash; 始点座標数値
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">p1</span>:Number</code> &mdash; 通過点座標数値（求められる曲線の始点）
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">p2</span>:Number</code> &mdash; 通過点座標数値（求められる曲線の終点）
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">p3</span>:Number</code> &mdash; 終点座標数値
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">t</span>:Number</code> &mdash; 2 つの座標間の補間値。 0 から 1 までの数値
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code> &mdash;  p1 から p2 の間にある t の位置を示す座標値
+   </td>
+</tr>
+</table>
+</div>
+<a name="toString()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toString</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function toString(target:Object):String</code><p>
+         指定されたオブジェクトのストリング表現を返します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">target</span>:Object</code> &mdash; 出力対象オブジェクト
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code> &mdash;  オブジェクトのストリング表現
+         </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

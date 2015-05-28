@@ -1,0 +1,53 @@
+
+Aguessy3D Juillet 2009
+
+deadline : Samedi 25 Juillet 2009
+
+
+TODO sam (developpement)
+	- finish home page, and add a special help-tutorial layer,
+	- develop news section,
+	- develop medias section, just a small explanation what is really media, and a redirection link.
+	- code & design a smoothe small volume masterer,
+	- develop the scroll situations therefore decided.
+	
+
+
+TODO sam (preparation & graphics)
+	- drawingz + scanning portfolio-featuring items
+	- find arrows for the graphic,
+	- design the help layer.
+	
+
+
+	
+
+TODO Koss (decision)
+	- graphic issues of the pre-home landing page (leading 2 the flash popup)
+	- what to do about the fullscreenable or not problem :
+		.has a problem with too low sizes and too high ones,
+		.there is also a problem when, in a 'static' text page, the content 
+		will have to be 'gridded'(dot background) and scrollable.
+		.will have a pb meeting the video container, and the description text.
+	- decide what color goes with which section within the hierarchy
+	- decide what background goes exactly with what section or subsection of the hierarchy (in most 'static sections')
+	
+TODO Koss (preparation)
+	- give Sam an exemple of late news article, with pictures, so can check the disposition of textual content next to visual, 
+	in order to define rules for this section.
+	- check all contents (in order of importance)
+	- browse quickly the first dynamic inputs :
+		projects featuring in Portfolio,
+		feeds featuring in News,
+		press-clippings featuring in Press.
+	- check with sam all considered 'static' textes, and disposition, 
+	once the scrolling system is voted by Koss :
+		.team
+		.portrait
+		.awards & exhibitions 
+		(special Sam Request : do not regroup two parts with an '&',
+		I'll rather use a section 'awards', and one 'exhibitions', the same in 'news & press',
+		which I'll prefer as two separate sections, as well, for pure functional development issues (special encoding of the & symbol, etc...))
+		.contacts
+		.legal
+		.credits (I'm hesitating, why not put it in first front page, not home, pre-home, in very dark and small, very simple html credits.)

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scheme>
+	<xml id="sections" url="../xml/struct/sections/sections.xml" />
+	<xml id="portfolio" url="../xml/struct/sections/portfolio.xml" />
+	<xml id="about" url="../xml/struct/sections/about.xml" />
+	<xml id="news" url="../xml/struct/sections/news.xml" />
+	<xml id="press" url="../xml/struct/sections/press.xml" />
+	<xml id="medias" url="../xml/struct/sections/medias.xml" />
+	<xml id="contacts" url="../xml/struct/sections/contacts.xml" />
+	<fonts id="Arial" url="../swf/library/arial.swf"/>
+	<fonts id="NeoTechDaciaRegular" url="../swf/library/neo_tech_dacia_regular.swf"/>
+	<swf id="clips" url="../swf/library/library_items.swf"/>
+	<img id="logo" url="../img/skash/home/logo.png"/>
+	<img id="facebook" url="../img/skash/home/facebook.png"/>
+	<img id="motif" url="../img/skash/home/motif.png"/>
+	<img id="arrow" url="../img/skash/home/arrow.png"/>
+	<img id="home" url="../img/home/home.jpg"/>
+</scheme>

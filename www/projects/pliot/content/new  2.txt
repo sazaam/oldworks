@@ -1,0 +1,23 @@
+$(document).ready(function(){
+		$("#searchbox").removeAttr("readonly")
+		.attr("value","")
+		.autocomplete("/actions/search/",{
+			width:320,
+			max:100,
+			scroll:true,
+			scrollHeight:400,
+			cacheLength:0,
+			minChars:2,
+			formatItem:function(t,m,w){
+				return w < 9 ? 
+					"<div style='float:left; height:40px; width:40px;'><img width='40' src='"+t[1]+"'/></div> <div title='"+t[2]+"' style='float:left; height:40px;padding-left:5px;line-height:12px; font-size:12px;width:250px;overflow:hidden;'><strong>"+t[0]+"</strong><br /><i style='font-size:9px;'>Artist: "+t[3]+"</i></div>"
+					:
+					"<div title='"+t[2]+"' style='float:left; height:40px;padding-left:5px;line-height:12px; font-size:12px'><strong>"+t[0]+"</strong><br /><i style='font-size:9px;'>Artist: "+t[3]+"</i></div>"
+			},
+			formatResult:function(t){
+			return t[0]
+			}
+		}).result(function(t,m){
+			location.href=m[4]
+		})
+}) ;

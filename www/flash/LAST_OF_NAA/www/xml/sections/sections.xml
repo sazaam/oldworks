@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<__sections__>
+	<section id="NEWS" label="news" sections="news.xml" />
+	<section id="ABOUT" label="about" sections="about.xml" />
+	<section id="CONTACT" label="contact" sections="contact.xml" />
+	<section id="PORTFOLIO" label="portfolio" sections="portfolio.xml" />
+	<section id="ONLINE_STORE" label="online store" sections="online_store.xml" />
+	<section id="MAMA" label="what is that, ur mamma" sections="mama.xml" />
+</__sections__>

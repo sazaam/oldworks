@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<section id="news">
+	<category name="March2009" usename="March 2009">
+		<item id="Designers_Days_2009" usename="Designers Days 2009">
+			<informations>
+				<event date="July 14 - July 17 2009" />
+				<link href="http://www.google.com" />
+				<resume>
+					<![CDATA[
+						<p>Kossi Aguessy passes from one medium to another with ease. His aesthetic is influenced by several different cultures, human values as well as by strong visual references.
+						Renault, Yves Saint-Laurent, Cartier, Swarovski, ST Dupont, Branex and art galleries have trusted and searched for his artistic richness to their benefit.
+						The designer has already been head of architectural projects in France, Turkey, and South Africa. He can already count on numerous collaborations, using furniture machinery at a rate of production clearly showing this industrial artist has no limits.
+						Passionate and driven by strong determination</p>
+					]]>
+				</resume>
+			</informations>
+			<!-- subitems -->
+			<source url="portfolio/furniture/sculpt.jpg" />
+			<source url="portfolio/furniture/kuba.jpg" />
+		</item>
+		<item id="Maison_et_Objet_2009" usename="Maison &amp; Objet 2009">
+			<informations>
+				<event date="September 4 - October 7 2009" />
+				<link href="http://www.google.com" />
+				<resume>
+					<![CDATA[
+						<p>Kossi Aguessy passes from one medium to another with ease. His aesthetic is influenced by several different cultures, human values as well as by strong visual references.
+						Renault, Yves Saint-Laurent, Cartier, Swarovski, ST Dupont, Branex and art galleries have trusted and searched for his artistic richness to their benefit.
+						The designer has already been head of architectural projects in France, Turkey, and South Africa. He can already count on numerous collaborations, using furniture machinery at a rate of production clearly showing this industrial artist has no limits.
+						Passionate and driven by strong determination</p>
+					]]>
+				</resume>
+			</informations>
+			<!-- subitems -->
+			<source url="portfolio/furniture/damn.jpg" />
+			<source url="portfolio/furniture/2004.jpg" />
+		</item>
+	</category>
+</section>

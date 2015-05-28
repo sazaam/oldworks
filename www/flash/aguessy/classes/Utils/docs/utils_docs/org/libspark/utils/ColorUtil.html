@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../print.css" type="text/css" media="print">
+<meta content="ColorUtil,org.libspark.utils.ColorUtil,HSVtoRGB,RGBtoHSV,colorTransform,hsv,max,min,rgb,sub,subtract,sum,toRGB" name="keywords">
+<title>org.libspark.utils.ColorUtil</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'ColorUtil - SPARK Project Utils Documentation';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">API Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../all-classes.html')" href="../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../index-list.html')" href="../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../index.html?org/libspark/utils/ColorUtil.html&amp;org/libspark/utils/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;ColorUtil</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class ColorUtil"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">org.libspark.utils</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class ColorUtil</td>
+</tr>
+</table>
+<p></p>
+  色情報を扱うユーティリティクラスです
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#colorTransform()">colorTransform</a>(rgb:uint = 0, amount:Number = 1.0, alpha:Number = 1.0):ColorTransform</div>
+<div class="summaryTableDescription">[static]
+         RGB 情報から ColorTransform インスタンスを作成します。
+         
+         </div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#hsv()">hsv</a>(h:int, s:Number, v:Number):uint</div>
+<div class="summaryTableDescription">[static]
+   HSV それぞれの数値から RGB カラー値を求めます。
+   
+   </div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#HSVtoRGB()">HSVtoRGB</a>(h:Number, s:Number, v:Number):Array</div>
+<div class="summaryTableDescription">[static]
+  HSVそれぞれの数値からRGBを割り出して配列として返します.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#max()">max</a>(col1:uint, col2:uint):uint</div>
+<div class="summaryTableDescription">[static]
+  比較（明）.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#min()">min</a>(col1:uint, col2:uint):uint</div>
+<div class="summaryTableDescription">[static]
+  比較（暗）.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#rgb()">rgb</a>(r:uint, g:uint, b:uint):uint</div>
+<div class="summaryTableDescription">[static]
+   RGB それぞれの数値から RGB カラー値を求めます。
+   
+   </div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#RGBtoHSV()">RGBtoHSV</a>(r:Number, g:Number, b:Number):Array</div>
+<div class="summaryTableDescription">[static]
+  RGBそれぞれの数値から、HSV に換算した配列を返します.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sub()">sub</a>(col1:uint, col2:uint):uint</div>
+<div class="summaryTableDescription">[static]
+  減法混色.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#subtract()">subtract</a>(col1:uint, col2:uint):uint</div>
+<div class="summaryTableDescription">[static]
+  減算.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#sum()">sum</a>(col1:uint, col2:uint):uint</div>
+<div class="summaryTableDescription">[static]
+  加法混色.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#toRGB()">toRGB</a>(rgb:uint):Array</div>
+<div class="summaryTableDescription">[static]
+  RGBを示す数値（ 0x000000 から 0xFFFFFF まで）を
+  R, G, B それぞれ 0 から 255 までの数値に分割した配列を返します.</div>
+</td><td class="summaryTableOwnerCol">ColorUtil</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="colorTransform()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">colorTransform</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function colorTransform(rgb:uint = 0, amount:Number = 1.0, alpha:Number = 1.0):ColorTransform</code><p>
+         RGB 情報から ColorTransform インスタンスを作成します。
+         
+         </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">rgb</span>:uint</code> (default = <code>0</code>)<code></code> &mdash; RGBを示す整数値 (0x000000 - 0xFFFFFF)
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">amount</span>:Number</code> (default = <code>1.0</code>)<code></code> &mdash; 塗りの適応値 (0.0 - 1.0)
+         </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">alpha</span>:Number</code> (default = <code>1.0</code>)<code></code> &mdash; 透明度 (0.0 - 1.0)
+         </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>ColorTransform</code> &mdash; 新しい ColorTransform インスタンス
+   </td>
+</tr>
+</table>
+</div>
+<a name="hsv()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">hsv</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function hsv(h:int, s:Number, v:Number):uint</code><p>
+   HSV それぞれの数値から RGB カラー値を求めます。
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">h</span>:int</code> &mdash; 色相（Hue）を示す数値（ 0 から 360 まで）
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">s</span>:Number</code> &mdash;  s 彩度（Saturation）を示す数値（ 0.0 から 1.0 まで）
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">v</span>:Number</code> &mdash;  v 明度（Value）を示す数値（ 0.0 から 1.0 まで）
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code> &mdash; 各色の値から求められたRGBを示す数値
+   </td>
+</tr>
+</table>
+</div>
+<a name="HSVtoRGB()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">HSVtoRGB</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function HSVtoRGB(h:Number, s:Number, v:Number):Array</code><p>
+  HSVそれぞれの数値からRGBを割り出して配列として返します.
+  RGB の値はそれぞれ以下の通りです.
+      R - 0 から 255 までの数値
+      G - 0 から 255 までの数値
+      B - 0 から 255 までの数値
+  
+  HSV の値はそれぞれ以下の通りです.
+      H - 0 から 360 までの数値
+      S - 0 から 1.0 までの数値
+      V - 0 から 1.0 までの数値
+  
+  Hが上記範囲外の場合 0 から 360 の範囲内に相当する数値に置き換えられます.
+  アルファを含めた計算はできません.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">h</span>:Number</code> &mdash; 色相（Hue）を示す数値（ 0 から 360 まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">s</span>:Number</code> &mdash; 彩度（Saturation）を示す数値（ 0.0 から 1.0 まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">v</span>:Number</code> &mdash; 明度（Value）を示す数値（ 0.0 から 1.0 まで）
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash; RGBに変換した値の配列 [ R, G, B ] 
+  </td>
+</tr>
+</table>
+</div>
+<a name="max()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">max</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function max(col1:uint, col2:uint):uint</code><p>
+  比較（明）. <br />
+  2つのRGBを示す数値（ 0x000000 から 0xFFFFFF まで）から比較して、RGBそれぞれ数値の高い方を合わせた数値を返します.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">col1</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">col2</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code> &mdash; 比較（明）値
+  </td>
+</tr>
+</table>
+</div>
+<a name="min()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">min</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function min(col1:uint, col2:uint):uint</code><p>
+  比較（暗）. <br />
+  2つのRGBを示す数値（ 0x000000 から 0xFFFFFF まで）から比較して、RGBそれぞれ数値の低い方を合わせた数値を返します.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">col1</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">col2</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code> &mdash; 比較（暗）値
+  </td>
+</tr>
+</table>
+</div>
+<a name="rgb()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rgb</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function rgb(r:uint, g:uint, b:uint):uint</code><p>
+   RGB それぞれの数値から RGB カラー値を求めます。
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:uint</code> &mdash; 赤（R）を示す数値（ 0 から 255 まで）
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:uint</code> &mdash; 緑（G）を示す数値（ 0 から 255 まで）
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:uint</code> &mdash; 青（B）を示す数値（ 0 から 255 まで）
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code> &mdash; 各色の値から求められたRGBを示す数値
+   </td>
+</tr>
+</table>
+</div>
+<a name="RGBtoHSV()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RGBtoHSV</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function RGBtoHSV(r:Number, g:Number, b:Number):Array</code><p>
+  RGBそれぞれの数値から、HSV に換算した配列を返します.
+  RGB の値はそれぞれ以下の通りです.
+      R - 0 から 255 までの数値
+      G - 0 から 255 までの数値
+      B - 0 から 255 までの数値
+  
+  HSV の値はそれぞれ以下の通りです.
+      H - 0 から 360 までの数値
+      S - 0 から 1.0 までの数値
+      V - 0 から 1.0 までの数値
+  
+  アルファを含めた計算はできません.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:Number</code> &mdash; 赤（R）を示す数値（ 0x00 から 0xFF まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Number</code> &mdash; 緑（G）を示す数値（ 0x00 から 0xFF まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:Number</code> &mdash; 青（B）を示す数値（ 0x00 から 0xFF まで）
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash; HSVに変換した値の配列 [ H, S, V ] 
+  </td>
+</tr>
+</table>
+</div>
+<a name="sub()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sub</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function sub(col1:uint, col2:uint):uint</code><p>
+  減法混色. <br />
+  2つのRGBを示す数値（ 0x000000 から 0xFFFFFF まで）から減法混色した数値を返します.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">col1</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">col2</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code> &mdash; 減法混色値
+  </td>
+</tr>
+</table>
+</div>
+<a name="subtract()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">subtract</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function subtract(col1:uint, col2:uint):uint</code><p>
+  減算. <br />
+  ２つのRGBを示す数値（ 0x000000 から 0xFFFFFF まで）から減算した数値を返します.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">col1</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">col2</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code> &mdash; 減算混色値
+  </td>
+</tr>
+</table>
+</div>
+<a name="sum()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">sum</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function sum(col1:uint, col2:uint):uint</code><p>
+  加法混色. <br />
+  ２つのRGBを示す数値（ 0x000000 から 0xFFFFFF まで）から加法混色した数値を返します.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">col1</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">col2</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>uint</code> &mdash; 加法混色値
+  </td>
+</tr>
+</table>
+</div>
+<a name="toRGB()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">toRGB</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function toRGB(rgb:uint):Array</code><p>
+  RGBを示す数値（ 0x000000 から 0xFFFFFF まで）を
+  R, G, B それぞれ 0 から 255 までの数値に分割した配列を返します.
+  
+  </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">rgb</span>:uint</code> &mdash; RGBを示す数値（ 0x000000 から 0xFFFFFF まで）
+  </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Array</code> &mdash; 各色の値を示す配列 [ R , G , B ] 
+  </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright"> 
+</center>
+</div>
+</body>
+</html>
+<!-- -->

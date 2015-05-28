@@ -1,0 +1,7 @@
+﻿[
+	{
+		"pk": 1,
+		"model": "studies.study",
+		"fields": {"OTN_ID": "AG0001s", "label": "V1 study", "launch_date": "2010-05-24 07:23:39", "publication_date": "2010-05-24 07:23:40", "contractor": 1}
+	}
+]

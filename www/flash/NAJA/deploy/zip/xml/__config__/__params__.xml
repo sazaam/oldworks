@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parameters title="SAMUAE" version="0.1" defaultAddress="SAMUAE">
+	<stage align="TL" scaleMode="noScale" frameRate="30" />
+	<scheme>
+		<flash.display.Sprite id="all" name="all">
+			<flash.display.Sprite id="contents" name="contents" />
+			<flash.display.Sprite id="constant" name="logo" x="40" y="20" />
+		</flash.display.Sprite>
+	</scheme>
+</parameters>

@@ -1,0 +1,97 @@
+
+/* 2 blocs :  width:340px */
+/* 3 blocs :  width:495px */
+/* 4 blocs :  width:660px */
+/* 5 blocs :  width:825px */
+/* 6 blocs :  width:980px */
+/* 7 blocs :  width:1155px */
+/* 8 blocs :  width:1320px */
+/* 9 blocs :  width:1485px */
+/* 10 blocs :  width:1650px */
+/* 11 blocs :  width:1815px */
+/* 12 blocs :  width:1980px */
+
+
+
+@media screen and (min-width: 5px) {
+	#gallery{width:405px;margin:0 auto}
+}
+
+
+@media screen and (min-width: 330px) {
+	#gallery{width:330px;}
+}
+
+ 
+ @media screen and (min-width: 505px) {
+	#gallery{width:495px;}
+}
+
+
+ @media screen and (min-width: 660px) {
+	#gallery{width:660px}
+}
+
+
+ @media screen and (min-width: 825px) {
+	#gallery{width:825px}
+}
+
+
+ @media screen and (min-width: 990px) {
+	#gallery{width:990px}
+}
+/*
+
+ @media screen and (min-width: 1155px) {
+	#gallery{width:1155px}
+}
+
+
+ @media screen and (min-width: 1320px) {
+	#gallery{width:1320px}
+}
+
+
+ @media screen and (min-width: 1485px) {
+	#gallery{width:1485px}
+}
+
+
+ @media screen and (min-width: 1650px) {
+	#gallery{width:1650px}
+}
+
+
+ @media screen and (min-width: 1815px) {
+	#gallery{width:1815px}
+}
+
+
+ @media screen and (min-width: 1980px) {
+	#gallery{width:1980px}
+}
+
+
+
+*/
+
+
+
+/* IOS Standards */
+/* IPhone */
+@media screen and (max-device-width: 480px)
+{
+	
+}
+/* IPad Portrait MANAGED TO AVOID USING IT*/
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)
+{
+	
+	
+}
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)
+{
+
+
+}

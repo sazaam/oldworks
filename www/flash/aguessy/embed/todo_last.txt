@@ -1,0 +1,53 @@
+
+todo SAM :
+
+- appeler Thibault,
+
+
+
+//- news :
+	//- tout faire dans news,
+
+//- contacts :
+	//- tout faire dans contacts,
+
+- medias :
+	- tout faire dans medias,
+	- //désactiver medias dans un premier temps,
+
+- prehome :
+	-dispo des elems d'intro,
+		-layer,
+		-logo + "DESIGNER, PARIS" + v3.0 > enter,
+		-logo facebook,
+		-signature,
+
+- home :
+	- visuel + ptit, + centré,
+	//- facebook à virer,
+
+- images : //resize ratio
+	
+- nav3D :
+	- optimiser couleurs & func,
+	- mettre couleurs sur flèches,
+	- changer les flèches en bidules,
+	- faire apparaitre/disparaître les flèches,
+	- faire apparaitre/disparaître les flèches,
+
+- textes :
+	- //optimiser pour fulscreen(detecte dernier block possible à afficher),
+
+- video :
+	- optimiser pour fullscreen,
+	- réglages du son,
+	
+- annexes :
+	- pdf explications,
+	- drawings of items,
+	- doc pour Kossi.
+	
+	
+	
+	
+	

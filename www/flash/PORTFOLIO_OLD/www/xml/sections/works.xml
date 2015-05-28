@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<data>
+	<section id="1" label="works 1" sections="sections/works/_1.xml" />
+	<section id="2" label="works 2" sections="sections/works/_2.xml" />
+	<section id="3" label="works 3" sections="sections/works/_3.xml" />
+	<section id="4" label="works 4" sections="sections/works/_4.xml" />
+	<section id="5" label="works 5" sections="sections/works/_5.xml" />
+</data>

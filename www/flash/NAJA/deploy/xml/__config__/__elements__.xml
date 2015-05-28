@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<debug>
+		<!-- debug textfield visible="false" -->
+		<flash.text.TextField gridFitType="subpixel" visible="false" antiAliasType="advanced" embedFonts="false" selectable="true" x="20" y="100" autoSize="left" multiline="true" kerning="true">
+			<htmlText><![CDATA[<b>Samuae</b> v 0.1<br/>]]></htmlText>
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="10" bold="false"  color="0xFF0000" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+	</debug>
+	<textfields>
+		<!-- templatized textfields -->
+		<flash.text.TextField gridFitType="subpixel" sharpness="200" thickness="400" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="2" autoSize="left" multiline="true" kerning="true">
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="8" bold="false"  color="0x000000" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+		<flash.text.TextField gridFitType="subpixel" sharpness="200" thickness="400" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="2" autoSize="left" multiline="true" kerning="true">
+			<defaultTextFormat>
+				<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="8" bold="false"  color="0x000000" />
+			</defaultTextFormat>
+		</flash.text.TextField>
+	</textfields>
+	<sprites>
+		<flash.display.Sprite id="INFOS" name="portfolio_infos">
+			<flash.text.TextField id="editor" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="2" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="date" gridFitType="subpixel" sharpness="200" thickness="400" text="2008" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="75" autoSize="left" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="cat" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="32" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="materials" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="2" y="44" wordWrap="true" width="150" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+		<flash.display.Sprite id="NEWS" name="news_infos">
+			<flash.text.TextField id="event" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="2" wordWrap="true" width="250" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="link" gridFitType="subpixel" sharpness="200" thickness="400" text="" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="22" wordWrap="true" width="250" multiline="true" kerning="true">
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="left" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+			<flash.text.TextField id="resume" gridFitType="subpixel" sharpness="200" thickness="400" antiAliasType="advanced" alpha=".55" selectable="false" x="162" y="44" wordWrap="true" width="250" multiline="true" kerning="true">
+				<htmlText>
+					<![CDATA[
+						<p>Kossi Aguessy passes from one medium to another with ease. His aesthetic is influenced by several different cultures, human values as well as by strong visual references.
+						Renault, Yves Saint-Laurent, Cartier, Swarovski, ST Dupont, Branex and art galleries have trusted and searched for his artistic richness to their benefit.
+						The designer has already been head of architectural projects in France, Turkey, and South Africa. He can already count on numerous collaborations, using furniture machinery at a rate of production clearly showing this industrial artist has no limits.
+						Passionate and driven by strong determination</p>
+					]]>
+				</htmlText>
+				<defaultTextFormat>
+					<flash.text.TextFormat font="Kozuka Gothic Pro L" letterSpacing="1" align="justify" size="9" bold="false"  color="0x000000" />
+				</defaultTextFormat>
+			</flash.text.TextField>
+		</flash.display.Sprite>
+	</sprites>
+</elements>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+	<entry name="params">__params__.xml</entry>
+	<entry name="elements">__elements__.xml</entry>
+	<entry name="libraries">__libraries__.xml</entry>
+	<entry name="links">__links__.xml</entry>
+	<entry name="scripts">__scripts__/js.xml</entry>
+</configuration>

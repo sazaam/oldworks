@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<scheme merged="false">
+	<!--
+	<zip id="libraries" url="../zip/libraries.zip" />
+	-->
+	<xml id="sections" url="sections/sections.xml" />
+	<fonts id="KozGothProL" url="KozGothProL.swf"/>
+	<fonts id="KozGothProH" url="KozGothProH.swf"/>
+	<swf id="clips" url="graphics.swf"/>
+	<!--
+	<img id="home" url="home.jpg"/>
+	<img id="facebook" url="home2.jpg"/>
+	-->
+</scheme>
+

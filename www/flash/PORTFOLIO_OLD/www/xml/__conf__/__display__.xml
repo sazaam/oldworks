@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<parameters version="0.1" defaultAddress="HOME">
+	<scheme>
+		<flash.display.Sprite id="universe" name="universe">
+			<flash.display.Sprite id="console" name="console" />
+			<flash.display.Sprite id="content" name="content" />
+			<flash.display.Sprite id="nav" name="nav" />
+		</flash.display.Sprite>
+	</scheme>
+</parameters>

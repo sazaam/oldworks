@@ -1,0 +1,11 @@
+Name: shinobi
+Specification-Title: Shinobi OOP Framework
+Specification-Version: 1.0.0
+Specification-Vendor: Ornorm
+Implementation-Title: OOP related packages
+Implementation-Version: 1.0.0
+Implementation-Vendor: Ornorm
+Implementation-Profile: profile.properties
+Include-Dependencies:
+Entry-Point: Main
+User-Info: shinobi.properties

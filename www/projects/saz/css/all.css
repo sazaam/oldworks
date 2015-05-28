@@ -1,0 +1,179 @@
+/* JS FILE */
+
+
+/* 
+	www.remitessier.com    SPILL FOR REMITESSIER
+	@author saz
+
+*/
+
+*{}
+
+
+.wrapper{
+	width:100%;
+	height:100%;
+	
+}
+
+#all{
+	background:#a4003b;
+}
+
+
+.page{
+	text-align:center;
+	width:100%;
+	overflow:auto;
+	overflow-x:hidden;
+	position:absolute;
+	z-index:1;
+	top:55px;
+	bottom:25px;
+}
+
+
+.header{
+	text-transform:uppercase;
+	font-size:100%;
+	color:#000;
+	position:absolute;
+	top:0;
+	z-index:100;
+	height:55px;
+	width:100%;
+	background:#d4d0c8;
+	border-bottom:1px solid #2a2a2a;
+	text-shadow:0px 1px 2px rgba(255,255,255,1);
+	/*-moz-box-shadow:0px 1px 15px rgba(0,0,0,.4);
+	-webkit-box-shadow:0px -1px 15px rgba(0,0,0,.4);
+	-o-box-shadow:0px -1px 15px rgba(0,0,0,.4);
+	box-shadow:0px -1px 15px rgba(0,0,0,.4);*/
+}
+
+.headerleft{}
+.headerleft li{
+	float:left
+}
+.headerleft li a{
+	padding:20px 25px;
+	display:block;
+}
+
+.footer{
+	text-transform:uppercase;
+	color:#000;
+	height:25px;
+	position:absolute;
+	bottom:0; 
+	left:0;
+	z-index:100;
+	width:100%;
+	background:#d4d0c8;
+	border-top:1px solid #2a2a2a;
+	text-shadow:0px 1px 2px rgba(255,255,255,1);
+	/*-moz-box-shadow:0px -1px 15px rgba(0,0,0,.4);
+	-webkit-box-shadow:0px -1px 15px rgba(0,0,0,.4);
+	-o-box-shadow:0px -1px 15px rgba(0,0,0,.4);
+	box-shadow:0px -1px 15px rgba(0,0,0,.4);*/
+}
+.footerleft{}
+.footerleft li{
+	float:left
+}
+.footerleft li a{
+	padding:5px 25px 3px;
+	display:block;
+}
+
+
+#saz, #saz2{color:white;text-align:left;}
+
+
+.projectsnav{
+	text-align:left;
+	text-transform:uppercase;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	text-shadow:0px 1px 2px rgba(0,0,0,.4);
+}
+
+.projectsnav ol{
+	padding:25px;
+}
+
+.projectsnav ol .toplevel{
+	
+}
+
+.projectsnav ol .toplevel a{
+	color:#d4d0c8;
+	font-size:21px;
+	display:block;
+}
+
+.button	{
+	display:block;
+	padding:5px 15px;
+	background:#d4d0c8;
+	color:black;
+}
+
+
+.content  .page{
+	top:25px;
+	bottom:25px;
+}
+.content .header{height:25px;background:#C4C0B8;color:#000}
+.content .headerleft a{
+	padding:6px 25px;
+}
+
+.content .footer{height:25px;background:#C4C0B8;color:#000}
+
+
+
+
+
+
+/* TEST HERMES */
+
+body, html{
+	height:100%;
+	overflow:auto !important;
+}
+
+
+#all{
+	/*float:left;*/
+	height:100%;
+	margin-right:250px;
+}
+
+#sidenav{
+	float:right;
+	width:250px;
+}
+
+.fullheight{
+	height:100%;
+	background:black;
+	overflow:hidden;
+}
+.fullwidth{
+	width:100%;
+	
+}
+
+
+
+
+
+
+
+
+
+
+

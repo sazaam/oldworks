@@ -1,0 +1,28 @@
+- var isLeft = zone == 'left', projects = user.projects
+div.abs.pages.left0.right0.fullW.fullH(style="#{(isLeft ? 'top:0%': 'bottom:0%')}")
+	- for(var i = 0 ; i < projects.length ; i++){
+		- var project = user.projects[i], isEven = i % 2 == 0
+		div.abs.page(style="#{(isLeft ? 'top:'+ (i*100) + '%': 'bottom:'+ (i*100) + '%')};left:0;")
+			div.abs.blocks.fullW.fullH(style="left:0%;color:#{project.styles.color}")
+				- for(var j = 0 ; j < project.pages.length ; j++){
+					- var page = project.pages[j], isFirst = j == 0
+					div.abs.centerblock.fullW.fullH(style="left:#{(j*100) + '%'}")
+						div.abs.imghold.context
+							div.abs.imganchor.left50.right50.top0.bottom0
+								img.dispBlock.#{project.imglayout}(alt="", src="#{page}")
+						- if((isEven && isLeft) || (!isEven && !isLeft)) {
+							- if(isFirst){
+								div.abs.#{(isLeft ? 'txtL': 'txtR')}.top0.left0.right0
+									div.line.rel
+										div
+											h3.title.sizeLg.Hmargin.Tmargin.uppercase= project.title
+											span.dispBlock.sizeSm.Hmargin.TmarginSm= project.desc
+								div.abs.#{(isLeft ? 'txtL': 'txtR')}.bottom0.left0.right0
+									h2.sizeR.margin
+										span.dispBlock.sizeSm.BpaddingSm= project.date
+										| #{project.desclabels}
+										span.dispBlock.sizeSm.TpaddingSm= project.tags
+							- }
+						- }
+				- }
+	- }
