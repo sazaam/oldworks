@@ -1,0 +1,61 @@
+<html>
+	<head>
+	
+	
+		<script type="text/javascript" src="./js/momo_app/node_modules/node_modules/jquery-1.8.1.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript" src="./js/strawnode.js"></script>
+		<script type="text/javascript" src="./js/momo_app/node_modules/strawexpress.js"></script>
+		<script type="text/javascript">
+			
+			//var origin = new EventDispatcher() ;
+			//var origin2 = new EventDispatcher() ;
+			
+			var originClosure ;
+			var origin2Closure ;
+			var loadClosure ;
+			var load2Closure ;
+			
+			//var el = new EventDispatcher() ;
+			//var el2 = new EventDispatcher() ;
+			
+			//el.bind('load', loadClosure = function loadClosure(e){
+				//trace('EL', e)
+			//}) ;
+			
+			//el2.bind('load', load2Closure = function load2Closure(e){
+				//trace('EL_2', e)
+			//}) ;
+			
+			var DOMEventDispatcherProxy = Pkg.definition('org.libspark.straw.event::DOMEventDispatcherProxy') ;
+			var loadClosure ;
+			var readyClosure ;
+			
+			var win = new EventDispatcher(window) ;
+			win.bind('load', loadClosure = function(e){
+				trace('LOAD', e.currentTarget)
+			})
+			
+			var doc = new EventDispatcher($('<div style="cursor:default;position:absolute;color:white;background:#333;margin:50px;font-family:Arial;font-size:12px;padding:25px">').appendTo(document.body).text('HELLO WORLD')[0]) ;
+			doc.bind('click', clickClosure = function(e){
+				trace('CLICK', e)
+			})
+			
+			//doc.setDispatcher() ;
+			//win.setDispatcher(window) ;
+			//win.setDispatcher() ;
+			
+			//m._dispatcher.addEventListener('load',  function(){
+				//trace('LOADED')
+			//})
+			
+			doc._dispatcher.trigger('click') ;
+			doc._dispatcher.trigger('click') ;
+			
+			//new DOMEventDispatcherProxy().trigger('click') ;
+			
+		</script>
+	</body>
+
+</html>

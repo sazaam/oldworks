@@ -1,0 +1,66 @@
+.page.dispNone.context
+	form#bookingform.bookingform.fullW.fullH
+		.abs.fullW.fullH.dispTable
+			.dispCell.txtM
+				.constraint.marginAuto.HpaddingLg.topborder.bottomborder
+					
+					.padding.txtL.sizeLg.VpaddingLg
+						p.txtL.Hpadding Regarding bookings and reservations, 
+							br
+							span.bold.green Please fill up these information fields about your trip to Busan :
+					
+					.context.sizeR
+							fieldset.fieldset.txtL.paddingLg.Vpadding.BmarginLg
+								p.fline.label30.Vmargin.context
+									label.label.bold(for="hometown") City
+									span.input.text
+										input(type="text", value="", id="hometown")
+								
+								p.fline.label30.Vmargin.context
+									label.label.bold(for="name") Name *
+									span.input.text
+										input(type="text", value="", id="name")
+								
+								p.fline.label30.Vmargin.context
+									label.label.bold(for="email") Mail *
+									span.input.text
+										input(type="text", value="", id="email")
+								
+								p.fline.label30.Vmargin.context
+									label.label.bold(for="message") Message *
+									span.input.text
+										input(type="text", value="", id="message")
+																			
+						.context.abs.right0.left0(style="top:100%;margin-top:-1px;")
+							p.validate.bold
+								a#send.sendbtn.dispBlock.submit.text.sizeR.floatR.bottomborder(href="#")
+									span.dispBlock.padding.HpaddingXXLg SEND
+								
+								a#clear.clearbtn.dispBlock.submit.text.sizeR.floatR.leftborder.bottomborder(href="#")
+									span.dispBlock.padding.HpaddingXXLg CLEAR
+								
+								span.submit.text.floatL.dispNone
+									input#submitmsghidden.realsend(type="submit", action="?", value="SEND")
+								
+							
+					a.dispBlock.toHome.powderBG.topborder.rightborder(href="#/en/home/") &lt; Back
+					
+		.errorzone.abs.fullW.fullH.dispNone
+			.abs.fullW.fullH.dispTable(style="background:rgba(42, 42, 42, .92)")
+				.dispCell.txtM
+					.constraint.marginAuto.HpaddingLg.topborder.bottomborder
+						.padding.txtC.sizeLg.VpaddingLg
+							p.txtL.Hpadding Your message cant get validated yet	… 
+								br 
+								span.bold.green Please read instructions and retry...
+						a.retry.dispBlock.toHome.powderBG.topborder.rightborder(href="#/en/home/") &lt; Retry
+						
+		.validzone.abs.fullW.fullH.dispNone
+			.abs.fullW.fullH.dispTable(style="background:rgba(42, 42, 42, .92)")
+				.dispCell.txtM
+					.constraint.marginAuto.HpaddingLg.topborder.bottomborder
+						.padding.txtC.sizeLg.VpaddingLg
+							p.txtL.Hpadding Thank you !
+								br 
+								span.bold.green I will shortly reply…
+						a.retry.dispBlock.toHome.powderBG.topborder.rightborder(href="#/en/home/") &lt; Back

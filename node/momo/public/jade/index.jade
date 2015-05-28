@@ -1,0 +1,223 @@
+extends layout
+block content	
+	#all.all.abs.fullW.fullH.darkBG( style="top:0%" )
+		- var f = function ( str ) {
+			- return str.replace(/[^\s]/g, function ( rr ){ return rr + '<br />'} ) ;
+		- }
+		- var section_index = -1 ;
+		- for ( var name in sections) {
+			- section_index ++ ;
+			- section = sections[name] ;
+			- if ( name == 'momoko' ) {
+				#momoko.project.rel.fullW.fullH.clickable( style="background:#222" )
+					.projectinside.abs.fullW.fullH
+						.page.abs
+							.abs.centerblock( style="background:url('./img/kamon.png') no-repeat 50% 50%" )
+								.abs.fullW.fullH.dispTable
+									.dispCell.txtM
+										h1.sizeM.white.hidden
+											| !{f(section.title)}
+					
+						
+					.abs.info.right0.txtR.top0.bottom0.context.dispNone( style="top:0 !important;bottom:0 !important" )
+						.contblock.abs.top0.fullW.fullH( style="left:0%" )
+							.contblockinside.abs.top0.fullW.fullH.momocolor( style="left:0%" )
+								.jp.marginLg.RmarginXXLg.context
+									p.sizeR.floatL
+										- var s = section.jp.lastname + section.jp.firstname ;
+										- for ( var i = 0 ; i < s.length ; i++ ) {
+											- var m = s.charAt(i) ;
+											span.letter.dispBlock= m
+										- }
+									p.sizeR.floatL.txtC
+										- s = section.en.firstname ;
+										- for ( var i = 0 ; i < s.length ; i++ ) {
+											- var m = s.charAt(i) ;
+											span.letter.dispBlock= m
+										- }
+									p.sizeR.floatL.txtC
+										- s = section.en.lastname ;
+										- for ( var i = 0 ; i < s.length ; i ++ ) {
+											- var m = s.charAt(i) ;
+											span.letter.dispBlock= m
+										- }
+									h4.floatR.sizeSm
+										- s = section.desc ;
+										- for ( var i = 0 ; i < s.length ; i ++ ) {
+											- var m = s.charAt(i) ;
+											span.letter.dispBlock= m
+										- }
+								.eng.abs.bottom0.right0.marginLg.RmarginXXLg.BmarginXXLg.ls1
+									.desc.sizeXSm.foggy
+										span.letter.dispBlock #{section.copy}
+									
+									h4.desc.TmarginSm.sizeSm
+										- var mail = section.mail ;
+										- var splits = mail.split('@') ;
+										a.foggy.dispBlock( href="mailto:#{mail}" )
+											span.letter.dispBlock #{splits[0]}
+											span.letter.dispBlock #{'(at)' + splits[1]}
+								
+					.abs.read.right0.top0
+						a#readinfofirst.momocolor.dispBlock.readInfo.italic.bolder.paddingLg.dark( href="#" ) i
+						
+			- } else {
+				.project.rel.fullW.fullH.context.clickable
+					.projectinside.abs.fullW.fullH( style="overflow:visible;left:0%" )
+						.page.abs
+							.abs.centerblock
+								.abs.fullW.fullH.dispTable
+									.dispCell.txtM
+										.line.rel( style="left:22px" )
+											.unit.size1of2.txtR
+												h2.sizeLg.Rmargin
+													| !{f(section.jp.title)}
+											.unit.lastUnit.txtL
+												h2.sizeR.Lmargin.TmarginXXXLg.ls1
+													span.dispBlock.sizeSm.Bpadding.momocolor #{section_index}
+													| #{section.en.title}
+													span.dispBlock.sizeSm.TpaddingSm.momocolor #{section.desc}
+						- var slides = section.slides ;
+						- for ( var j = 0 ; j < slides.length ; j++ ) {
+							- var slide = slides[j] ;
+							- var slide_index = j + 1 ;
+							.page.abs( style="left:#{slide_index}00%" )
+								.abs.centerblock
+									img.dispBlock.fullH.marginAuto( alt="", src="./img/#{slide.name}.png" )
+						- }
+					
+					.abs.info.right0.txtR.top0.bottom0.context.dispNone
+						.contblock.abs.top0.fullW.fullH.allinfo( style="left:0%" )
+							.contblockinside.abs.top0.left0.fullW.fullH
+								.jp.marginLg.RmarginXXLg.context
+									p.sizeR.floatL
+										- var s = section.jp.title ;
+										- for ( var i = 0 ; i < s.length ; i ++ ) {
+											- var m = s.charAt(i) ;
+											span.letter.dispBlock= m
+										- }
+									h4.sizeSm.floatR
+										- var s = section.jp.technique + ' ' + section.dimensions + ' ' + section.jp.year ;
+										- for ( var i = 0 ; i < s.length ; i ++ ) {
+											- var m = s.charAt(i) ;
+											span.letter.dispBlock= m
+										- }
+								.eng.abs.bottom0.right0.marginLg.RmarginXXLg.BmarginXXLg.ls1
+									.desc.sizeSm.grey.context
+											span.letter.dispBlock
+												span.faded.Rmargin #{section.en.year}
+												!{section.en.title}
+										h4.desc.sizeSm.foggy.context
+											span.letter.dispBlock #{section.dimensions + ' cm'}
+											span.letter.dispBlock #{section.en.technique}
+							- var slides = section.slides ;
+							- for ( var j = 0 ; j < slides.length ; j++ ) {
+								- var slide = slides[j] ;
+								- var slide_index = j + 1 ;
+								.contblockinside.abs.top0.fullW.fullH.infodark( style="left:#{slide_index}00%" )
+									.imghold.abs.top0.bottom0.context
+										img.abs.top0.left0.fullH( alt="", src="./img/#{slide.name}bis.png" )
+									
+									.jp.marginLg.RmarginXXLg.context
+										- var texts = slide.texts || slides[0].texts || [section.jp.title] ;
+										- for ( var k = 0 ; k < texts.length ; k++ ) {
+											- var text = texts[k] ;
+											- var s = text ;
+											p.sizeR.floatL
+												- for ( var i = 0 ; i < s.length ; i ++ ) {
+													- var m = s.charAt(i) ;
+													span.letter.dispBlock= m
+												- }
+										- }
+										
+										h4.sizeSm.floatR
+											- var s = section.jp.technique + ' ' + section.dimensions + ' ' + section.jp.year ;
+											- for ( var i = 0 ; i < s.length ; i ++ ) {
+												- var m = s.charAt(i) ;
+												span.letter.dispBlock= m
+											- }
+										
+									.eng.abs.bottom0.right0.marginLg.RmarginXXLg.BmarginXXLg.ls1
+										.desc.sizeSm.grey.context
+											span.letter.dispBlock
+												span.faded.Rmargin #{section.en.year}
+												!{section.en.title}
+										h4.desc.sizeSm.foggy.context
+											span.letter.dispBlock #{section.dimensions + ' cm'}
+											span.letter.dispBlock #{section.en.technique}
+							- }
+					.abs.arr.prev.context.left0.top50
+						a.arrow.dispBlock.sizeSm( href="#" ) &larr;
+					
+					.abs.arr.next.context.right0.top50
+						a.arrow.dispBlock.sizeSm( href="#" ) &rarr;
+					
+					.abs.read.right0.top0
+						a.arrow.dispBlock.readinfo.italic.bolder.paddingLg( href="#" ) i
+			- }
+		- }
+	
+	
+	.abs.projectarr.prevproj.dispNone.left0.top0.right0.clickable
+		a.arrow.dispBlock.sizeSm.VmarginLg( href="#" ) &uarr;
+
+	.abs.projectarr.nextproj.dispNone.left0.bottom0.right0.clickable
+		a.arrow.dispBlock.sizeSm.VmarginLg( href="#" ) &darr;
+		
+	.abs.help.right0.top0.marginLg.RmarginXXXLg.txtL.clickable.sizeXSm.momocolor
+		.helpbox.padding
+			.usearrows.ls1
+				span.dispBlock
+					| FOR INFOS ----&gt;
+		.helpbox.padding.anthraciteBG
+			.usearrows.ls1
+				span.dispBlock
+					| OR
+					br
+					| PRESS [ SPACE ]
+			.usearrows.ls1.TmarginSm(style="color:#555 !important")
+				| \\\\\\\\\\\\\\\\\\\
+			.usearrows.ls1.TmarginSm
+				| NAVIGATE
+				br
+				| WITH
+				br
+				| KEYBOARD ARROWS
+			.usearrows.Tmargin.txtC.Rmargin
+				| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;^&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			.usearrows.Tmargin.txtC.Rmargin
+				| < &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; > 
+			.usearrows.Tmargin.txtC.Rmargin
+				| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;v&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			.orelse.ls1.txtL
+				| OR
+				br
+				| BY DRAGGING
+				br
+				| ON SCREEN
+				
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	script( type="text/javascript", src="/js/strawnode.js" )
+	script( type="text/javascript", src="/js/momo_app/node_modules/node_modules/jquery-1.8.1.min.js")
+	script( type="text/javascript", src="/js/momo_app/node_modules/strawexpress.js")
+	script( type="text/javascript", src="/js/momo_app/node_modules/strawexpress-address.js")
+	script( type="text/javascript", src="/js/momo_app/node_modules/strawexpress-utils.js")
+	script( type="text/javascript", src="/js/momo_app/node_modules/betweenjs.js")
+	script( type="text/javascript", src="/js/momo_app/graphics.js")
+	script( type="text/javascript", src="/js/momo_app/routes.js")
+	script( type="text/javascript", src="/js/momo_app/index.js")
+	// script( type="text/javascript", src="/js/strawnode.js?starter=./momo_app/" )
+	
+	
+	
+	
+	
+	
