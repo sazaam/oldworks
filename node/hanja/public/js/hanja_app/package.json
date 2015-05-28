@@ -1,0 +1,12 @@
+{
+	"name" : "strawnode_app",
+	"version" : "0.0.1",
+	"description" : "Strawnode's example app",
+	"index" : "./index.js",
+	"dependencies":[
+		"strawexpress.js",
+		"strawexpress-address.js",
+		"strawjade.js",
+		"betweenjs.js"
+	]
+}

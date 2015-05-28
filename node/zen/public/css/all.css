@@ -1,0 +1,447 @@
+
+
+body, html {
+    height: 100%;
+}
+body {
+    color: #F3F3F3;
+    text-align: center;
+}
+a {
+    color: #F7F7F7;
+    text-decoration:none;
+    outline:none !important;
+}
+
+
+.bold{
+	color:#F7F7F7;
+}
+
+
+.green{
+	color:#7ba7a8;
+}
+.home .zen{
+	color:#CCC;
+}
+
+label.bold{color:inherit;}
+
+a:hover, .active a{
+    color: #666;
+}
+a:active{color:#CCC !important;}
+
+.page a:hover{color:#7ba7a8 !important}
+
+.inactive {
+    color: #333 !important;
+}
+.inactive:hover {
+    color: #333 !important;
+}
+.pentone , .pentone a{
+    color: #A40133;
+}
+.pentone2 , .pentone2 a{
+    color: #912738;
+}
+
+.pentone3 , .pentone3 a{
+    color: #ed014a;
+}
+
+.error {
+    color: #A40133;
+}
+.darkest {
+    color: #000000;
+}
+.darker {
+    color: #1D1D1D;
+}
+.dark {
+    color: #434343;
+}
+.shady {
+    color: #555555;
+}
+.faded {
+    color: #363636;
+}
+.foggy {
+    color: #BBBBBB;
+}
+.light {
+    color: #CDCDCD;
+}
+.lighter {
+    color: #E4E4D8;
+}
+.lightest {
+    color: #FFFFFF;
+}
+.courrier {
+    font-family: "Courier New","Times New Roman",Times,serif;
+}
+.typo {
+    /* font-family: "Kozuka Gothic Pro EL", "DFPKaiSho-Md", "Georgia" ; */
+    font-family: "Kozuka Gothic Pro EL" ;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+.italic {
+    font-style: italic;
+}
+.ls1 {
+    letter-spacing: .5em;
+}
+.ls2 {
+    letter-spacing: .3em;
+}
+.ls4 {
+    letter-spacing: 1.5em;
+}
+.ls10 {
+    letter-spacing: 2.5em;
+}
+.sizeXSm {
+    font-size: 8px;
+}
+.sizeSm {
+    font-size: 10px;
+}
+.sizeR {
+    font-size: 14px;
+}
+.sizeM {
+    font-size: 18px;
+}
+.sizeLg {
+    font-size: 24px;
+}
+.sizeXLg {
+    font-size: 38px;
+}
+.sizeXXLg {
+    font-size: 44px;
+}
+.sizeXXXLg {
+    font-size: 165px;
+    line-height: 128px;
+}
+html, body {
+    -webkit-text-size-adjust: 100%;
+}
+
+.clickable{
+	cursor:url('../img/pointer.png'), -moz-zoom-in;
+}
+
+.movable, .movable *{
+	cursor:url('../img/move.png'), -moz-zoom-in;
+}
+.movableleft, .movableleft *{
+	cursor:url('../img/moveleft.png'), -moz-zoom-in;
+}
+
+.movableright, .movableright *{
+	cursor:url('../img/moveright.png'), -moz-zoom-in;
+}
+.movableup, .movableup *{
+	cursor:url('../img/moveup.png'), -moz-zoom-in;
+}
+
+.movabledown, .movabledown *{
+	cursor:url('../img/movedown.png'), -moz-zoom-in;
+}
+.unclickable{
+	cursor:default;
+}
+
+
+/* GENERICS */
+
+/* backgrounds */
+.blackBG{background-color:#000;}
+.whiteBG{background-color:#FFF;}
+.anthraxBG{background-color:#F7F7F7;}
+.powderBG{background-color:#2A2A2A}
+.lightgrayBG, .lightgreyBG{background-color:#CCC;}
+.grayBG, .greyBG{background-color:#999;}
+.darkgrayBG, .darkgreyBG{background-color:#555;}
+.anthraciteBG{background-color:#333;}
+.antBG{background-color:#2A2A2A;}
+.darkBG, .darkBG{background-color:#2A2A2A;}
+
+
+/* ELEMENTS */
+
+body, html{
+	background:#FFF;
+}
+
+
+.universe{
+	
+}
+
+.universe, .universe a{
+	/*font-family:'BentonSans' ;*/
+	font-family:'ARS-Maquette-Web-Pro-1' ;
+}
+
+
+.all{
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background:#1D1D1D;
+}
+
+
+/* Content Zone */
+
+
+.contentzone{
+	/* width:640px; */
+	margin:auto;
+	background:#272727;
+	
+}
+.page{
+	color:#555;
+	position:absolute;
+	top:30px;left:0;right:0;bottom:100px;
+	background:#2A2A2A;
+	border-top:1px solid #333;
+	border-bottom:1px solid #333;
+}
+.rightborder{
+	border-right:1px solid #333;
+}
+.leftborder{
+	border-left:1px solid #333;
+}
+.topborder{
+	border-top:1px solid #333;
+}
+.bottomborder{
+	border-bottom:1px solid #333;
+}
+
+
+
+
+.page.home{
+	color:#666;
+	
+}
+
+.page.home .hometitle{
+	height:100%;
+}
+
+.slideshow{
+	top:0px;left:0;right:0;bottom:99px;
+}
+/* Icons NAV */
+
+.navzone{
+	height:100px;
+	width:100%;
+}
+
+.nav{
+	height:100%;
+}
+
+.nav .iconzone{
+	width:25%;
+	height:100%;
+	float:left;
+}
+
+.nav .icon{
+	width:100%;
+	height:100%;
+	position:relative;
+}
+
+.nav .icon a{
+	height: 100%;
+    line-height: 100px;
+}
+
+
+.slashes{
+	right:0;
+	left:0;
+	top:31px;
+	bottom:101px;
+}
+
+.slash{
+	
+}
+
+
+.slash.black .centerbox{
+	background:#2A2A2A;
+}
+
+.slash.red .centerbox{
+	background:#27dd85;
+}
+
+.slash.yellow .centerbox{
+	background:#272727 url('./skin/zen.jpg') no-repeat 50% 50%;
+	/*background:#1D1D1D url('./skin/zen.jpg') no-repeat 50% 50%;*/
+}
+
+
+
+.page .input input, .page .input select, .page .input textarea{
+    border: 0px solid #D4D4D4;
+    color:inherit;
+    background:transparent;
+    padding:0;
+}
+
+.page .fieldset .input{
+    border:1px solid #333;
+    color:#666;
+    background:#2C2C2C;
+    padding:3px 2px 2px !important;
+}
+
+
+
+.validate input.text, .validate select, .validate textarea {
+	background:#BFBFBF;
+}
+
+
+.validate .submit{background:#2A2A2A;color:#555;}
+.validate .submit:hover{ color:#7BA7A8;} 
+
+.slide a{
+	background:url('noimage.jpg') no-repeat 50% 50%;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+}
+
+
+img.bg {
+  /* Set rules to fill background */
+  
+  /* Set up proportionate scaling */
+  width: auto !important;
+  height: 100%;
+
+  /* Set up positioning */
+  margin:auto !important
+}
+
+
+
+.page a{color:#555;}
+.page a:hover{color:#7BA7A8;}
+.nav a{color:#555;}
+.nav a:hover{color:#7BA7A8;}
+.nav a.active, .nav .active a{color:#7BA7A8;}
+
+.backarrow{
+	width:55px;
+	height:35px;
+	background:url('./skin/backarrow.png') no-repeat 50% top;
+}
+
+.white{
+	color:#EAEAEA;
+}
+
+.white .backarrow{
+	background:url('./skin/backarrow.png') no-repeat 50% bottom;
+}
+
+.zen{
+	width:auto !important;
+}
+.hometitle2{
+	text-shadow:0px 0px 3px rgba(42, 42, 42, 1);
+}
+.zenbackground{
+	left:0px;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	background:url('./skin/zen_back.jpg') no-repeat right bottom ;/**/
+}
+
+.constraint{
+	position:relative;
+	max-width:640px;
+}
+
+.white .constraint{
+	max-width:100%;
+}
+
+.slidenav{
+	
+}
+.prev, .next{
+	padding:5px 15px;
+}
+
+.toHome{
+	display:block;
+	position:absolute;
+	left:0;
+	top:-37px;
+	padding:10px 40px;
+	font-weight:bold;
+}
+
+
+.marginAuto{
+	margin:0 auto;
+}
+
+
+
+
+
+.page .fieldset .failure{border-color:#96546b;}
+.page .fieldset .success{border-color:#7BA7A8;}
+
+
+/* DISPLAY TABLE VALIGN */
+
+.dispTable{
+	display:table;
+}
+.dispCell{
+	display:table-cell;
+	position:relative;
+}
+.MSIE .dispTable{
+	//position:relative;
+	//height:auto !important;
+	//top:50%;
+	zoom:1;
+}
+
+
+.MSIE .dispCell{
+	//display:table-cell;
+	//position:relative;
+	//top:-50%;
+	zoom:1;
+}

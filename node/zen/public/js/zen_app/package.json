@@ -1,0 +1,12 @@
+{
+	"name" : "Zen Backpackers",
+	"version" : "0.0.1",
+	"description" : "June's fortune-telling guesthouse",
+	"index" : "./index.js",
+	"dependencies":[
+		"strawexpress.js",
+		"strawexpress-address.js",
+		"strawjade.js",
+		"betweenjs.min.js"
+	]
+}

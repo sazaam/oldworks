@@ -1,0 +1,15 @@
+{
+	"name" : "The Strawnode Project",
+	"version" : "0.0.1",
+	"description" : "Strawnode's example app",
+	"index" : "./index.js",
+	"dependencies":[
+		"strawexpress.js",
+		"strawexpress-address.js",
+		"strawexpress-utils.js",
+		"strawjade.js",
+		"jquery-1.8.1.min.js",
+		"jquery.ba-hashchange.min.js",
+		"betweenjs.js"
+	]
+}

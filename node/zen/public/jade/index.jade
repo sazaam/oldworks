@@ -1,0 +1,45 @@
+extends layout
+block content
+	#universe.universe.bs.fixed(style="top:0;bottom:0;left:0;right:0;")
+		#all.all.abs.context
+			
+			#contentzone.contentzone.fullH.context
+				a.dispBlock.titledesc.HpaddingXXLg.Vpadding.txtR.sizeSm(href="#/en/home/") 
+					span.bold.floatL(style="color:#555;") Zen Backpackers
+					span.bold.green GuestHouse in Busan Korea. +(82) 10 - 8722 - 1530
+					
+				include ./pages/home.jade
+				
+				include ./pages/zen.jade
+				
+				include ./pages/rooms.jade
+				
+				include ./pages/booking.jade
+				
+				include ./pages/map.jade
+				
+			
+			#navzone.navzone.abs.bottom0.context
+				ul#nav.nav.marginAuto.constraint.bold
+					li.iconzone
+						.icon
+							a.dispBlock.marginAuto(href="/en/zen/") ZEN
+					li.iconzone
+						.icon
+							a.dispBlock.marginAuto(href="/en/rooms/") ROOMS
+					li.iconzone
+						.icon
+							a.dispBlock.marginAuto(href="/en/booking/") BOOKING
+					li.iconzone
+						.icon
+							a.dispBlock.marginAuto(href="/en/map/") MAP
+			
+			.slashes.abs.context
+				.slash.abs.fullW.fullH(style="left:150%; background:#7BA7A8")
+					.centerbox.fullW.fullH //
+				
+				.slash.yellow.abs.fullW.fullH(style="left:150%;")
+					.centerbox.fullW.fullH //
+					
+	
+	script(type="text/javascript", src="./js/strawnode.js?starter=./zen_app/")

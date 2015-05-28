@@ -1,0 +1,1014 @@
+
+
+
+
+url : "http://hanja.naver.com/ac",
+request_type : "jsonp",
+request_method : "get",
+request_data : {q:"{query}",q_enc:"utf-8",st:"111",r_format:"json",r_enc:"utf-8"} 
+
+
+
+
+
+
+
+
+function $Class(oDef){
+	function typeClass(){
+		var t = this ;
+		var a = [] ;
+		while(typeof t.$super != "undefined"){
+			t.$super.$this = this ; 
+			if(typeof t.$super.$init == "function") a[a.length] = t ;
+			t = t.$super ;
+		}
+		for(var i = a.length - 1 ; i > -1 ; i--) a[i].$super.$init.apply(a[i].$super, arguments) ;
+		if(typeof this.$init == "function") this.$init.apply(this, arguments) ;
+	}
+	
+	if(typeof oDef.$static != "undefined"){
+		var i = 0, x ;
+		for(x in oDef) x == "$static" || i++ ;
+		for(x in oDef.$static) typeClass[x] = oDef.$static[x] ;
+		if(!i)return oDef.$static ; 
+		delete oDef.$static ;
+	}
+	
+	typeClass.prototype = oDef ;
+	typeClass.prototype.constructor = typeClass ;
+	typeClass.extend = $Class.extend ;
+	return typeClass ;
+}
+
+
+$Class.extend = function(superClass){
+	this.prototype.$super = new Object ; 
+	var superFunc = function(m,func){
+		return function(){
+			var f = this.$this[m] ;
+			var t = this.$this ;
+			var r = (t[m] = func).apply(t,arguments) ;
+			t[m] = f ;
+			return r ;
+		} ;
+	} ;
+	
+	for(var x in superClass.prototype){
+		if(typeof this.prototype[x] == "undefined" && x != "$init")
+			this.prototype[x] = superClass.prototype[x] ;
+		if(typeof superClass.prototype[x] == "function"){
+			this.prototype.$super[x] = superFunc(x,superClass.prototype[x]) ;
+		}else{
+			this.prototype.$super[x] = superClass.prototype[x] ;
+		}
+	}
+	
+	for(var x in superClass){
+		if(x == "prototype") continue ;
+		this[x] = superClass[x] ;
+	}
+	
+	return this ;
+}
+
+
+
+
+
+
+
+
+function $Ajax( url , option) {
+	var cl = arguments.callee ;
+	if ( !(this instanceof cl) ) return new cl(url, option) ;
+	
+	function _getXHR(){
+		if(window.XMLHttpRequest){
+			return new XMLHttpRequest() ;
+		}else if(ActiveXObject){
+			try{ return new ActiveXObject('MSXML2.XMLHTTP') }
+			catch(e){ return new ActiveXObject('Microsoft.XMLHTTP') }
+			return null ; 
+		}
+	}
+	
+	var loc = location.toString() ;
+	var domain = '';
+	try{domain = loc.match(/^https?:\/\/([a-z0-9_\-\.]+)/i)[1];}catch(e){}
+	this._url = url;
+	this._options = new Object;
+	this._headers = new Object;
+	this._options = {
+		type:"xhr",
+		method:"post",
+		proxy:"",
+		timeout:0,
+		onload:function(req){},
+		ontimeout:function(req){},
+		jsonp_charset:"utf-8"
+	};
+	
+	this.option(option);
+	var _opt = this._options ;
+	_opt.type = _opt.type.toLowerCase() ;
+	_opt.method = _opt.method.toLowerCase() ;
+	if(typeof window.__jindo2_callback == "undefined"){
+		window.__jindo2_callback = new Array();
+	}
+	switch(_opt.type){
+		case "get" : 
+		case "post" :
+			_opt.method = _opt.type ;
+			_opt.type = "xhr" ;
+		case "xhr" : 
+			this._request = _getXHR() ;
+			break ;
+		case "flash" : 
+			this._request = new $Ajax.SWFRequest(); 
+			break ; 
+		case "jsonp" : 
+			_opt.method= "get" ;
+			this._request = new $Ajax.JSONPRequest() ;
+			this._request.charset = _opt.jsonp_charset;
+		break ;
+		case "iframe" : 
+			this._request = new $Ajax.FrameRequest() ;
+			this._request._proxy = _opt.proxy ;
+		break ;
+	}
+	
+};
+
+	
+$Ajax.prototype._onload = function(){
+	if(this._request.readyState==4){
+		this._options.onload($Ajax.Response(this._request));
+	}
+} ;
+
+$Ajax.prototype.request = function(oData){
+	var t = this ; 
+	var req = this._request ; var opt = this._options ; 
+	var data, v , a = [], data = "" ;
+	var _timer = null ;
+	if(typeof oData == "undefined" || !oData){
+		data = null ;
+	}else{
+		for(var k in oData){
+			v = oData[k] ;
+			if(typeof v == "function") v = v() ;
+			a[a.length] = k + "=" + encodeURIComponent(v);
+		}
+		data = a.join("&");
+	}
+	
+	req.open(opt.method.toUpperCase(), this._url, true) ;
+	
+	req.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=utf-8") ;
+	req.setRequestHeader("charset", "utf-8") ;
+	for(var x in this._headers){
+		if(typeof this._headers[x] == "function") continue ;
+		req.setRequestHeader(x, String(this._headers[x])) ;
+	}
+	if(typeof req.onload != "undefined"){
+		req.onload = function(rq){
+			clearTimeout(_timer) ;
+			t._onload(rq)
+		} ;
+	}else{
+		req.onreadystatechange = function(rq){
+			clearTimeout(_timer) ;
+			t._onload(rq)
+		} ;
+	}
+	if(opt.timeout>0){
+		_timer = setTimeout(function(){
+			try{ req.abort(); }
+			catch(e){} ;
+			opt.ontimeout(req);
+		},opt.timeout*1000)
+	}
+	req.send(data) ;
+	return this ;
+}
+
+$Ajax.prototype.abort = function(){
+	this._request.abort() ;
+	return this ;
+}
+
+$Ajax.prototype.option = function(name,value){
+	if(typeof name == "undefined") return "" ;
+	if(typeof name == "string"){
+		if(typeof value == "undefined")
+			return this._options[name] ;
+		this._options[name] = value ;
+		return this ;
+	}
+	try{
+		for(var x in name)
+			this._options[x] = name[x]
+	}
+	catch(e){} ;
+	return this ;
+}
+
+$Ajax.prototype.header = function(name,value){
+	if(typeof name == "undefined" ) return "" ;
+	if(typeof name == "string"){
+		if(typeof value == "undefined") return this._headers[name] ;
+		this._headers[name] = value ;
+		return this ;
+	}
+	try{for(var x in name)this._headers[x]=name[x]}
+	catch(e){} ;
+	return this;
+}
+
+$Ajax.Response = function(req){
+	if(this === $Ajax) return new $Ajax.Response(req) ;
+	this._response = req ;
+}
+
+$Ajax.Response.prototype.xml = function(){
+	return this._response.responseXML ;
+}
+
+$Ajax.Response.prototype.text = function(){
+	return this._response.responseText ;
+}
+
+$Ajax.Response.prototype.json = function(){
+	if(this._response.responseJSON){
+		return this._response.responseJSON ;
+	}else if(this._response.responseText){
+		try{ return eval( "(" + this._response.responseText + ")" ) }
+		catch(e){return {}}
+	}
+	return {} ;
+}
+
+
+$Ajax.Response.prototype.header = function(name){
+	if(typeof name == "string") return this._response.getResponseHeader(name) ;
+	return this._response.getAllResponseHeaders()
+}
+	
+
+$Ajax.RequestBase = $Class({
+	_headers:{}, 
+	_respHeaders:{}, 
+	_respHeaderString : "", 
+	responseXML : null,
+	responseJSON : null, 
+	responseText : "", 
+	$init : function(){},
+	onload:function(){},
+	abort:function(){},
+	open:function(){},
+	send:function(){},
+	setRequestHeader : function(sName,sValue){
+		this._headers[sName] = sValue;
+	},
+	getResponseHeader : function(sName){
+		return this._respHeaders[sName] || "";
+	},
+	getAllResponseHeaders:function(){
+		return this._respHeaderString;
+	},
+	_getCallbackInfo:function(){
+		var id = "" ;
+		do{
+			id = "$" + Math.floor(Math.random()*10000);
+		}
+		while(window.__jindo2_callback[id]) ; 
+		return {
+			id : id,
+			name : "window.__jindo2_callback." + id
+		};
+	}
+}) ;
+
+$Ajax.JSONPRequest = $Class({
+	charset : "utf-8",
+	_script : null,
+	_callback : function(data){
+		var self = this ;
+		this.readyState = 4 ;
+		this.responseJSON = data ;
+		this.onload(this) ; setTimeout(function(){self.abort()},10);
+	},
+	abort : function(){
+		if(this._script){
+			try{
+				this._script.parentNode.removeChild(this._script) ;
+			}catch(e){} ;
+		}
+	},
+	open : function(method,url){
+		this.responseJSON = null ;
+		this._url = url ;
+	},
+	send : function(data){
+		var t = this ;
+		var info = this._getCallbackInfo() ;
+		var head = document.getElementsByTagName("head")[0] ;
+		this._script = $("<script>") ;
+		this._script.type = "text/javascript" ;
+		this._script.charset = this.charset ; 
+		if(head){ head.appendChild(this._script) }
+		else if(document.body){ document.body.appendChild(this._script) }
+		
+		window.__jindo2_callback[info.id] = function(data){
+			try{t._callback(data);}
+			finally{delete window.__jindo2_callback[info.id];}
+		} ;
+		
+		this._script.src = this._url + " ? _callback   = " + info.name + "&" + data ;
+	}
+	
+}).extend($Ajax.RequestBase) ;
+
+function $H(hashObject){
+	var cl = arguments.callee ; 
+	if(typeof hashObject == "undefined") hashObject = new Object ;
+	if(hashObject instanceof cl) return hashObject ;
+	if(!(this instanceof cl)) return new cl(hashObject) ;
+	this._table = {} ;
+	for(var k in hashObject){
+		if(this._table[k] == hashObject[k]) continue ;
+		this._table[k] = hashObject[k] ;
+	}
+}
+
+$H.prototype.$value = function(){ return this._table }
+
+$H.prototype.$ = function(key,value){ 
+	if(typeof value == "undefined"){ return this._table[key] }
+	this._table[key] = value ;
+	return this ;
+}
+
+$H.prototype.length = function(){
+	var i = 0 ;
+	for(var k in this._table){
+		if(typeof Object.prototype[k] != "undeifned" && Object.prototype[k] === this._table[k] ) continue ;
+		i++ ;
+	}
+	return i ;
+}
+
+$H.prototype.forEach = function(callback,thisObject){
+	var t = this._table ;
+	var h = this.constructor ;
+	for(var k in t){
+		if(!t.propertyIsEnumerable(k)) continue ;
+		try{callback.call(thisObject,t[k],k,t);}
+		catch(e){
+			if(e instanceof h.Break)
+				break ;
+			if(e instanceof h.Continue)
+				continue ;
+		}
+	}
+	return this ;
+}
+
+$H.prototype.filter = function(callback, thisObject){
+	var h = $H() ;
+	this.forEach(function(v, k, o){
+		if(callback.call(thisObject, v, k, o) === true){
+			h.add(k, v) ;
+		}
+	}) ;
+	return h ;
+}
+
+$H.prototype.map = function(callback, thisObject){
+	var t = this._table ; 
+	this.forEach(function(v, k, o){
+		t[k] = callback.call(thisObject, v, k, o) ;
+	}) ;
+	return this ;
+}
+
+$H.prototype.add = function(key, value){
+	if(this.hasKey(key)) return null ;
+	this._table[key] = value ; 
+	return this ;
+}
+
+$H.prototype.remove = function(key){
+	if(typeof this._table[key] == "undefined") return null;
+	var val = this._table[key] ; 
+	delete this._table[key] ;
+	return val ;
+}
+
+$H.prototype.search = function(value){
+	var result = false ;
+	this.forEach(function(v, k, o){
+		if(v === value){ result = k ; $H.Break() ;}
+	}) ;
+	return result ;
+}
+
+$H.prototype.hasKey = function(key){
+	var result = false ;
+	return(typeof this._table[key] != "undefined") ;
+}
+
+$H.prototype.hasValue = function(value){
+	return(this.search(value) !== false) ;
+}
+
+$H.prototype.sort = function(){
+	var o = new Object ;
+	var a = this.values() ;
+	var k = false ;
+	a.sort() ;
+	for(var i = 0 ; i < a.length ; i++){
+		k = this.search(a[i]) ;
+		o[k] = a[i] ;
+		delete this._table[k] ;
+	}
+	this._table = o ;
+	return this ;
+}
+
+
+$H.prototype.ksort = function(){
+	var o = new Object ;
+	var a = this.keys() ;
+	a.sort() ;
+	for(var i = 0 ; i < a.length ; i++){
+		o[a[i]] = this._table[a[i]] ;
+	}
+	this._table = o ;
+	return this ;
+}
+
+
+$H.prototype.keys = function(){
+	var keys = new Array ;
+	for(var k in this._table){ keys.push(k) }
+	return keys ;
+}
+
+$H.prototype.values = function(){
+	var values = [] ;
+	for(var k in this._table){
+		values[values.length] = this._table[k] ;
+	}
+	return values ;
+}
+
+
+$H.prototype.toQueryString = function(){
+	var buf = [], val = null, idx = 0 ;
+	for(var k in this._table){
+		if(typeof(val = this._table[k]) == "object" && val.constructor == Array){
+			for(i = 0 ; i < val.length ; i++){
+				buf[buf.length] = encodeURIComponent(k) + "[]=" + encodeURIComponent(val[i] + "");
+			}
+		}else{
+			buf[buf.length] = encodeURIComponent(k) + "=" + encodeURIComponent(this._table[k] + "");
+		}
+	}
+	return buf.join("&") ;
+}
+
+
+$H.prototype.empty = function(){
+	var keys = this.keys() ; 
+	for(var i = 0 ; i < keys.length ; i++){
+		delete this._table[keys[i]] ;
+	}
+	return this ;
+}
+
+
+$H.Break = function(){
+	if(!(this instanceof arguments.callee))
+		throw new arguments.callee ;
+}
+
+
+$H.Continue = function(){
+	if(!(this instanceof arguments.callee))
+		throw new arguments.callee ;
+}
+
+function $Json(sObject){
+	var cl = arguments.callee ;
+	if(typeof sObject == "undefined") sObject = new Object ;
+	if(sObject instanceof cl) return sObject ;
+	if(!(this instanceof cl)) return new cl(sObject) ;
+	if(typeof sObject == "string"){
+		try{ sObject = eval("(" + sObject + ")") }
+		catch(e){ sObject = new Object }
+	}
+	this._object = sObject ;
+}
+
+
+
+
+/*
+function $Agent(){var cl=arguments.callee;var cc=cl._cached;if(cc)return cc;if(!(this instanceof cl))return new cl;if(!cc)cl._cached=this;}
+$Agent.prototype.navigator=function(){var info=new Object;var ver=-1;var u=navigator.userAgent;var v=navigator.vendor||"";function f(s,h){return((h||"").indexOf(s)>-1)};info.opera=(typeof window.opera!="undefined")||f("Opera",u);info.ie=!info.opera&&f("MSIE",u);info.chrome=f("Chrome",u);info.safari=!info.chrome&&f("Apple",v);info.mozilla=f("Gecko",u)&&!info.safari&&!info.chrome;info.firefox=f("Firefox",u);info.camino=f("Camino",v);info.netscape=f("Netscape",u);info.omniweb=f("OmniWeb",u);info.icab=f("iCab",v);info.konqueror=f("KDE",v);try{if(info.ie){ver=u.match(/(?:MSIE) ([0-9.]+)/)[1];}else if(info.firefox||info.opera||info.omniweb){ver=u.match(/(?:Firefox|Opera|OmniWeb)\/([0-9.]+)/)[1];}else if(info.mozilla){ver=u.match(/rv:([0-9.]+)/)[1];}else if(info.safari){ver=parseFloat(u.match(/Safari\/([0-9.]+)/)[1]);if(ver==100){ver=1.1;}else{ver=[1.0,1.2,-1,1.3,2.0,3.0][Math.floor(ver/100)];}}else if(info.icab){ver=u.match(/iCab[ \/]([0-9.]+)/)[1];}else if(info.chrome){ver=u.match(/Chrome[ \/]([0-9.]+)/)[1];}
+info.version=parseFloat(ver);if(isNaN(info.version))info.version=-1;}catch(e){info.version=-1;}
+$Agent.prototype.navigator=function(){return info;};return info;};$Agent.prototype.os=function(){var info=new Object;var u=navigator.userAgent;var p=navigator.platform;var f=function(s,h){return(h.indexOf(s)>-1)};info.win=f("Win",p);info.mac=f("Mac",p);info.linux=f("Linux",p);info.win2000=info.win&&(f("NT 5.0",p)||f("2000",p));info.winxp=info.win&&(f("NT 5.1",p)||f("Win32",p));info.xpsp2=info.winxp&&(f("SV1",u)||f("MSIE 7",u));info.vista=f("NT 6.0",p);$Agent.prototype.os=function(){return info;};return info;};$Agent.prototype.flash=function(){var info=new Object;var p=navigator.plugins;var m=navigator.mimeTypes;var f=null;info.installed=false;info.version=-1;if(typeof p!="undefined"&&p.length){f=p["Shockwave Flash"];if(f){info.installed=true;if(f.description){info.version=parseFloat(f.description.match(/[0-9.]+/)[0]);}}
+if(p["Shockwave Flash 2.0"]){info.installed=true;info.version=2;}}else if(typeof m!="undefined"&&m.length){f=m["application/x-shockwave-flash"];info.installed=(f&&f.enabledPlugin);}else{for(var i=10;i>1;i--){try{f=new ActiveXObject("ShockwaveFlash.ShockwaveFlash."+i);info.installed=true;info.version=i;break;}catch(e){}}}
+$Agent.prototype.info=function(){return info;};return info;};$Agent.prototype.silverlight=function(){var info=new Object;var p=navigator.plugins;var s=null;info.installed=false;info.version=-1;if(typeof p!="undefined"&&p.length){s=p["Silverlight Plug-In"];if(s){info.installed=true;info.version=parseInt(s.description.split(".")[0]);if(s.description=="1.0.30226.2")info.version=2;}}else{try{s=new ActiveXObject("AgControl.AgControl");info.installed=true;if(s.isVersionSupported("2.0")){info.version=2;}else if(s.isVersionSupported("1.0")){info.version=1;}}catch(e){}}
+$Agent.prototype.silverlight=function(){return info;};return info;};function $A(array){var cl=arguments.callee;if(typeof array=="undefined")array=[];if(array instanceof cl)return array;if(!(this instanceof cl))return new cl(array);this._array=[];for(var i=0;i<array.length;i++){this._array[this._array.length]=array[i];}};$A.prototype.toString=function(){return this._array.toString();};$A.prototype.length=function(len,elem){if(typeof len=="number"){var l=this._array.length;this._array.length=len;if(typeof elem!="undefined"){for(var i=l;i<len;i++){this._array[i]=elem;}}
+return this;}else{return this._array.length;}};$A.prototype.has=function(any){return(this.indexOf(any)>-1);};$A.prototype.indexOf=function(any){if(typeof this._array.indexOf!='undefined')return this._array.indexOf(any);for(var i=0;i<this._array.length;i++){if(this._array[i]==any)return i;}
+return-1;};$A.prototype.$value=function(){return this._array;};$A.prototype.push=function(element1){return this._array.push.apply(this._array,$A(arguments).$value());};$A.prototype.pop=function(){return this._array.pop();};$A.prototype.shift=function(){return this._array.shift();};$A.prototype.unshift=function(element1){this._array.unshift.apply(this._array,$A(arguments).$value());return this._array.length;};$A.prototype.forEach=function(callback,thisObject){var arr=this._array;var errBreak=this.constructor.Break;var errContinue=this.constructor.Continue;function f(v,i,a){try{callback.call(thisObject,v,i,a);}catch(e){if(!(e instanceof errContinue))throw e;}};if(typeof this._array.forEach=="function"){try{this._array.forEach(f);}catch(e){if(!(e instanceof errBreak))throw e;}
+return this;}
+for(var i=0;i<arr.length;i++){try{f(arr[i],i,arr);}catch(e){if(e instanceof errBreak)break;throw e;}}
+return this;};$A.prototype.map=function(callback,thisObject){var arr=this._array;var errBreak=this.constructor.Break;var errContinue=this.constructor.Continue;function f(v,i,a){try{return callback.call(thisObject,v,i,a);}catch(e){if(e instanceof errContinue)return v;else throw e;}};if(typeof this._array.map=="function"){try{this._array=this._array.map(f);}catch(e){if(!(e instanceof errBreak))throw e;}
+return this;}
+for(var i=0;i<this._array.length;i++){try{arr[i]=f(arr[i],i,arr);}catch(e){if(e instanceof errBreak)break;throw e;}}
+return this;};$A.prototype.filter=function(callback,thisObject){var ar=new Array;this.forEach(function(v,i,a){if(callback.call(thisObject,v,i,a)===true){ar[ar.length]=v;}});return $A(ar);};$A.prototype.every=function(callback,thisObject){if(typeof this._array.every!="undefined")return this._array.every(callback,thisObject);var result=true;this.forEach(function(v,i,a){if(callback.call(thisObject,v,i,a)===false){result=false;$A.Break();}});return result;};$A.prototype.some=function(callback,thisObject){if(typeof this._array.some!="undefined")return this._array.some(callback,thisObject);var result=false;this.forEach(function(v,i,a){if(callback.call(thisObject,v,i,a)===true){result=true;$A.Break();}});return result;};$A.prototype.refuse=function(value){var a=$A(arguments);return this.filter(function(v,i){return!a.has(v)});};$A.prototype.slice=function(start,end){var a=this._array.slice.call(this._array,start,end);return $A(a);};$A.prototype.splice=function(index,howMany){var a=this._array.splice.apply(this._array,arguments);return $A(a);};$A.prototype.shuffle=function(){this._array.sort(function(a,b){return Math.random()>Math.random()?1:-1});return this;};$A.prototype.unique=function(){var a=this._array,b=[],l=a.length;var i,j;for(i=0;i<l;i++){for(j=0;j<b.length;j++){if(a[i]==b[j])break;}
+if(j>=b.length)b[j]=a[i];}
+this._array=b;return this;};$A.prototype.reverse=function(){this._array.reverse();return this;};$A.prototype.empty=function(){return this.length(0);};$A.Break=function(){if(!(this instanceof arguments.callee))throw new arguments.callee;};$A.Continue=function(){if(!(this instanceof arguments.callee))throw new arguments.callee;};
+
+*/
+
+
+
+
+
+var linguDics = [
+	{
+		serviceCode : "endic" ,
+		serviceName: "영어/영영" ,
+		mainUrl : "http://endic.naver.com" ,
+		searchUrl : "http://endic.naver.com/search.nhn?isOnlyViewEE=N&query=${query}" ,
+		nclickCode : "DNB.endic" ,
+		showNewIcon: false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "krdic" ,
+		serviceName: "국어" ,
+		mainUrl : "http://krdic.naver.com" ,
+		searchUrl : "http://krdic.naver.com/search.nhn?dic_where=krdic&query=${query}" ,
+		nclickCode : "DNB.krdic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "hanja" ,
+		serviceName : "한자" ,
+		mainUrl : "http://hanja.naver.com" ,
+		searchUrl : "http://hanja.naver.com/search?query=${query}",
+		nclickCode : "DNB.hanja" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "jpdic" ,
+		serviceName : "일본어" ,
+		mainUrl : "http://jpdic.naver.com" ,
+		searchUrl : "http://jpdic.naver.com/search.nhn?dic_where=jpdic&query=${query}" ,
+		nclickCode : "DNB.jpdic" ,
+		showNewIcon : false , 
+		showUpIcon : false
+	},
+	{
+		serviceCode : "cndic" ,
+		serviceName : "중국어" ,
+		mainUrl : "http://cndic.naver.com" ,
+		searchUrl : "http://cndic.naver.com/search/all?q=${query}" ,
+		nclickCode : "DNB.cndic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "frdic" ,
+		serviceName : "프랑스어" ,
+		mainUrl : "http://frdic.naver.com" ,
+		searchUrl : "http://frdic.naver.com/search.nhn?query=${query}",
+		nclickCode : "DNB.frdic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "spdic" ,
+		serviceName : "스페인어" ,
+		mainUrl : "http://spdic.naver.com" ,
+		searchUrl : "http://spdic.naver.com/search.nhn?query=${query}" ,
+		nclickCode : "DNB.spdic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "dedic" ,
+		serviceName : "독일어" ,
+		mainUrl : "http://dedic.naver.com" ,
+		searchUrl : "http://dedic.naver.com/#search/all/q=${query}" ,
+		nclickCode : "DNB.dedic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "vndic" ,
+		serviceName : "� 트남어" ,
+		mainUrl : "http://vndic.naver.com" ,
+		searchUrl : "http://vndic.naver.com/search.nhn?query=${query}" ,
+		nclickCode : "DNB.vndic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "rudic" ,
+		serviceName : "러시아어" ,
+		mainUrl : "http://rudic.naver.com" ,
+		searchUrl : "http://rudic.naver.com/?sLn=kr#search.nhn?query=${query}" ,
+		nclickCode : "DNB.rudic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "ptdic" ,
+		serviceName : "포르투갈어" ,
+		mainUrl : "http://ptdic.naver.com" ,
+		searchUrl : "http://ptdic.naver.com/#search/${query}" ,
+		nclickCode : "DNB.ptdic" ,
+		showNewIcon : true ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "mndic" ,
+		serviceName : "몽골어" ,
+		mainUrl : "http://mndic.naver.com" ,
+		searchUrl : "http://mndic.naver.com/?sLn=kr#search.nhn?query=${query}" ,
+		nclickCode : "DNB.mndic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "iddic" ,
+		serviceName : "인도네시아어" ,
+		mainUrl : "http://iddic.naver.com" ,
+		searchUrl : "http://iddic.naver.com/?sLn=kr#search.nhn?query=${query}" ,
+		nclickCode : "DNB.iddic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "trdic" ,
+		serviceName : "터키어" ,
+		mainUrl : "http://trdic.naver.com" ,
+		searchUrl : "http://trdic.naver.com/search.nhn?query=${query}" ,
+		nclickCode : "DNB.trdic" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "khdic" ,
+		serviceName : "캄보디아어" ,
+		mainUrl : "http://khdic.naver.com" ,
+		searchUrl : "http://khdic.naver.com/#search/${query}" ,
+		nclickCode : "DNB.khdic" ,
+		showNewIcon : true ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "uadic" ,
+		serviceName : "우크라이나어" ,
+		mainUrl : "http://uadic.naver.com" ,
+		searchUrl : "http://uadic.naver.com/#search/${query}" ,
+		nclickCode : "DNB.uadic" ,
+		showNewIcon : true ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "uzdic" ,
+		serviceName : "우즈� 크어" ,
+		mainUrl : "http://uzdic.naver.com" ,
+		searchUrl : "http://uzdic.naver.com/#search/${query}" ,
+		nclickCode : "DNB.uzdic" ,
+		showNewIcon : true ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "aldic" ,
+		serviceName : "알바니아어" ,
+		mainUrl : "http://aldic.naver.com" ,
+		searchUrl : "http://aldic.naver.com/#search/${query}" ,
+		nclickCode : "DNB.aldic" ,
+		showNewIcon : true ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "gedic" ,
+		serviceName : "조지아어" ,
+		mainUrl : "http://gedic.naver.com" ,
+		searchUrl : "http://gedic.naver.com/#search/${query}" ,
+		nclickCode : "DNB.gedic" , 
+		showNewIcon : true ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "phrasebook" ,
+		serviceName : "글로벌회화" ,
+		mainUrl : "http://phrasebook.naver.com" ,
+		searchUrl : "http://phrasebook.naver.com" ,
+		nclickCode : "DNB.phrasebook" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	}
+] ;
+var encyDics = [
+	{
+		serviceCode : "terms" ,
+		serviceName : "지식백과 홈" ,
+		mainUrl : "http://terms.naver.com" ,
+		searchUrl : "http://terms.naver.com/search.nhn?query=${query}" ,
+		nclickCode : "DNB.terms" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "100" ,
+		serviceName : "두산백과" ,
+		mainUrl : "http://terms.naver.com/doopedia/" ,
+		searchUrl : "http://terms.naver.com/search.nhn?subject=Doopedia&query=${query}" ,
+		nclickCode : "DNB.100" ,
+		showNewIcon : true ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "minbaek" ,
+		serviceName : "한국민족문화대백과" ,
+		mainUrl : "http://terms.naver.com/minbaek" ,
+		searchUrl : "http://terms.naver.com/search.nhn?subject=KoreanCulture&query=${query}" ,
+		nclickCode : "DNB.minbaek" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "childbook" ,
+		serviceName : "어린이백과" ,
+		mainUrl : "http://terms.naver.com/list.nhn?categoryId=3062" ,
+		searchUrl : "http://terms.naver.com/search.nhn?query=${query}&sm=&subject=1400" ,
+		nclickCode : "DNB.childbook" ,
+		showNewIcon : true , 
+		showUpIcon : false
+	},
+	{
+		serviceCode : "art" , 
+		serviceName : "미� 작품" ,
+		mainUrl : "http://terms.naver.com/list.nhn?categoryId=3122" ,
+		searchUrl : "http://terms.naver.com/search.nhn?query=${query}&sm=&subject=1600" ,
+		nclickCode : "DNB.art" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	},
+	{
+		serviceCode : "navercast" ,
+		serviceName : "네이버캐스트" ,
+		mainUrl : "http://navercast.naver.com" ,
+		searchUrl : "http://navercast.naver.com/search.nhn?query=${query}" ,
+		nclickCode : "DNB.navercast" ,
+		showNewIcon : false ,
+		showUpIcon : false
+	}
+] ;
+
+var linguDicsView=[{serviceCode:"dichome",showLayerhome:false,showLayerDetail:true},{serviceCode:"endic",showLayerhome:true,showLayerDetail:true},{serviceCode:"krdic",showLayerhome:true,showLayerDetail:true},{serviceCode:"hanja",showLayerhome:true,showLayerDetail:true},{serviceCode:"jpdic",showLayerhome:true,showLayerDetail:true},{serviceCode:"cndic",showLayerhome:true,showLayerDetail:true},{serviceCode:"frdic",showLayerhome:true,showLayerDetail:true},{serviceCode:"spdic",showLayerhome:true,showLayerDetail:true},{serviceCode:"dedic",showLayerhome:true,showLayerDetail:true},{serviceCode:"vndic",showLayerhome:true,showLayerDetail:true},{serviceCode:"rudic",showLayerhome:true,showLayerDetail:true},{serviceCode:"ptdic",showLayerhome:true,showLayerDetail:true},{serviceCode:"mndic",showLayerhome:true,showLayerDetail:true},{serviceCode:"iddic",showLayerhome:true,showLayerDetail:true},{serviceCode:"trdic",showLayerhome:true,showLayerDetail:true},{serviceCode:"khdic",showLayerhome:true,showLayerDetail:true},{serviceCode:"uadic",showLayerhome:true,showLayerDetail:true},{serviceCode:"uzdic",showLayerhome:true,showLayerDetail:true},{serviceCode:"aldic",showLayerhome:true,showLayerDetail:true},{serviceCode:"gedic",showLayerhome:true,showLayerDetail:true},{serviceCode:"phrasebook",showLayerhome:true,showLayerDetail:true}];
+function LayerManager(a,b){this.layer=a;this.className=b;this.classNameRegx=new RegExp("(?:^|\\s)"+b+"(?!\\S)","g");this.showLayer=function(){if(this.layer.className.indexOf(this.className)<0){if(this.layer.classList){this.layer.classList.add(this.className)}else{this.layer.className+=" "+this.className}}};this.hideLayer=function(){if(this.layer._focus||this.layer._mouseover){}else{if(this.layer.className.indexOf(this.className)>=0){if(this.layer.classList){this.layer.classList.remove(this.className)
+}else{this.layer.className=this.layer.className.replace(this.classNameRegx,"")}}}};this.clickToggle=function(){if(this.layer.classList){this.layer.classList.toggle(this.className)}else{if(this.layer.className.indexOf(this.className)<0){this.layer.className+=" "+this.className}else{this.layer.className=this.layer.className.replace(this.classNameRegx,"")}}};this.onmouseover=function(){this.layer._mouseover=true;this.showLayer()};this.onmouseout=function(){this.layer._mouseover=false;this.layer._focus=false;
+var c=this;setTimeout(function(){c.hideLayer()},100)};this.onclick=function(){this.clickToggle()};this.onblur=function(){this.layer._mouseover=false;this.layer._focus=false;var c=this;c.hideLayer()};this.onfocus=function(){this.layer._focus=true;this.showLayer(a)}}try{document.getElementById("dic_dnb_container").innerHTML=(function(c){var g=window.dnb_query==c?null:encodeURIComponent(window.dnb_query);var n=window.dnb_service==c?null:window.dnb_service;var f=window.dnb_skin==c?"kr":window.dnb_skin;
+var j=9;var b="";var k=location.href.indexOf("local.")>=0?"dev.":location.href.indexOf("dev.")>=0?"dev.":location.href.indexOf("stg.")>=0?"stg.":"";b+="\n		<h1>";b+='\n			<a href="http://www.naver.com" onclick="clickcr(this, \'DNB.naver\',\'\',\'\',event);" title="네이버" class="naver"><em class="blind">네이버</em></a>';if(f=="en"){b+='\n			<a href="http://dic.naver.com" onclick="clickcr(this, \'DNB.dic\',\'\',\'\',event);" title="dictionary"><img src="http://dicimg.naver.net/endic/img/gnb_dic_en.gif" width="74" height="18" alt="dictionary"></a>'
+}else{b+='\n			<a class="home dic" href="http://dic.naver.com" onclick="clickcr(this, \'DNB.dic\',\'\',\'\',event);" title="사� �홈"><em class="blind">사� �</em></a>'}b+="\n		</h1>";b+='\n		<div class="lnb" id="dispGnbLayer" style="display: '+dnb_layer+'">';b+='\n			<ul class="gnb">';for(var h=0;h<linguDics.length;h++){if(h==j){b+='\n			<li id="moreLayer1" class="more_menu"><a href="javascript:void(0);" title="어학사� � 더보기" onmouseover="dnb_more_layer1.onmouseover();" onmouseout="dnb_more_layer1.onmouseout();" onclick="dnb_more_layer1.onclick(); clickcr(this, \'DNB.lmore\', \'\', \'\',event); return false;" onfocus="dnb_more_layer1.onfocus();" onblur="dnb_more_layer1.onblur();"><span class="blind">어학사� �</span>더보기<span class="new"><em class="blind">new</em></span></a>';
+b+='\n			  <div class="layer01" onmouseover="dnb_more_layer1.onmouseover();" onmouseout="dnb_more_layer1.onmouseout();">';b+="\n				 <ul>"}var m=linguDics[h];var a=g?m.searchUrl.replace("${query}",g):m.mainUrl;if(k){a=a.replace("http://","http://"+k)}var l;if(h==0){l=m.serviceCode==n?'<li class="fc on">':'<li class="fc">'}else{l=m.serviceCode==n?'<li class="on">':"<li>"}var d="";if(m.showNewIcon){d='<span class="new"><em class="blind">new</em></span>'}else{if(m.showUpIcon){d='<span class="update"><em class="blind">update</em></span>'
+}}if(h>=j){b+="\n			"+l+'<a href="'+a+'" title="'+m.serviceName+'" onfocus="dnb_more_layer1.onfocus();" onblur="dnb_more_layer1.onblur();" onclick="clickcr(this, \''+m.nclickCode+"','','',event);\">"+m.serviceName+d+"</a></li>"}else{b+="\n			"+l+'<a href="'+a+'" title="'+m.serviceName+'" onclick="clickcr(this, \''+m.nclickCode+"','','',event);\">"+m.serviceName+d+"</a></li>"}if(h==linguDics.length-1){b+="\n				 </ul>";b+="\n			  </div>";b+="\n			</li>"}}b+='\n			<li id="otherDicLayer" class="more_menu lc">';
+b+='\n				<a href="javascript:void(0);" title="지식백과 더보기" onmouseover="dnb_more_layer2.onmouseover();" onmouseout="dnb_more_layer2.onmouseout();" onclick="dnb_more_layer2.onclick(); clickcr(this,\'DNB.kmore\',\'\',\'\',event);return false;" onfocus="dnb_more_layer2.onfocus();" onblur="dnb_more_layer2.onblur();">지식백과<span class="blind">더보기</span></a>';b+='\n				<div class="layer01" onmouseover="dnb_more_layer2.onmouseover();" onmouseout="dnb_more_layer2.onmouseout();">';b+="\n					<ul>";for(var h=0;
+h<encyDics.length;h++){var m=encyDics[h];var a=g?m.searchUrl.replace("${query}",g):m.mainUrl;var d=m.showNewIcon?'<span class="new"><em class="blind">new</em></span>':"";b+='\n					<li><a class="dic" href="'+a+'" title="'+m.serviceName+'" onfocus="dnb_more_layer2.onfocus();" onblur="dnb_more_layer2.onblur();" onclick="clickcr(this, \''+m.nclickCode+"','','',event);\">"+m.serviceName+d+"</a></li>"}b+="\n					</ul>";b+="\n				</div>";b+="\n			</li>";b+="\n			</ul>";b+="\n		</div>";return b})();var dnb_more_layer1=new LayerManager(document.getElementById("moreLayer1",document.getElementById("dic_dnb_container")),"layer_open");
+var dnb_more_layer2=new LayerManager(document.getElementById("otherDicLayer",document.getElementById("dic_dnb_container")),"layer_open")}catch(e){};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function clickcr(a,d,f,g,h,i,j){
+	var k,p2,p1_id,p2_id,ptarr ;
+	var l="" ;
+	var m = window.event ? window.event : h ;
+	var n = -1 ;
+	var p = -1 ;
+	var q = -1 ;
+	var r = -1 ;
+	var s, dElement, ifrId ;
+	var t, clink, tempURL ;
+	var o, x, y, bw ;
+	var u ;
+	var v = 0 ;
+	if(!i) i = 0 ;
+	if(!j) j = "" ;
+	if(window.g_ssc != undefined && window.g_query != undefined){ v = 1 }
+	else{ v = 0 }
+	
+	try{ 
+		bw = xWindowSize(window) ;
+		ifrId = checkIframe(a) ;
+		if( ifrId ){
+			var w = findPos(document.getElementById(ifrId)) ;
+			if(m.clientX&&m.clientX != undefined){
+				s = document.body ;
+				if(s.clientLeft && s.clientTop){
+					ifrSx = m.clientX - s.clientLeft ;
+					ifrSy = m.clientY - s.clientTop
+				}else{
+					ifrSx = m.clientX ;
+					ifrSy = m.clientY
+				}
+			}
+			
+			q = w[0] + ifrSx ;
+			r = w[1] + ifrSy ;
+			
+			if(document.body && (document.body.scrollTop || document.body.scrollLeft)){
+				s = document.body ;
+				n = q - s.scrollLeft ;
+				p = r - s.scrollTop
+			}else if(document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)){
+				dElement = document.documentElement ;
+				n = q - dElement.scrollLeft ;
+				p = r - dElement.scrollTop
+			}else{
+				n = q ;
+				p = r
+			}
+		}else{
+			if(m.clientX && m.clientX != undefined){
+				s = document.body ;
+				if(s.clientLeft && s.clientTop){
+					n = m.clientX - s.clientLeft ;
+					p = m.clientY - s.clientTop
+				}else{
+					n = m.clientX ;
+					p = m.clientY
+				}
+			}
+			if(document.body && (document.body.scrollTop || document.body.scrollLeft)){
+				q = document.body.scrollLeft + (n < 0 ? 0 : n) ;
+				r = document.body.scrollTop + (p < 0 ? 0 : p)
+			}else if(document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)){
+				dElement = document.documentElement ;
+				if(dElement.scrollLeft != undefined) q = dElement.scrollLeft + (n < 0 ? 0 : n) ;
+				if(dElement.scrollTop != undefined) r = dElement.scrollTop + (p < 0 ? 0 : p)
+			}else{
+				q = ( n < 0 ? 0 : n ) ;
+				r = ( p < 0 ? 0 : p )
+			}
+			
+			if(m.pageX){ q = m.pageX }
+			if(m.pageY){ r = m.pageY }
+		}
+		
+	}catch(e){
+	
+	}
+	
+	if( d != "" ){
+		ptarr = d.split(".") ;
+		l = ptarr[0] + "." + ptarr[1]
+	}else{
+		x = a.parentNode ;
+		y = x.parentNode ;
+		p2 = getparent(a) ;
+		if(p2 == null){return false}
+		k = getparent(p2) ;
+		if(k == null){return false}
+		l = k.id + "." + p2.id
+	}
+	
+	if(i==1){t=0}
+	else if(a.href){
+		if(
+			(a.target&&a.target != "_self" && a.target != "_top" && a.target != "_parent")
+			|| (a.href.toLowerCase().indexOf("javascript:") != -1)
+			|| (a.getAttribute("href",2) && a.getAttribute("href",2).charAt(0) == '#')
+			|| (a.href.indexOf("#") != -1 && (a.href.substr(0, a.href.indexOf("#")) == document.URL))
+			|| a.nodeName.toLowerCase() == "img"
+		){
+			t = 0 ;
+		}else{
+			t = 1 ;
+		}
+	}else{
+		t = 0 ;
+	}
+	
+	if(a.href && a.href.indexOf("http://"+ccsrv) == 0){
+		tempURL = a.href
+	}else{
+		tempURL = "http://"
+			+ ccsrv
+			+ "/"
+			+ nclkModule
+			+ "?a="
+			+ l
+			+ "&r="
+			+ g
+			+ "&i="
+			+ f ;
+		tempURL += "&bw="
+			+ bw
+			+ "&px="
+			+ q
+			+ "&py="
+			+ r
+			+ "&sx="
+			+ n
+			+ "&sy="
+			+ p
+			+ "&m="
+			+ t ;
+			
+		if(v == 0){
+			tempURL += "&nsc=" + nsc
+		}else if(v == 1){
+			tempURL += "&ssc="
+				+ g_ssc
+				+ "&q="
+				+ encodeURIComponent(g_query)
+				+ "&s="
+				+ g_sid
+				+ "&p="
+				+ g_pid
+				+ "&g="
+				+ j
+		}
+	}
+	
+	if(a.href && a.href.indexOf("http://" + ccsrv) == 0){
+		clink = tempURL
+	}else if(a.href && a.href.indexOf("http://" + ccsrv) != 0 && a.nodeName.toLowerCase() != "img" ){
+		clink = tempURL
+			+ "&u="
+			+ encodeURIComponent(a.href)
+	}else{
+		clink = tempURL
+			+ "&u=about%3Ablank"
+	}
+	
+	if(t == 1){
+		u = a.innerHTML ;
+		a.href = clink ;
+		if(a.innerHTML != u){ a.innerHTML = u}
+	}else if(document.images){
+		var z = new Date().getTime() ;
+		clink += "&time=" + z ;
+		if(nclkIsSafari && !a.href){
+			var b = c = new Date() ;
+			while((b.getTime() - c.getTime()) < 100)
+				b = new Date() ;
+			var o = new Image() ;
+			nClkImg.push(o) ;
+			o.src = clink
+		}else{
+			var o = new Image() ;
+			nClkImg.push(o) ;
+			o.src = clink}
+		}
+	return true ;
+}
+
+
+
+
+
+
+
